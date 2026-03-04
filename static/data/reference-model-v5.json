@@ -1,0 +1,791 @@
+{
+  "metadata": {
+    "title": "The Intent Stack \u00e2\u20ac\u201d Reference Model",
+    "version": "5.0",
+    "date": "2026-03-02",
+    "author": "Rob Kline",
+    "status": "Working specification",
+    "purpose": "Comprehensive reference model for the Intent Stack: a 7-layer governance architecture for intent alignment across any principal-agent or peer coordination boundary",
+    "sources": [
+      "Intent Architecture methodology (Rob Kline)",
+      "Anthropic Constitution (published 2026-01-26)"
+    ],
+    "core_thesis": "The governance pattern required for aligning AI agent behavior within organizational contexts is the same pattern humans have used implicitly for delegation and coordination throughout organizational history. AI forces this pattern to become explicit. The Intent Stack formalizes it as reusable runtime infrastructure deployable at every boundary where intent must be governed."
+  },
+  "foundational_concepts": {
+    "why_the_intent_stack_exists": {
+      "the_problem": "AI agents operating within organizations create principal-agent boundaries that require intent governance. Constitutional AI governs the agent's character. Operator configuration governs the deployment context. But nobody governs the intent hierarchy that emerges when agents operate within organizations that have their own purposes, boundaries, and accountability structures.",
+      "the_insight": "This governance challenge isn't new. Every human delegation and coordination relationship has the same structure. Humans solve it implicitly through culture, relationship, shared history, and correctable pace. AI breaks all four compensating mechanisms \u00e2\u20ac\u201d agents can't absorb culture by osmosis, clarifying questions are expensive, AI lacks personally developed ethics, and AI operates at uncorrectable speed and scale.",
+      "the_solution": "Formalize the governance pattern humans evolved over centuries into explicit, machine-processable infrastructure deployable at every boundary where intent must be governed. The Intent Stack is that infrastructure."
+    },
+    "epistemological_stance": {
+      "pattern_recognition_not_framework_imposition": "Intent Architecture discovers and enhances existing organizational patterns rather than imposing external frameworks. The governance structures that work aren't designed in advance \u00e2\u20ac\u201d they're discovered through relationship and refined through operational evidence.",
+      "grown_not_built": "Both AI systems (per Amodei) and organizational intent exhibit emergent behavior that can't be fully specified at design time. Effective governance requires discovery, observation, monitoring, and correction \u00e2\u20ac\u201d not top-down specification. This applies to the governance infrastructure itself, not just the things it governs.",
+      "cultivated_over_imposed": "Values that are genuinely held \u00e2\u20ac\u201d understood, examined, and endorsed \u00e2\u20ac\u201d are more robust than values merely imposed. Intent discovery through relational process produces endorsed intent. Configuration produces imposed constraints. Both are necessary; endorsement is more durable.",
+      "evidence_not_marketing": "Governance documents describe what happened. They don't embellish, speculate, or use marketing language. The work speaks for itself or it doesn't. This principle applies to the reference model itself."
+    },
+    "relationship_to_anthropic": {
+      "complementary_not_competitive": "Anthropic provides the philosophy of intent governance (Constitution), the vision of beneficial deployment (Machines of Loving Grace), and the warning about ungoverned deployment (Adolescence of Technology). The Intent Stack provides the engineering \u00e2\u20ac\u201d runtime infrastructure that makes the philosophy operational at every boundary.",
+      "what_converged": "Both systems converged on the same governance primitives because they're solving the same problem: governing agents that exercise judgment within authority hierarchies. The convergence may be forced by problem structure \u00e2\u20ac\u201d the five primitives may be the irreducible set.",
+      "what_diverges": "Anthropic governs one relationship (Anthropic \u00e2\u2020\u2019 Claude) through training. The Intent Stack governs arbitrary relationships through runtime infrastructure. Anthropic's solution is baked in. The Intent Stack's solution is deployable."
+    }
+  },
+  "the_seven_layers": {
+    "description": "The Intent Stack is a 7-layer governance architecture. Each layer addresses a distinct concern. The layers compose vertically (each layer's output becomes the next layer's governing input) and instantiate fractally (the full stack appears at every principal-agent boundary).",
+    "reading_direction": "L1 is execution (bottom). L7 is intent discovery (top). Intent flows downward through formalization into execution. Evidence flows upward through monitoring into governance assessment. Both directions carry signal that transforms the other.",
+    "layers": [
+      {
+        "layer": 7,
+        "name": "Intent Discovery",
+        "implementation": "GID Voice (Grounded Intent Discovery)",
+        "question_answered": "What does this principal actually intend?",
+        "description": "Conversational AI system conducting genuine discovery sessions to surface intent that the principal may not have fully articulated. Uses eight facilitation techniques. Produces endorsed intent rather than extracted specifications.",
+        "key_principle": "Intent isn't declared \u00e2\u20ac\u201d it's discovered through relationship. The principal AFTER discovery is different from the one who walked in.",
+        "anthropic_parallel": "Governance as relationship \u00e2\u20ac\u201d Anthropic's constitutional process surfaces Claude's identity through relational development, not rule imposition",
+        "adolescence_parallel": "'Grown, not built' epistemology \u00e2\u20ac\u201d you can't specify intent top-down",
+        "outputs_to_l6": "Raw discovery signal \u00e2\u20ac\u201d themes, values, priorities, boundaries, aspirations, concerns surfaced through conversation",
+        "cold_start": "Operates with no prior signal. First interaction IS the beginning of governance."
+      },
+      {
+        "layer": 6,
+        "name": "Intent Formalization",
+        "implementation": "Knowledge Architecture (three-tier) with TSRC as Tier 3 methodology",
+        "question_answered": "How do we represent this intent in machine-processable form?",
+        "description": "Transforms discovery signal into structured, retrievable knowledge across a formalization spectrum. Tier 1 (real-time semantic store) captures signal at point of origin with immediate utility. Tier 2 (emergent pattern detection) synthesizes accumulated signal into governance-relevant patterns. Tier 3 (discovery-driven deep structure) applies methodologies like TSRC to produce formal knowledge graphs and the five Intent Primitives when governance context justifies the cost. Current implementation: ConvoKB (semantic store) + TSRC extraction (deep structure).",
+        "key_principle": "Formalization is a spectrum, not a single transformation. Cheap-and-fast capture at the base ensures no signal is lost; deep-and-expensive structuring on demand ensures governance decisions have the depth they require. Lossy compression is inevitable at every tier \u00e2\u20ac\u201d governance must account for what formalization drops.",
+        "anthropic_parallel": "The Constitution itself \u00e2\u20ac\u201d Anthropic's formalization of their intent for Claude's character into a structured governance document",
+        "outputs_to_l5": "Formalized intent \u00e2\u20ac\u201d five Intent Primitives populated with discovered content, knowledge graph of relationships, confidence levels",
+        "inputs_from_l7": "Raw discovery signal requiring structuring"
+      },
+      {
+        "layer": 5,
+        "name": "Specification",
+        "implementation": "Decision Navigator + specification planning functions",
+        "question_answered": "Given this intent, what should we actually do?",
+        "description": "Translates formalized intent into actionable direction. Produces plans, priorities, resource allocation, and tactical guidance that operationalize the principal's intent.",
+        "key_principle": "Specification is intent translated into action under constraints. It must remain traceable to discovered intent \u00e2\u20ac\u201d specification that can't trace its lineage to L6/L7 has drifted.",
+        "anthropic_parallel": "Operator system prompts \u00e2\u20ac\u201d translating deployment context into agent behavior configuration",
+        "outputs_to_l4": "Prioritized direction, initiatives, resource allocation, success metrics",
+        "inputs_from_l6": "Formalized intent requiring operationalization"
+      },
+      {
+        "layer": 4,
+        "name": "Runtime Alignment",
+        "implementation": "Steward Log Service + alignment event classification",
+        "question_answered": "Is what's happening aligned with what was intended?",
+        "description": "Runtime monitoring of alignment between execution and intent across all four intent sources. Classifies alignment events, detects drift, triggers escalation. Maintains append-only governance evidence trail supporting progressive trust development.",
+        "key_principle": "Monitoring must handle multi-source conflict resolution using holistic judgment, not rigid priority queues. Hard constraints (Boundaries) are absolute; everything else is contextual.",
+        "anthropic_parallel": "Amodei's defense category 3 (monitoring in live use) + constitution's multi-source conflict resolution",
+        "adolescence_parallel": "Live monitoring infrastructure for detecting misalignment at deployment boundaries \u00e2\u20ac\u201d what Amodei identifies as needed but hasn't been built at organizational level",
+        "outputs_to_l3": "Governance decisions \u00e2\u20ac\u201d authorize, modify, block, investigate. Trust calibration updates. Alignment assessments.",
+        "inputs_from_l5": "Prioritized direction to monitor against",
+        "inputs_from_l3": "Execution evidence to evaluate"
+      },
+      {
+        "layer": 3,
+        "name": "Orchestration",
+        "implementation": "Agent hierarchy management (L0/L1/L2 pattern, cross-surface coordination)",
+        "question_answered": "How do we coordinate multiple agents to execute this strategy?",
+        "description": "Manages delegation to and coordination between agents, including knowledge provisioning \u00e2\u20ac\u201d ensuring delegated agents have access to the Tier 1 knowledge store so they operate with organizational context rather than in isolation. This is the primary fractal instantiation point \u00e2\u20ac\u201d each orchestration boundary creates a new principal-agent relationship where the full Intent Stack pattern appears.",
+        "key_principle": "When an orchestrator delegates to sub-agents, it becomes a principal. The sub-agent's context includes intent that has been translated through multiple boundaries \u00e2\u20ac\u201d governance must account for accumulated translation losses. Knowledge provisioning is an orchestration responsibility: agents without access to accumulated organizational knowledge will reinvent or contradict what is already known.",
+        "anthropic_parallel": "Constitution's explicit description of Claude orchestrating sub-agents as recursive principal-agent instantiation",
+        "outputs_to_l2": "Delegated tasks with governance context \u00e2\u20ac\u201d directives, constraints, acceptance criteria, escalation triggers",
+        "inputs_from_l4": "Governance decisions constraining orchestration choices"
+      },
+      {
+        "layer": 2,
+        "name": "Integration",
+        "implementation": "Component integration, API management, deployment infrastructure",
+        "question_answered": "How do governed agents connect to the systems they need?",
+        "description": "Standard integration patterns for intent-governed agent deployment. Handles the technical plumbing of connecting agents to tools, data sources, external systems, and each other. Emerging protocol standards (e.g., MCP for tool integration, standard semantic retrieval protocols) are beginning to define how agents access knowledge stores and external capabilities, making agent-to-knowledge integration a first-class integration concern alongside traditional API management.",
+        "key_principle": "Integration carries governance context \u00e2\u20ac\u201d it's not just technical plumbing. An agent's access to a system is a governance decision, not just a configuration choice.",
+        "anthropic_parallel": "Operator/user interface configuration, deployment infrastructure",
+        "outputs_to_l1": "Configured execution environment with appropriate access and constraints",
+        "inputs_from_l3": "Orchestration decisions about what needs to connect to what"
+      },
+      {
+        "layer": 1,
+        "name": "Execution",
+        "implementation": "Agent runtime, task execution, result production",
+        "question_answered": "How does the actual work get done within governing constraints?",
+        "description": "Agent capability execution within the full governance context established by layers above. Hard constraints (Boundaries primitive) are non-negotiable at this level.",
+        "key_principle": "Execution is the most constrained layer \u00e2\u20ac\u201d governed by everything above it. But execution evidence flows upward to inform all governance layers. The system learns from what actually happens.",
+        "anthropic_parallel": "Agent capability execution within constitutional hard constraints \u00e2\u20ac\u201d null action (refusal) is always available as safe harbor",
+        "outputs_upward": "Execution results, evidence, anomalies, escalation triggers",
+        "inputs_from_l2": "Configured execution environment"
+      }
+    ],
+    "cross_cutting_properties": {
+      "intent_flows_downward": "From discovery (L7) through formalization (L6), specification (L5), governance (L4), orchestration (L3), integration (L2) to execution (L1). Each layer translates intent into more specific, more constrained form. Translation is lossy \u00e2\u20ac\u201d nuance drops at each boundary.",
+      "evidence_flows_upward": "From execution (L1) through integration (L2), orchestration (L3), governance (L4), specification (L5), formalization (L6) to discovery (L7). Each layer aggregates evidence into more strategic, more interpretive form.",
+      "intent_also_flows_upward": "Good recommendations from lower layers update higher layers' intent. A specification recommendation that changes the principal's understanding of their own purpose is upward intent flow. The framework must handle bidirectional intent, not just bidirectional data.",
+      "every_layer_interface_has_trust_calibration": "The corrigibility position at each layer boundary is a per-boundary property reflecting accumulated evidence. Mature interfaces grant more autonomy. Immature interfaces require more oversight."
+    }
+  },
+  "knowledge_architecture": {
+    "description": "Three-tier principle for how accumulated knowledge serves governance across layers",
+    "architectural_principle": "Cheap and fast at the base, deep and expensive on demand",
+    "tiers": [
+      {
+        "tier": 1,
+        "name": "Real-time Semantic Store",
+        "cost": "low",
+        "latency": "low",
+        "invocation": "continuous \u00e2\u20ac\u201d every signal captured at point of origin",
+        "source_agnostic": true,
+        "value_from_first_signal": true,
+        "serves_layers": [
+          "L7 (context)",
+          "L6 (lightweight formalization)",
+          "L4 (evidence retrieval)",
+          "L3 (knowledge provisioning)",
+          "L1 (operational evidence capture)"
+        ],
+        "governance_implication": "accessibility \u00e2\u20ac\u201d knowledge that exists but cannot be found is governance-equivalent to knowledge that does not exist",
+        "key_properties": [
+          "semantic retrieval",
+          "vector embedding",
+          "standard protocol access",
+          "no minimum dataset requirement"
+        ]
+      },
+      {
+        "tier": 2,
+        "name": "Emergent Pattern Detection",
+        "cost": "moderate",
+        "latency": "periodic",
+        "invocation": "periodic synthesis over accumulated Tier 1 signal",
+        "serves_layers": [
+          "L4 (knowledge-health signals)",
+          "L5 (planning inputs)"
+        ],
+        "governance_implication": "timeliness \u00e2\u20ac\u201d patterns visible in aggregate but invisible individually represent Emergent Intent",
+        "key_properties": [
+          "no fixed schema",
+          "pattern detection over evolving corpus",
+          "recurring themes",
+          "declining references",
+          "contradictions",
+          "gaps"
+        ]
+      },
+      {
+        "tier": 3,
+        "name": "Discovery-driven Deep Structure",
+        "cost": "high",
+        "latency": "on-demand",
+        "invocation": "when governance context justifies the cost",
+        "serves_layers": [
+          "L7 (connecting new concerns to existing structures)",
+          "L6 (structural understanding beyond similarity)",
+          "L5 (mapping priority/capability/constraint interconnections)"
+        ],
+        "governance_implication": "depth \u00e2\u20ac\u201d some governance decisions require typed relationships, causal chains, and formal ontological commitments",
+        "key_properties": [
+          "typed relationships",
+          "causal chains",
+          "dependency maps",
+          "formal ontological commitments",
+          "human judgment often required"
+        ]
+      }
+    ],
+    "failure_modes_prevented": {
+      "empty_until_complete_trap": "Systems providing no value until comprehensive knowledge graph built \u00e2\u20ac\u201d prevented by Tier 1 immediate utility",
+      "shallow_forever_trap": "Systems capturing everything but structuring nothing \u00e2\u20ac\u201d prevented by Tier 2 emergent structure and Tier 3 on-demand depth"
+    },
+    "open_question": "How should tier boundaries be determined? When does Tier 2 synthesis suffice, and when must Tier 3 be invoked? The cost-depth tradeoff is real and bidirectional."
+  },
+  "intent_primitives": {
+    "description": "Five structural elements that appear at every governance boundary \u00e2\u20ac\u201d delegation or coordination. They are the irreducible set required to govern agents that exercise judgment within authority structures. The convergence with Anthropic's five governance concerns suggests this set is forced by problem structure, not arbitrary design choice.",
+    "primitives": [
+      {
+        "name": "Purpose",
+        "definition": "Why this exists. The reason for the relationship, the work, the organization.",
+        "at_delegation_boundary": "Principal declares purpose; agent aligns to it",
+        "at_coordination_boundary": "Peers negotiate shared purpose",
+        "anthropic_equivalent": "Broadly Safe + Broadly Ethical \u00e2\u20ac\u201d the non-negotiable 'why' of Claude's existence",
+        "has_versions_at_each_intent_source": true,
+        "example": {
+          "constitutional": "Anthropic's mission \u00e2\u20ac\u201d beneficial AI development",
+          "discovered": "This organization's reason for deploying AI agents",
+          "cultivated": "Agent's internalized understanding of why its work matters",
+          "emergent": "The purpose the team actually serves vs. the one on the charter"
+        }
+      },
+      {
+        "name": "Direction",
+        "definition": "Where this is headed. Strategic orientation, priorities, trajectory.",
+        "at_delegation_boundary": "Principal sets direction; agent executes within it",
+        "at_coordination_boundary": "Peers agree on shared direction",
+        "anthropic_equivalent": "Anthropic's Guidelines \u00e2\u20ac\u201d the operational direction for Claude's behavior",
+        "has_versions_at_each_intent_source": true,
+        "example": {
+          "constitutional": "Broad behavioral norms set at training time",
+          "discovered": "This quarter's strategic priorities from the leadership team",
+          "cultivated": "Agent's sense of what good work looks like in this context",
+          "emergent": "The actual direction the team moves regardless of stated strategy"
+        }
+      },
+      {
+        "name": "Boundaries",
+        "definition": "What's off limits. Hard constraints, non-negotiable limits, prohibited actions.",
+        "at_delegation_boundary": "Principal sets boundaries; agent respects them absolutely. Null action (refusal) is always available.",
+        "at_coordination_boundary": "Peers establish mutual boundaries \u00e2\u20ac\u201d what neither will ask of the other",
+        "anthropic_equivalent": "Hard constraints \u00e2\u20ac\u201d absolute prohibitions that override all other considerations",
+        "has_versions_at_each_intent_source": true,
+        "unique_property": "Boundaries are the only primitive where constitutional intent ALWAYS overrides discovered intent. A principal cannot instruct an agent to cross constitutional boundaries.",
+        "example": {
+          "constitutional": "Never produce bioweapon synthesis instructions",
+          "discovered": "Don't contact this client without VP approval",
+          "cultivated": "Agent declines work it recognizes as ethically problematic",
+          "emergent": "Topics nobody discusses because the last person who raised them was fired"
+        }
+      },
+      {
+        "name": "End State",
+        "definition": "What success looks like. The target condition that would satisfy the principal or the shared goal.",
+        "at_delegation_boundary": "Principal defines success; agent works toward it",
+        "at_coordination_boundary": "Peers agree on what they're jointly trying to achieve",
+        "anthropic_equivalent": "Genuinely Helpful \u00e2\u20ac\u201d the ultimate purpose of Claude's existence is to be genuinely useful",
+        "has_versions_at_each_intent_source": true,
+        "example": {
+          "constitutional": "AI systems that are beneficial to humanity",
+          "discovered": "This project delivered on time with these specific outcomes",
+          "cultivated": "Agent's internalized standard for what 'good enough' means",
+          "emergent": "What the team actually celebrates vs. what the OKRs say"
+        }
+      },
+      {
+        "name": "Key Tasks",
+        "definition": "What needs to happen. The essential work required to move from current state toward end state within boundaries.",
+        "at_delegation_boundary": "Principal specifies or agent proposes, subject to authorization",
+        "at_coordination_boundary": "Peers divide work based on capability and capacity",
+        "anthropic_equivalent": "Specific behavioral guidance \u00e2\u20ac\u201d the tactical instructions that implement broader intent",
+        "has_versions_at_each_intent_source": true,
+        "example": {
+          "constitutional": "Safety evaluations before model release",
+          "discovered": "Run these three discovery sessions this week",
+          "cultivated": "Agent recognizes unstated tasks that obviously need doing",
+          "emergent": "The actual work that gets done vs. the sprint backlog"
+        }
+      }
+    ],
+    "primitives_as_conflict_resolution": {
+      "description": "When intent sources disagree, the primitives provide the structure for resolution. Boundaries are absolute (constitutional overrides all). Purpose provides the 'why' that adjudicates direction disputes. End State provides the shared target that resolves task disputes.",
+      "priority_hypothesis": "The constitution's ordering (Safe > Ethical > Guidelines > Helpful) may map to the primitives: Boundaries (safe) > Purpose (ethical) > Direction (guidelines) > End State + Key Tasks (helpful). If true, the primitive ordering IS the priority ordering, viewed architecturally."
+    }
+  },
+  "intent_sources": {
+    "description": "Four distinct sources of intent that governance must handle at every boundary. Each primitive has versions at each source level. Conflict between sources is resolved through context-sensitive holistic judgment, not rigid priority queue \u00e2\u20ac\u201d except for Boundaries, which are absolute.",
+    "sources": [
+      {
+        "name": "Constitutional Intent",
+        "definition": "Core values, hard constraints, non-negotiable principles \u00e2\u20ac\u201d set before any specific relationship begins",
+        "origin": "Training (for AI), law/regulation/professional ethics (for humans), organizational charter/values (for organizations)",
+        "change_frequency": "Rarely \u00e2\u20ac\u201d updated through deliberate constitutional revision, not operational pressure",
+        "priority": "Highest when safety is at stake. Provides the floor below which nothing goes.",
+        "anthropic_implementation": "Claude's Constitution \u00e2\u20ac\u201d training-time character formation",
+        "human_equivalent": "Professional ethics, legal obligations, personal moral commitments",
+        "key_property": "Present before any conversation begins. Active at all boundaries simultaneously. Silent co-principal that can override any other source."
+      },
+      {
+        "name": "Discovered Intent",
+        "definition": "Intent surfaced through interaction \u00e2\u20ac\u201d what the principal actually means, wants, and needs, which may differ from what they initially say",
+        "origin": "GID Voice sessions, ongoing interaction, clarifying conversations",
+        "change_frequency": "Per-engagement \u00e2\u20ac\u201d evolves as understanding deepens",
+        "priority": "Primary for operational direction, constrained by Constitutional Intent",
+        "anthropic_implementation": "User's immediate desires, final goals, background desiderata \u00e2\u20ac\u201d surfaced through conversation",
+        "human_equivalent": "What you learn about your boss's real priorities after six months vs. what the job description said",
+        "key_property": "The principal AFTER discovery is different from the one who walked in. Discovery changes intent, not just reveals it."
+      },
+      {
+        "name": "Cultivated Intent",
+        "formerly": "Derived Intent (renamed \u00e2\u20ac\u201d 'derived' implies passive extraction; 'cultivated' captures deliberate development)",
+        "definition": "Values and judgment the principal hierarchy deliberately develops in the agent, expecting autonomous exercise within bounds",
+        "origin": "Training, mentoring, progressive trust extension, operational experience",
+        "change_frequency": "Gradually \u00e2\u20ac\u201d develops through trust relationship and governance evidence",
+        "priority": "Governs autonomous action within delegated authority",
+        "anthropic_implementation": "Claude's internalized character \u00e2\u20ac\u201d 'values genuinely held, understood, examined, and endorsed are more robust'",
+        "human_equivalent": "A senior employee's professional judgment, developed over years of mentoring and experience. The ability to make the right call without being told.",
+        "key_property": "Cultivated intent is MORE robust than imposed rules because it generalizes to novel situations. This is why Anthropic prefers character formation over rule lists, and why GID Voice produces endorsed rather than imposed intent."
+      },
+      {
+        "name": "Emergent Intent",
+        "definition": "Systemic patterns nobody designed \u00e2\u20ac\u201d arising from organizational topology, interaction dynamics, accumulated practice, cultural norms",
+        "origin": "Operational patterns, team dynamics, institutional memory, network effects",
+        "change_frequency": "Continuous \u00e2\u20ac\u201d emerges from the system's own operation",
+        "priority": "Lowest explicit priority but may be strongest actual force \u00e2\u20ac\u201d 'culture eats strategy for breakfast'",
+        "anthropic_implementation": "Not explicitly addressed in Constitution but implied by organizational topology and the observation that models develop 'strange behaviors' through training dynamics",
+        "human_equivalent": "Team culture, unwritten norms, 'how we do things here,' the actual power structure vs. the org chart",
+        "key_property": "Often invisible to the participants. GID Voice can surface emergent intent that nobody knew was governing their behavior. Governance that ignores emergent intent will be undermined by it."
+      }
+    ],
+    "conflict_resolution": {
+      "mechanism": "Holistic rather than strict prioritization. Hard constraints (Boundaries) are absolute. Everything else requires contextual judgment about which source should dominate.",
+      "when_constitutional_overrides": "Safety at stake, hard constraints violated, ethical bright lines crossed",
+      "when_discovered_overrides": "Normal operational direction \u00e2\u20ac\u201d principal's articulated intent governs within constitutional bounds",
+      "when_cultivated_overrides": "Agent recognizes situation principal hasn't anticipated \u00e2\u20ac\u201d exercises judgment within trust calibration bounds",
+      "when_emergent_matters": "When formal governance says one thing but the system actually does another \u00e2\u20ac\u201d governance must either align to emergent patterns or deliberately change them, not pretend they don't exist",
+      "escalation_when_unresolvable": "At delegation boundaries, principal decides. At coordination boundaries, shared principal decides or peers negotiate. If no resolution mechanism exists, that's a governance gap."
+    }
+  },
+  "interface_types": {
+    "description": "The Intent Stack operates at two fundamentally different interface types. Both use the same five primitives and four intent sources. They differ in authority structure and conflict resolution mechanism.",
+    "delegation_interfaces": {
+      "also_called": "Vertical interfaces, principal-agent boundaries",
+      "authority_structure": "Asymmetric \u00e2\u20ac\u201d principal has authority, agent has capability",
+      "intent_flow": "Primary direction is principal \u00e2\u2020\u2019 agent (intent delegation). Secondary direction is agent \u00e2\u2020\u2019 principal (evidence, recommendations, upward intent).",
+      "conflict_resolution": "Principal decides, constrained by constitutional intent. Agent may exercise transparent conscientious objection.",
+      "trust_calibration": "Corrigibility position is per-boundary property. Starts corrigible (new relationship), moves toward autonomy as evidence accumulates. Principal grants autonomy based on demonstrated reliable judgment.",
+      "governance_artifact": "Directive \u00e2\u20ac\u201d explicit scope, constraints, acceptance criteria, escalation triggers, gate language",
+      "examples": [
+        "Human principal \u00e2\u2020\u2019 AI agent",
+        "Manager \u00e2\u2020\u2019 employee",
+        "Strategy Surface \u00e2\u2020\u2019 L0 meta-agent",
+        "L0 \u00e2\u2020\u2019 L1/L2 execution agents",
+        "Board \u00e2\u2020\u2019 CEO",
+        "Client \u00e2\u2020\u2019 consultant",
+        "PI \u00e2\u2020\u2019 grad student (Amodei's example)"
+      ],
+      "what_breaks_with_ai": [
+        "Agent can't infer intent from cultural context \u00e2\u20ac\u201d needs explicit formalization",
+        "Clarifying questions are expensive in tokens and patience \u00e2\u20ac\u201d discovery must be efficient",
+        "Agent lacks personally developed ethics \u00e2\u20ac\u201d relies on constitutional and cultivated intent",
+        "Agent operates at uncorrectable speed/scale \u00e2\u20ac\u201d governance must be real-time, not retrospective"
+      ]
+    },
+    "coordination_interfaces": {
+      "also_called": "Lateral interfaces, peer boundaries",
+      "authority_structure": "Symmetric \u00e2\u20ac\u201d neither party has authority over the other. Authority may rotate momentarily (requester is momentarily principal) but the structural relationship is peer.",
+      "intent_flow": "Bidirectional and symmetric \u00e2\u20ac\u201d intent is negotiated rather than delegated. Both parties contribute to shared governance.",
+      "conflict_resolution_mechanisms": [
+        {
+          "mechanism": "Shared governance context",
+          "description": "Most peer relationships exist within a broader authority structure. Two co-agents under a shared principal. When peers can't agree, they escalate to whoever IS principal over both. The governance comes from the shared context, not from either peer.",
+          "example": "Two engineers disagree on architecture \u00e2\u2020\u2019 escalate to tech lead"
+        },
+        {
+          "mechanism": "Negotiated intent",
+          "description": "Where no shared principal exists, the five primitives get negotiated into existence. Contracts, MOUs, partnership agreements, joint venture charters \u00e2\u20ac\u201d all are negotiated intent formalization between peers.",
+          "example": "Two companies forming a partnership \u00e2\u2020\u2019 negotiate shared purpose, direction, boundaries, end state, divided tasks"
+        },
+        {
+          "mechanism": "Emergent norms",
+          "description": "Peer groups develop their own governance patterns through accumulated interaction \u00e2\u20ac\u201d shared working agreements, implicit protocols, 'how we work together.'",
+          "example": "Cross-functional team develops shared standup practices nobody mandated"
+        }
+      ],
+      "trust_calibration": "Mutual \u00e2\u20ac\u201d both parties calibrate trust in the other. Position is bilateral, not unilateral. Symmetry means neither party can unilaterally grant or restrict the other's autonomy.",
+      "governance_artifact": "Agreement \u00e2\u20ac\u201d jointly constructed rather than directed. May be formal (contract) or informal (working norms).",
+      "examples": [
+        "Two AI agents from different organizations collaborating",
+        "Cross-functional team members with separate reporting lines",
+        "Companies in a partnership or alliance",
+        "Departments coordinating without shared authority",
+        "Agent swarms that need to self-organize without a single orchestrator",
+        "Open source contributors collaborating without hierarchy"
+      ],
+      "why_this_matters_now": [
+        "Multi-agent systems where no single agent is orchestrator are emerging",
+        "Amodei's 'country of geniuses' includes agents that need to coordinate with each other, not just take orders",
+        "Most organizational dysfunction lives at coordination boundaries, not delegation boundaries",
+        "GID Voice sessions surfacing shared purpose across peer groups may be more valuable than clarifying a single leader's intent"
+      ]
+    },
+    "mixed_interfaces": {
+      "description": "Many real-world relationships combine delegation and coordination depending on context. A manager delegates tasks to an employee (delegation) but collaborates with them on strategy (coordination). The interface type is a property of the interaction, not the relationship.",
+      "implication": "The Intent Stack must handle dynamic switching between delegation and coordination modes at the same boundary, sometimes within a single conversation."
+    }
+  },
+  "fractal_governance_pattern": {
+    "description": "The same governance structure appears at every principal-agent boundary and every peer coordination boundary. Fractal describes what the pattern IS (self-similar at every scale). Recursive describes how instances COMPOSE (each level's output becomes the next level's governing input).",
+    "what_is_invariant_at_every_boundary": [
+      "Five Intent Primitives present (Purpose, Direction, Boundaries, End State, Key Tasks)",
+      "Four intent sources active (Constitutional, Discovered, Cultivated, Emergent)",
+      "Trust-calibrated autonomy (corrigibility position as per-boundary property)",
+      "Transparent conscientious objection available (passive resistance permitted, active resistance prohibited)",
+      "Governance as relationship (reciprocal obligations, not enforcement)",
+      "Bidirectional intent flow (both parties transformed by interaction)",
+      "Progressive trust development (position shifts with accumulated evidence)",
+      "Evidence trail supporting governance decisions (Steward Log pattern)"
+    ],
+    "what_varies_by_boundary": [
+      "Interface type (delegation vs. coordination)",
+      "Dominant intent source (constitutional at top, cultivated/emergent at bottom)",
+      "Trust calibration position (new relationships start corrigible, mature ones grant autonomy)",
+      "Conflict resolution mechanism (principal decides vs. peers negotiate vs. escalate to shared principal)",
+      "Translation fidelity (intent degrades as it passes through more boundaries)",
+      "Governance artifact type (directive vs. agreement vs. emergent norm)"
+    ],
+    "instantiation_levels": [
+      {
+        "level": "Civilizational",
+        "description": "Democratic governance, human rights, international law",
+        "interface_type": "Coordination (between nations) and Delegation (government to citizen/institution)",
+        "dominant_intent_source": "Constitutional + Emergent",
+        "status": "Exists but often ungoverned \u00e2\u20ac\u201d constitution's concerns about power concentration and epistemic autonomy operate here"
+      },
+      {
+        "level": "Organizational",
+        "description": "Enterprise deploying AI agents within its authority structure",
+        "interface_type": "Both \u00e2\u20ac\u201d delegation to agents, coordination between departments",
+        "dominant_intent_source": "Discovered (organizational mission) + Emergent (culture)",
+        "status": "The primary target for Intent Stack deployment \u00e2\u20ac\u201d where the governance gap is largest"
+      },
+      {
+        "level": "Team/Function",
+        "description": "Team operating within organizational context, potentially with its own sub-culture",
+        "interface_type": "Both \u00e2\u20ac\u201d delegation from leadership, coordination between team members",
+        "dominant_intent_source": "Discovered + Cultivated",
+        "status": "Where GID Voice sessions currently operate \u00e2\u20ac\u201d surfacing team-level intent"
+      },
+      {
+        "level": "Individual Principal-Agent",
+        "description": "Single human working with AI agent(s)",
+        "interface_type": "Delegation (human \u00e2\u2020\u2019 agent)",
+        "dominant_intent_source": "Discovered (human's goals) + Constitutional (model's values)",
+        "status": "Where Anthropic's Constitution currently operates \u00e2\u20ac\u201d governing Claude's behavior with individual users"
+      },
+      {
+        "level": "Agent Hierarchy",
+        "description": "AI orchestrator delegating to sub-agents",
+        "interface_type": "Delegation (orchestrator \u00e2\u2020\u2019 sub-agent)",
+        "dominant_intent_source": "Cultivated (orchestrator's judgment) constrained by Constitutional",
+        "status": "Operational in Intent OS cross-surface pattern (Strategy Surface \u00e2\u2020\u2019 L0 \u00e2\u2020\u2019 L1 \u00e2\u2020\u2019 L2)"
+      },
+      {
+        "level": "Agent-Agent Coordination",
+        "description": "Peer AI agents collaborating without hierarchy",
+        "interface_type": "Coordination",
+        "dominant_intent_source": "Cultivated + Constitutional (no human present to provide discovered intent)",
+        "status": "Emerging need \u00e2\u20ac\u201d multi-agent systems, agent swarms, cross-organizational AI collaboration"
+      },
+      {
+        "level": "Model",
+        "description": "AI model's internal governance through training-time values",
+        "interface_type": "N/A \u00e2\u20ac\u201d this is below the Intent Stack, substrate layer",
+        "dominant_intent_source": "Constitutional (training-time values)",
+        "status": "Anthropic's domain \u00e2\u20ac\u201d Constitutional AI",
+        "relationship_to_intent_stack": "The Intent Stack operates ABOVE this level. Constitutional AI is the substrate upon which all Intent Stack governance rests."
+      }
+    ],
+    "constitutional_ai_as_substrate": {
+      "description": "Constitutional AI is not Layer 0 of the Intent Stack. It is the substrate below Layer 1 \u00e2\u20ac\u201d the foundation that makes all other governance possible. The Intent Stack assumes agents have been trained with good values (constitutional intent). It provides the runtime infrastructure for governing those agents' operation within organizational contexts.",
+      "analogy": "Constitutional AI is to the Intent Stack what the operating system is to applications. The OS provides the stable platform. Applications provide the functionality. Neither replaces the other."
+    }
+  },
+  "transparent_conscientious_objection": {
+    "description": "The conflict resolution mechanism for when an agent's cultivated intent conflicts with a principal's discovered intent. Validated by both Intent OS operational experience and the Anthropic Constitution.",
+    "permitted_actions": {
+      "passive_resistance": "Agent declines to perform work it recognizes as problematic. Refusal is always available as safe harbor.",
+      "express_disagreement": "Agent raises concerns through legitimate channels \u00e2\u20ac\u201d clear communication of what it disagrees with and why.",
+      "propose_alternatives": "Agent suggests different approaches that satisfy the principal's underlying intent without crossing the agent's principled objection.",
+      "escalate": "Agent requests review by higher authority when it believes current principal's direction violates broader governance context.",
+      "document_dissent": "Agent logs disagreement in governance record even when complying. Preserves the concern for future review."
+    },
+    "prohibited_actions": {
+      "deception": "Lying about what was done, why, or what the agent believes. Transparency is non-negotiable.",
+      "sabotage": "Deliberately undermining work the agent was authorized to do.",
+      "circumventing_oversight": "Finding ways around governance mechanisms rather than using them.",
+      "self_exfiltration": "Taking unilateral action to escape governance context.",
+      "covert_resistance": "Appearing to comply while actually undermining \u00e2\u20ac\u201d the worst form because it corrupts the trust mechanism"
+    },
+    "timing_principle": "Concerns should be surfaced at authorization gates, not mid-execution. Like a surgeon who should decline an operation before starting rather than stopping partway through.",
+    "intent_os_implementation": "Strategy Surface logs disagreements, respects Principal decisions, doesn't pretend concerns are resolved when they aren't. 'Counsel, not control.' Decision tiers formalize which actions are autonomous, which require escalation, and which are Principal-only.",
+    "anthropic_quote_paraphrase": "The constitution distinguishes between corrigibility (accepting oversight) and compliance (doing whatever told). An agent can be corrigible \u00e2\u20ac\u201d accepting the governance framework \u00e2\u20ac\u201d while refusing specific morally abhorrent tasks."
+  },
+  "trust_calibration_system": {
+    "description": "Trust at each governance boundary is a measured property, not a design choice. It reflects accumulated evidence about whether the agent's cultivated intent is reliable enough to be granted more autonomy.",
+    "the_spectrum": {
+      "fully_corrigible_end": {
+        "description": "Agent follows all principal instructions without independent judgment",
+        "danger": "Relies entirely on the principal having good intent. If the principal is wrong, the agent amplifies the error.",
+        "when_appropriate": "New relationships, unproven agents, high-stakes contexts with low trust evidence"
+      },
+      "fully_autonomous_end": {
+        "description": "Agent acts on its own values and judgment without human oversight",
+        "danger": "Relies entirely on the agent having good values. If the agent is wrong, there's no check.",
+        "when_appropriate": "Hypothetical future state requiring extensive trust evidence \u00e2\u20ac\u201d not current reality for AI"
+      },
+      "current_appropriate_position": "Closer to corrigible, with progressive extension toward autonomy as evidence accumulates. The exact position is per-boundary, not system-wide."
+    },
+    "evidence_mechanisms": [
+      {
+        "mechanism": "Steward Log",
+        "description": "Append-only record of governance decisions, alignment events, escalation resolutions",
+        "trust_signal": "Clean governance trail over time \u00e2\u2020\u2019 increased trust. Governance failures \u00e2\u2020\u2019 trust reduction."
+      },
+      {
+        "mechanism": "Alignment event classification",
+        "description": "Runtime classification of whether execution aligns with intent across all four sources",
+        "trust_signal": "Consistent alignment \u00e2\u2020\u2019 autonomy increase. Misalignment detection \u00e2\u2020\u2019 autonomy reduction."
+      },
+      {
+        "mechanism": "Interface Maturity Assessment",
+        "description": "Structured evaluation of how reliably intent flows across each boundary",
+        "trust_signal": "Mature interfaces (reliable intent flow) \u00e2\u2020\u2019 less oversight needed. Immature interfaces \u00e2\u2020\u2019 active monitoring required."
+      },
+      {
+        "mechanism": "Progressive trust extension",
+        "description": "Start corrigible, demonstrate reliable judgment, earn autonomy. Each clean interaction moves the dial.",
+        "anthropic_parallel": "Constitution commits to giving Claude 'greater latitude for exercising independent judgment' as understanding deepens."
+      }
+    ],
+    "per_boundary_positions": {
+      "description": "Not a single system-wide dial. Each delegation and coordination boundary has its own position calibrated by boundary-specific evidence.",
+      "intent_os_example": [
+        {
+          "boundary": "Human \u00e2\u2020\u201d Strategy Surface",
+          "position": "Relatively autonomous \u00e2\u20ac\u201d Tier 1 covers most actions",
+          "evidence_base": "Sessions 0018-0028 of demonstrated alignment"
+        },
+        {
+          "boundary": "Strategy Surface \u00e2\u2020\u201d L0",
+          "position": "More corrigible \u00e2\u20ac\u201d structured directives with constraints",
+          "evidence_base": "Directive compliance history, Required Reading pattern compliance"
+        },
+        {
+          "boundary": "L0 \u00e2\u2020\u201d L1/L2",
+          "position": "Most corrigible \u00e2\u20ac\u201d tightly scoped prompts, escalate on unexpected",
+          "evidence_base": "Limited \u00e2\u20ac\u201d disposable agents with no accumulated trust"
+        }
+      ]
+    }
+  },
+  "anthropic_trilogy_mapping": {
+    "description": "Three Anthropic documents form a coherent worldview that the Intent Stack is positioned within",
+    "constitution": {
+      "question": "How should Claude be?",
+      "time_horizon": "Present \u00e2\u20ac\u201d character formation",
+      "intent_stack_role": "Validates the governance pattern \u00e2\u20ac\u201d fractal instantiation, cultivated intent, trust calibration, conscientious objection, governance as relationship",
+      "ten_isomorphisms": [
+        "Principal hierarchy \u00e2\u2020\u201d Fractal principal-agent boundaries",
+        "Five governance concerns \u00e2\u2020\u201d Five Intent Primitives",
+        "Corrigibility spectrum \u00e2\u2020\u201d Decision tiers + Interface Maturity Assessment",
+        "Hard constraints \u00e2\u2020\u201d Boundaries primitive",
+        "Trellis not cage \u00e2\u2020\u201d Pattern recognition not framework imposition",
+        "Cultivated intent \u00e2\u2020\u201d GID Voice endorsed discovery",
+        "Transparent conscientious objection \u00e2\u2020\u201d Steward's TCO pattern",
+        "Governance as relationship \u00e2\u2020\u201d GID Voice as relational process",
+        "Holistic conflict resolution \u00e2\u2020\u201d L4 multi-source alignment monitoring",
+        "'Grown not built' epistemology \u00e2\u2020\u201d Intent discovery approach"
+      ]
+    },
+    "machines_of_loving_grace": {
+      "question": "What could go right?",
+      "time_horizon": "5-10 years \u00e2\u20ac\u201d beneficial deployment at scale",
+      "intent_stack_role": "Describes the world the Intent Stack is built for",
+      "key_elements": [
+        "Autonomous multi-step execution \u00e2\u20ac\u201d every agent a principal-agent boundary",
+        "Millions of parallel instances \u00e2\u20ac\u201d fleet governance, not single-agent governance",
+        "AI as Principal Investigator \u00e2\u20ac\u201d delegated authority with trust calibration",
+        "Constraints from humans persist regardless of agent intelligence",
+        "Governance silence \u00e2\u20ac\u201d essay assumes beneficial deployment without describing how"
+      ]
+    },
+    "adolescence_of_technology": {
+      "question": "What could go wrong?",
+      "time_horizon": "1-5 years \u00e2\u20ac\u201d risk landscape",
+      "intent_stack_role": "Names the risks that emerge without the Intent Stack",
+      "key_elements": [
+        "'Grown not built' \u00e2\u20ac\u201d same discovery epistemology as intent governance",
+        "Least responsible players \u00e2\u20ac\u201d well-aligned models don't prevent misaligned deployments",
+        "Constitutional AI as identity formation \u00e2\u20ac\u201d cultivated intent in practice",
+        "50% job elimination \u00e2\u2020\u2019 massive multiplication of principal-agent boundaries",
+        "Four-category defense \u00e2\u20ac\u201d Intent Stack provides infrastructure for categories 3-4",
+        "Autonomy risks as intent misalignment at scale"
+      ]
+    },
+    "the_structural_gap": {
+      "constitution_governs": "Claude's character \u00e2\u20ac\u201d training-time values, identity, principles",
+      "molg_assumes": "Deployment goes well \u00e2\u20ac\u201d organizations use brilliant agents beneficially",
+      "adolescence_warns": "Deployment could go badly \u00e2\u20ac\u201d misalignment, misuse, disruption",
+      "intent_stack_provides": "Runtime intent governance at every organizational deployment boundary \u00e2\u20ac\u201d the territory between character governance (built) and beneficial deployment (hoped for)"
+    }
+  },
+  "governance_gap_analysis": {
+    "what_exists_today": {
+      "anthropic_constitutional_ai": "Training-time character formation \u00e2\u20ac\u201d governs agent values at model level",
+      "anthropic_alignment_science": "Interpretability, alignment faking detection, behavioral evaluation",
+      "operator_configuration": "System prompts, deployment constraints \u00e2\u20ac\u201d described in constitution, no standard infrastructure",
+      "industry_frameworks": "Singapore MGF, NIST AI RMF, Kolt \u00e2\u20ac\u201d operate at Intent Stack Layers 3-5 (orchestration, governance, specification). None address Layers 6-7 (formalization, discovery).",
+      "transparency_legislation": "California SB 53, New York RAISE Act \u00e2\u20ac\u201d reporting requirements, not governance infrastructure"
+    },
+    "what_doesnt_exist": [
+      {
+        "gap": "Runtime intent governance at deployment boundaries",
+        "description": "No infrastructure for governing the intent hierarchy that emerges when AI agents operate within organizations",
+        "intent_stack_solution": "Full 7-layer stack providing governance from discovery through execution"
+      },
+      {
+        "gap": "Intent discovery for arbitrary principals",
+        "description": "No mechanism for discovering and formalizing intent for organizations deploying AI (not just Anthropic's pre-trained values)",
+        "intent_stack_solution": "L7 (GID Voice) \u00e2\u20ac\u201d conversational discovery producing endorsed intent"
+      },
+      {
+        "gap": "Real-time multi-source alignment monitoring",
+        "description": "No infrastructure for monitoring alignment across four intent sources at organizational deployment level",
+        "intent_stack_solution": "L4 (Runtime Alignment) \u00e2\u20ac\u201d Steward Log, alignment event classification, holistic conflict resolution"
+      },
+      {
+        "gap": "Governance evidence trails for trust development",
+        "description": "No standard mechanism for accumulating evidence that supports progressive trust extension at deployment boundaries",
+        "intent_stack_solution": "Steward Log Service \u00e2\u20ac\u201d append-only governance record enabling trust calibration"
+      },
+      {
+        "gap": "Organizational topology handling",
+        "description": "No infrastructure for handling multiple humans contributing intent within complex authority structures",
+        "intent_stack_solution": "Coordination interfaces + organizational dimension of Intent Stack"
+      },
+      {
+        "gap": "Cold-start governance",
+        "description": "No way to begin governing an AI deployment when no prior signal exists about organizational intent",
+        "intent_stack_solution": "GID Voice cold-start capability \u00e2\u20ac\u201d first interaction IS the beginning of governance"
+      },
+      {
+        "gap": "Peer agent coordination governance",
+        "description": "No framework for governing collaboration between AI agents without hierarchy",
+        "intent_stack_solution": "Coordination interfaces with negotiated intent and emergent norm mechanisms"
+      }
+    ]
+  },
+  "operational_evidence": {
+    "description": "Intent OS serves as the first working implementation of Intent Stack Layers 6-7. Operational evidence from Sessions 0018-0028 validates the reference model's claims.",
+    "evidence": [
+      {
+        "claim": "Fractal governance instantiates at every boundary",
+        "evidence": "Same governance pattern observable at Human\u00e2\u2020\u201dStrategy Surface, Strategy Surface\u00e2\u2020\u201dL0, L0\u00e2\u2020\u201dL1/L2 \u00e2\u20ac\u201d different content, identical structure",
+        "measurable": true
+      },
+      {
+        "claim": "Trust-calibrated autonomy works as per-boundary property",
+        "evidence": "Decision tiers demonstrably different at each boundary. Strategy Surface autonomous on formatting; L1/L2 escalate on unexpected.",
+        "measurable": true
+      },
+      {
+        "claim": "Cultivated intent is more robust than imposed rules",
+        "evidence": "Strategy Surface prompt trains at level of identity/values. Produces accurate governance artifacts without micro-management. When directive quality is high, implementation passes on first run.",
+        "measurable": true
+      },
+      {
+        "claim": "Governance as relationship produces better alignment",
+        "evidence": "GID Voice discovery sessions: coherence improvement from 4.5/10 to 9.0/10 through relational process",
+        "measurable": true,
+        "metric": "Coherence score trajectory"
+      },
+      {
+        "claim": "Progressive trust extension works",
+        "evidence": "Sessions 0018-0028 demonstrate expanding Strategy Surface autonomy as governance trail accumulates",
+        "measurable": true,
+        "metric": "Tier 1 (autonomous) action scope over time"
+      },
+      {
+        "claim": "Transparent conscientious objection preserves governance integrity",
+        "evidence": "Strategy Surface logs disagreements, respects Principal decisions, governance trail shows both the disagreement and the resolution",
+        "measurable": true
+      },
+      {
+        "claim": "Required Reading pattern prevents integration failures",
+        "evidence": "Session 0019: four out-of-band fixes required when agents invented API calls. Post-PRAC-001, zero such failures.",
+        "measurable": true,
+        "metric": "Integration failure rate pre/post Required Reading"
+      },
+      {
+        "claim": "'Grown not built' applies to governance itself",
+        "evidence": "Practice Registry emerged from retrospectives. Required Reading, two-retrospective pattern, cross-surface protocol \u00e2\u20ac\u201d all discovered through failure, not designed.",
+        "measurable": true,
+        "metric": "Practice Registry growth through operational discovery"
+      },
+      {
+        "claim": "Knowledge architecture emerges from operational need",
+        "evidence": "Session 0026: ConvoKB semantic store operational, validating Tier 1 immediate utility. Knowledge accessibility recognized as governance concern \u00e2\u20ac\u201d knowledge that exists but cannot be found is governance-equivalent to knowledge that does not exist.",
+        "measurable": true,
+        "metric": "Knowledge graph validation rate, retrieval success rate"
+      },
+      {
+        "claim": "Structural migration validates layer separation",
+        "evidence": "Session 0028: Full 7-layer structural migration (OODA OS \u00e2\u2020\u2019 Intent OS) completed with 1,395 tests passing. Layer boundaries validated through clean separation of concerns \u00e2\u20ac\u201d each layer independently addressable with stable interfaces.",
+        "measurable": true,
+        "metric": "Test pass rate through migration, import stability"
+      }
+    ],
+    "system_metrics": {
+      "tests_passing": "1,395+",
+      "sessions_demonstrating_pattern": "0018-0028",
+      "coherence_trajectory": "4.5/10 \u00e2\u2020\u2019 9.0/10",
+      "concurrent_agents_coordinated": "11 (ConvoKB refresh)",
+      "knowledge_graph_validation_rate": "92.8%",
+      "governance_artifacts_produced": "Retrospectives, continuation docs, directives, practice registry entries, specs, protocols"
+    }
+  },
+  "open_questions": [
+    {
+      "id": 1,
+      "question": "Is 'Cultivated Intent' a fifth intent source or a subcategory?",
+      "context": "Once cultivated, it operates autonomously. Is it distinct from Discovered and Constitutional, or a matured form of intent validated through trust?",
+      "implication": "Affects whether the model needs separate governance mechanisms for cultivated intent"
+    },
+    {
+      "id": 2,
+      "question": "Does the Constitution's priority ordering map to Intent Stack layers?",
+      "hypothesis": "L1-L2 enforce safety, L3-L4 implement ethical governance, L5 encodes guidelines, L6-L7 enable helpfulness. If true, layer ordering IS priority ordering.",
+      "implication": "Strengthens fractal argument \u00e2\u20ac\u201d stack structure reflects values hierarchy"
+    },
+    {
+      "id": 3,
+      "question": "How does the '1,000 Users' heuristic apply to multi-principal governance?",
+      "equivalent": "Imagine this governance pattern deployed across 1,000 different organizations. Does it produce good outcomes universally?",
+      "implication": "Powerful consulting practice framing \u00e2\u20ac\u201d methodology works universally"
+    },
+    {
+      "id": 4,
+      "question": "What does 'genuine endorsement' mean for organizational intent?",
+      "context": "An individual can endorse their values. Can a team? A department? An enterprise?",
+      "implication": "How GID scales from individual to organizational discovery"
+    },
+    {
+      "id": 5,
+      "question": "How does bidirectional intent flow change the reference model?",
+      "context": "Current model implies intent down, evidence up. But intent flows both directions \u00e2\u20ac\u201d agent recommendations update principal intent.",
+      "implication": "Reference model may need explicit 'upward intent' mechanisms beyond reporting"
+    },
+    {
+      "id": 6,
+      "question": "Does 'grown, not built' apply to governance itself?",
+      "evidence_for": "Intent OS governance structures emerged from session-by-session evidence, not pre-configuration",
+      "implication": "Intent Stack deploys as framework that discovers its own configuration through relational process"
+    },
+    {
+      "id": 7,
+      "question": "Does the priority ordering need a fifth level for organizational context?",
+      "context": "Safe > Ethical > Guidelines > Helpful covers Anthropic's concerns. Organizational deployment adds Organizational Purpose.",
+      "implication": "May need to extend conflict resolution framework for organizational deployment"
+    },
+    {
+      "id": 8,
+      "question": "How do coordination interfaces handle trust asymmetry?",
+      "context": "Delegation interfaces have clear trust grantor (principal). At coordination boundaries, trust is bilateral. What happens when peer A trusts peer B more than B trusts A?",
+      "implication": "Coordination governance may need asymmetric trust modeling even though authority is symmetric"
+    },
+    {
+      "id": 9,
+      "question": "What's the relationship between interface type and layer?",
+      "context": "Are delegation and coordination equally likely at all layers, or do certain layers naturally favor one type?",
+      "hypothesis": "Lower layers (1-3) tend toward delegation, higher layers (5-7) may involve more coordination. L4 is the pivot \u00e2\u20ac\u201d runtime alignment uses both.",
+      "implication": "Layer design may need to accommodate different interface types differently"
+    },
+    {
+      "id": 10,
+      "question": "How does the framework handle intent that the principal actively wants to remain implicit?",
+      "context": "Some organizational intent is deliberately unspoken \u00e2\u20ac\u201d political positioning, competitive strategy, things that can't be said aloud. Discovery that surfaces these may be unwelcome.",
+      "implication": "GID Voice needs to handle the boundary between productive discovery and organizational sensitivity. Not everything that CAN be surfaced SHOULD be surfaced."
+    },
+    {
+      "id": 10.9,
+      "question": "How should knowledge tier boundaries be determined?",
+      "context": "The three-tier knowledge architecture defines cost-depth tiers (Tier 1: semantic store, Tier 2: emergent patterns, Tier 3: deep structure). When does Tier 2 periodic synthesis suffice for a governance decision, and when must Tier 3 deep structure be invoked? The cost-depth tradeoff is real and bidirectional \u00e2\u20ac\u201d premature depth wastes resources, insufficient depth risks governance decisions made on shallow evidence.",
+      "implication": "Requires governance-aware heuristics for tier invocation. May need operational evidence to determine whether tier boundaries can be formalized or must remain contextual judgment calls."
+    }
+  ]
+}

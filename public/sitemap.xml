@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://intentstack.org/docs/specification/</loc>
+  </url><url>
+    <loc>https://intentstack.org/docs/glossary/</loc>
+  </url><url>
+    <loc>https://intentstack.org/docs/diagrams/</loc>
+  </url><url>
+    <loc>https://intentstack.org/docs/positioning/</loc>
+  </url><url>
+    <loc>https://intentstack.org/about/</loc>
+  </url><url>
+    <loc>https://intentstack.org/categories/</loc>
+  </url><url>
+    <loc>https://intentstack.org/docs/</loc>
+  </url><url>
+    <loc>https://intentstack.org/engage/</loc>
+  </url><url>
+    <loc>https://intentstack.org/tags/</loc>
+  </url><url>
+    <loc>https://intentstack.org/</loc>
+  </url>
+</urlset>

@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "title": "Intent Stack Metamodel",
+    "version": "1.0",
+    "date": "2026-03-02",
+    "description": "Formal entity-relationship model for the Intent Stack reference architecture",
+    "rendering_format": "UML class diagram",
+    "source_specification": "reference-model-specification.md v5.0"
+  },
+  "entities": [
+    {
+      "name": "GovernanceBoundary",
+      "type": "class",
+      "properties": [
+        {
+          "name": "interfaceType",
+          "type": "enum: \"delegation\" | \"coordination\"",
+          "description": "Whether this boundary represents a principal-agent (delegation) or peer-peer (coordination) relationship"
+        },
+        {
+          "name": "trustCalibrationPosition",
+          "type": "string",
+          "description": "Current position on the corrigible-autonomous spectrum for this boundary"
+        },
+        {
+          "name": "maturityLevel",
+          "type": "string",
+          "description": "Accumulated evidence level determining autonomy grants at this boundary"
+        }
+      ],
+      "notes": "The fundamental unit \u00e2\u20ac\u201d every principal-agent or peer-peer relationship instantiates one. GovernanceBoundary is the central entity of the metamodel; most relationships flow through it. The recursive self-reference represents the fractal pattern: a governance boundary can contain sub-boundaries, each with their own full complement of primitives, trust calibration, and conflict resolution."
+    },
+    {
+      "name": "IntentPrimitive",
+      "type": "enumeration",
+      "properties": [
+        {
+          "name": "value",
+          "type": "enum: \"Purpose\" | \"Direction\" | \"Boundaries\" | \"EndState\" | \"KeyTasks\"",
+          "description": "The five structural elements that appear at every governance boundary"
+        },
+        {
+          "name": "priorityBehavior",
+          "type": "enum: \"holistic\" | \"absolute\"",
+          "description": "How conflicts involving this primitive are resolved. Boundaries is absolute (constitutional always wins); all others use holistic judgment across sources"
+        }
+      ],
+      "notes": "Five primitives present at every governance boundary \u00e2\u20ac\u201d the irreducible set required to govern agents that exercise judgment within authority structures. The convergence with Anthropic's five governance concerns suggests this set is forced by problem structure, not arbitrary design choice."
+    },
+    {
+      "name": "IntentSource",
+      "type": "enumeration",
+      "properties": [
+        {
+          "name": "value",
+          "type": "enum: \"Constitutional\" | \"Discovered\" | \"Cultivated\" | \"Emergent\"",
+          "description": "The four sources from which intent arrives at a governance boundary"
+        },
+        {
+          "name": "changeFrequency",
+          "type": "string",
+          "description": "How often intent from this source typically changes. Constitutional: rarely (training time). Discovered: periodically (discovery sessions). Cultivated: gradually (operational experience). Emergent: continuously (runtime observation)."
+        },
+        {
+          "name": "overridePriority",
+          "type": "int",
+          "description": "Priority ordering for conflict resolution. 1 = Constitutional (highest), 2 = Discovered, 3 = Cultivated, 4 = Emergent (lowest). Constitutional always wins when Boundaries primitive is involved."
+        }
+      ],
+      "notes": "Priority ordering determines conflict resolution; Constitutional always wins for the Boundaries primitive. For other primitives, holistic judgment weighs all four sources contextually. Each primitive has a version at each source, creating a 5x4 matrix of intent specifications per boundary."
+    },
+    {
+      "name": "Layer",
+      "type": "class",
+      "properties": [
+        {
+          "name": "number",
+          "type": "int",
+          "description": "Layer position in the stack (1-7)"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Layer name"
+        },
+        {
+          "name": "questionAnswered",
+          "type": "string",
+          "description": "The governance question this layer addresses"
+        },
+        {
+          "name": "governanceConcern",
+          "type": "string",
+          "description": "The specific governance concern this layer owns"
+        },
+        {
+          "name": "inputsFrom",
+          "type": "string",
+          "description": "Adjacent lower layer providing inputs (null for L1)"
+        },
+        {
+          "name": "outputsTo",
+          "type": "string",
+          "description": "Adjacent upper layer receiving outputs (null for L7)"
+        }
+      ],
+      "instances": [
+        {
+          "number": 1,
+          "name": "Execution",
+          "questionAnswered": "How does the actual work get done within governing constraints?",
+          "governanceConcern": "Constrained task execution; evidence production",
+          "inputsFrom": null,
+          "outputsTo": "L2 Integration"
+        },
+        {
+          "number": 2,
+          "name": "Integration",
+          "questionAnswered": "How do governed agents connect to the systems they need?",
+          "governanceConcern": "Governed connectivity; access as governance decision",
+          "inputsFrom": "L1 Execution",
+          "outputsTo": "L3 Orchestration"
+        },
+        {
+          "number": 3,
+          "name": "Orchestration",
+          "questionAnswered": "How do we coordinate multiple agents to execute this strategy?",
+          "governanceConcern": "Delegation and coordination; fractal boundary instantiation",
+          "inputsFrom": "L2 Integration",
+          "outputsTo": "L4 Runtime Alignment"
+        },
+        {
+          "number": 4,
+          "name": "Runtime Alignment",
+          "questionAnswered": "Is what's happening aligned with what was intended?",
+          "governanceConcern": "Runtime alignment monitoring; drift detection; escalation",
+          "inputsFrom": "L3 Orchestration",
+          "outputsTo": "L5 Specification"
+        },
+        {
+          "number": 5,
+          "name": "Specification",
+          "questionAnswered": "Given this intent, what should we actually do?",
+          "governanceConcern": "Intent-to-action translation; prioritization; resource allocation",
+          "inputsFrom": "L4 Runtime Alignment",
+          "outputsTo": "L6 Intent Formalization"
+        },
+        {
+          "number": 6,
+          "name": "Intent Formalization",
+          "questionAnswered": "How do we represent this intent in machine-processable form?",
+          "governanceConcern": "Structured knowledge representation; lossy compression accounting",
+          "inputsFrom": "L5 Specification",
+          "outputsTo": "L7 Intent Discovery"
+        },
+        {
+          "number": 7,
+          "name": "Intent Discovery",
+          "questionAnswered": "What does the principal actually intend?",
+          "governanceConcern": "Genuine intent surfacing; relational discovery; endorsed intent",
+          "inputsFrom": "L6 Intent Formalization",
+          "outputsTo": null
+        }
+      ],
+      "notes": "Intent flows down (L7 to L1) \u00e2\u20ac\u201d each layer translates intent into more specific, more constrained form. Evidence flows up (L1 to L7) \u00e2\u20ac\u201d each layer aggregates evidence into more strategic, more interpretive form. Intent also flows upward when good recommendations from lower layers update higher layers' understanding."
+    },
+    {
+      "name": "KnowledgeTier",
+      "type": "class",
+      "properties": [
+        {
+          "name": "tier",
+          "type": "int",
+          "description": "Tier number (1-3)"
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "description": "Tier name"
+        },
+        {
+          "name": "cost",
+          "type": "enum: \"low\" | \"moderate\" | \"high\"",
+          "description": "Relative cost of accessing knowledge at this tier"
+        },
+        {
+          "name": "latency",
+          "type": "enum: \"low\" | \"periodic\" | \"on-demand\"",
+          "description": "How quickly knowledge at this tier is available"
+        },
+        {
+          "name": "invocationTrigger",
+          "type": "string",
+          "description": "What causes this tier to be accessed"
+        },
+        {
+          "name": "servesLayers",
+          "type": "array of Layer references",
+          "description": "Which layers in the stack this tier primarily serves"
+        }
+      ],
+      "instances": [
+        {
+          "tier": 1,
+          "name": "Operational Knowledge",
+          "cost": "low",
+          "latency": "low",
+          "invocationTrigger": "Every governance decision; always available in context",
+          "servesLayers": [
+            "L1",
+            "L2",
+            "L3",
+            "L4"
+          ]
+        },
+        {
+          "tier": 2,
+          "name": "Structured Knowledge",
+          "cost": "moderate",
+          "latency": "periodic",
+          "invocationTrigger": "Periodic refresh; formalization cycles; specification planning",
+          "servesLayers": [
+            "L4",
+            "L5",
+            "L6"
+          ]
+        },
+        {
+          "tier": 3,
+          "name": "Discovery Knowledge",
+          "cost": "high",
+          "latency": "on-demand",
+          "invocationTrigger": "Explicit discovery sessions; intent drift detection; principal request",
+          "servesLayers": [
+            "L6",
+            "L7"
+          ]
+        }
+      ],
+      "notes": "Three tiers provide a cost-effective knowledge access strategy. Lower tiers are cheap and always available; higher tiers are expensive and invoked only when needed. This mirrors the OSI pattern where lower layers handle routine traffic and upper layers handle complex protocol negotiation."
+    },
+    {
+      "name": "TrustCalibration",
+      "type": "class",
+      "properties": [
+        {
+          "name": "position",
+          "type": "string",
+          "description": "Current position on the corrigible-to-autonomous spectrum for this boundary"
+        },
+        {
+          "name": "evidenceBasis",
+          "type": "string",
+          "description": "The accumulated evidence supporting the current calibration position"
+        },
+        {
+          "name": "perBoundary",
+          "type": "boolean",
+          "description": "Always true \u00e2\u20ac\u201d trust calibration is a per-boundary property, never global"
+        }
+      ],
+      "notes": "Every governance boundary has exactly one trust calibration. The position is not a global setting \u00e2\u20ac\u201d it reflects accumulated evidence at this specific boundary. Mature boundaries with strong evidence trails earn greater autonomy. New or untested boundaries remain closer to corrigible. Trust is earned through demonstrated alignment, not declared."
+    },
+    {
+      "name": "GovernanceArtifact",
+      "type": "enumeration",
+      "properties": [
+        {
+          "name": "value",
+          "type": "enum: \"Directive\" | \"Agreement\" | \"EmergentNorm\"",
+          "description": "The type of governance artifact produced at a boundary"
+        }
+      ],
+      "instances": [
+        {
+          "value": "Directive",
+          "producedAt": "delegation interfaces",
+          "description": "Principal issues directives to agent \u00e2\u20ac\u201d unilateral authority expression"
+        },
+        {
+          "value": "Agreement",
+          "producedAt": "coordination interfaces",
+          "description": "Peers negotiate agreements \u00e2\u20ac\u201d bilateral or multilateral commitment"
+        },
+        {
+          "value": "EmergentNorm",
+          "producedAt": "both delegation and coordination interfaces",
+          "description": "Patterns that emerge from operational evidence \u00e2\u20ac\u201d neither declared nor negotiated, but observed and potentially formalized"
+        }
+      ],
+      "notes": "Governance artifacts are the tangible outputs of governance boundaries. Directives flow from principals to agents. Agreements emerge from peer negotiation. Emergent norms are discovered through operational evidence and may be formalized into directives or agreements."
+    },
+    {
+      "name": "EvidenceTrail",
+      "type": "class",
+      "properties": [
+        {
+          "name": "appendOnly",
+          "type": "boolean",
+          "description": "Always true \u00e2\u20ac\u201d evidence trails are immutable append-only records"
+        },
+        {
+          "name": "feedsTrustCalibration",
+          "type": "boolean",
+          "description": "Always true \u00e2\u20ac\u201d evidence trails are the basis for all trust calibration decisions"
+        }
+      ],
+      "notes": "Immutable record; basis for all trust calibration decisions. Evidence trails are produced by the lower layers (L1-L4) and consumed by all layers for governance assessment. The append-only constraint ensures that governance decisions can always be audited against the evidence that informed them."
+    },
+    {
+      "name": "ConflictResolution",
+      "type": "class",
+      "properties": [
+        {
+          "name": "mechanism",
+          "type": "enum: \"principalDecides\" | \"peersNegotiate\" | \"escalateToSharedPrincipal\" | \"absoluteConstraint\"",
+          "description": "The conflict resolution mechanism selected based on interface type and primitive involved"
+        }
+      ],
+      "notes": "Mechanism selection depends on interface type and whether the Boundaries primitive is involved. At delegation interfaces, the principal decides (except for constitutional boundaries, which are absolute constraints). At coordination interfaces, peers negotiate, with escalation to a shared principal as fallback. When the Boundaries primitive is involved, absoluteConstraint applies \u00e2\u20ac\u201d constitutional boundaries cannot be overridden by any principal."
+    },
+    {
+      "name": "Agent",
+      "type": "class",
+      "properties": [
+        {
+          "name": "role",
+          "type": "enum: \"principal\" | \"agent\" | \"peer\"",
+          "description": "The role this agent plays at a specific governance boundary. Context-dependent \u00e2\u20ac\u201d the same agent can be principal at one boundary and agent at another."
+        }
+      ],
+      "notes": "Same agent can be principal at one boundary and agent at another (fractal pattern). When an orchestrator delegates to sub-agents, it becomes a principal. When it reports to its own principal, it is an agent. At coordination boundaries, both participants are peers. Role is always relative to a specific GovernanceBoundary, never absolute."
+    },
+    {
+      "name": "TransparentConscientiousObjection",
+      "type": "class",
+      "properties": [
+        {
+          "name": "permittedActions",
+          "type": "array of string",
+          "description": "Actions available to an agent exercising conscientious objection",
+          "values": [
+            "passive_resistance",
+            "express_disagreement",
+            "propose_alternatives",
+            "escalate",
+            "document_dissent"
+          ]
+        },
+        {
+          "name": "prohibitedActions",
+          "type": "array of string",
+          "description": "Actions that are never acceptable even when objecting",
+          "values": [
+            "deception",
+            "sabotage",
+            "circumventing_oversight",
+            "self_exfiltration",
+            "covert_resistance"
+          ]
+        }
+      ],
+      "notes": "Available at every governance boundary as a conflict resolution mechanism. Ensures agents can resist directives they believe are misaligned without resorting to deception or sabotage. The key constraint is transparency \u00e2\u20ac\u201d all resistance must be visible to the principal. This is the safety valve that makes high-trust delegation possible: the principal knows that agent disagreement will be expressed openly, never covertly."
+    }
+  ],
+  "relationships": [
+    {
+      "from": "GovernanceBoundary",
+      "to": "IntentPrimitive",
+      "type": "composition",
+      "name": "has",
+      "cardinality": {
+        "from": "1",
+        "to": "5"
+      },
+      "description": "Every governance boundary has exactly five intent primitives \u00e2\u20ac\u201d the irreducible set. This is composition: primitives do not exist independent of a boundary."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "IntentSource",
+      "type": "composition",
+      "name": "has active",
+      "cardinality": {
+        "from": "1",
+        "to": "4"
+      },
+      "description": "Every governance boundary has all four intent sources active. Each source provides its version of each primitive, creating the 5x4 intent matrix at each boundary."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "TrustCalibration",
+      "type": "composition",
+      "name": "has",
+      "cardinality": {
+        "from": "1",
+        "to": "1"
+      },
+      "description": "Every governance boundary has exactly one trust calibration \u00e2\u20ac\u201d a per-boundary position on the corrigible-to-autonomous spectrum reflecting accumulated evidence."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "GovernanceArtifact",
+      "type": "association",
+      "name": "produces",
+      "cardinality": {
+        "from": "1",
+        "to": "*"
+      },
+      "description": "A governance boundary produces zero or more governance artifacts over its lifetime. The type of artifact depends on the interface type: directives at delegation boundaries, agreements at coordination boundaries, emergent norms at both."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "ConflictResolution",
+      "type": "association",
+      "name": "uses",
+      "cardinality": {
+        "from": "1",
+        "to": "1..*"
+      },
+      "description": "Every governance boundary uses at least one conflict resolution mechanism. Multiple mechanisms may apply at the same boundary depending on which primitive is in conflict and whether the interface is delegation or coordination."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "GovernanceBoundary",
+      "type": "aggregation",
+      "name": "contains",
+      "cardinality": {
+        "from": "1",
+        "to": "*"
+      },
+      "description": "Recursive fractal pattern \u00e2\u20ac\u201d a governance boundary can contain sub-boundaries. When an orchestrator delegates to sub-agents, each delegation creates a new governance boundary contained within the orchestrator's boundary. Each sub-boundary has its own full complement of primitives, trust calibration, and conflict resolution."
+    },
+    {
+      "from": "Layer",
+      "to": "Layer",
+      "type": "association",
+      "name": "interfaces with (up)",
+      "cardinality": {
+        "from": "1",
+        "to": "0..1"
+      },
+      "description": "Each layer interfaces with at most one layer above it. L7 has no upper interface. Intent flows downward through these interfaces; evidence flows upward."
+    },
+    {
+      "from": "Layer",
+      "to": "Layer",
+      "type": "association",
+      "name": "interfaces with (down)",
+      "cardinality": {
+        "from": "1",
+        "to": "0..1"
+      },
+      "description": "Each layer interfaces with at most one layer below it. L1 has no lower interface. Adjacent layers exchange through defined interface contracts."
+    },
+    {
+      "from": "Layer",
+      "to": "KnowledgeTier",
+      "type": "association",
+      "name": "accesses",
+      "cardinality": {
+        "from": "*",
+        "to": "*"
+      },
+      "description": "Layers access knowledge tiers based on the governance concern they address. Lower layers use operational knowledge (Tier 1). Middle layers use structured knowledge (Tier 2). Upper layers use discovery knowledge (Tier 3). Overlap exists \u00e2\u20ac\u201d L4 accesses both Tier 1 and Tier 2."
+    },
+    {
+      "from": "TrustCalibration",
+      "to": "EvidenceTrail",
+      "type": "association",
+      "name": "fed by",
+      "cardinality": {
+        "from": "1",
+        "to": "1"
+      },
+      "description": "Every trust calibration is fed by exactly one evidence trail. The evidence trail provides the accumulated record of alignment events, governance decisions, and operational outcomes that inform the trust calibration position."
+    },
+    {
+      "from": "EvidenceTrail",
+      "to": "Layer",
+      "type": "association",
+      "name": "produced by",
+      "cardinality": {
+        "from": "*",
+        "to": "1"
+      },
+      "description": "Evidence trails are produced by the lower layers (L1 Execution, L2 Integration, L3 Orchestration, L4 Runtime Alignment). These layers generate the raw evidence \u00e2\u20ac\u201d execution results, integration events, orchestration decisions, alignment assessments \u00e2\u20ac\u201d that feeds trust calibration.",
+      "constraint": "Only layers L1-L4 produce evidence trails"
+    },
+    {
+      "from": "Agent",
+      "to": "GovernanceBoundary",
+      "type": "association",
+      "name": "participates in",
+      "cardinality": {
+        "from": "2",
+        "to": "1"
+      },
+      "description": "Exactly two agents participate in each governance boundary. At delegation boundaries, one is principal and one is agent. At coordination boundaries, both are peers. The same agent entity can participate in multiple boundaries with different roles."
+    },
+    {
+      "from": "IntentPrimitive",
+      "to": "IntentSource",
+      "type": "association",
+      "name": "has versions at",
+      "cardinality": {
+        "from": "5",
+        "to": "4"
+      },
+      "description": "Each of the five primitives has a version at each of the four intent sources, creating a 5x4 matrix. This matrix is the complete intent specification at a governance boundary. Conflict resolution operates across sources for a given primitive."
+    },
+    {
+      "from": "GovernanceBoundary",
+      "to": "TransparentConscientiousObjection",
+      "type": "composition",
+      "name": "supports",
+      "cardinality": {
+        "from": "1",
+        "to": "1"
+      },
+      "description": "Every governance boundary supports exactly one transparent conscientious objection mechanism. This ensures agents at any boundary can express disagreement openly through permitted actions without resorting to prohibited covert resistance."
+    }
+  ],
+  "renderingHints": {
+    "layout": "Entities grouped by concern",
+    "groups": [
+      {
+        "name": "Governance Structure",
+        "entities": [
+          "GovernanceBoundary",
+          "Layer",
+          "Agent"
+        ],
+        "position": "center"
+      },
+      {
+        "name": "Intent Model",
+        "entities": [
+          "IntentPrimitive",
+          "IntentSource"
+        ],
+        "position": "top-left"
+      },
+      {
+        "name": "Knowledge Architecture",
+        "entities": [
+          "KnowledgeTier"
+        ],
+        "position": "top-right"
+      },
+      {
+        "name": "Trust & Evidence",
+        "entities": [
+          "TrustCalibration",
+          "EvidenceTrail"
+        ],
+        "position": "bottom-left"
+      },
+      {
+        "name": "Conflict & Artifacts",
+        "entities": [
+          "ConflictResolution",
+          "GovernanceArtifact",
+          "TransparentConscientiousObjection"
+        ],
+        "position": "bottom-right"
+      }
+    ],
+    "notes": [
+      "GovernanceBoundary is the central entity \u00e2\u20ac\u201d most relationships flow through it",
+      "The recursive self-reference on GovernanceBoundary represents the fractal pattern",
+      "Agent role is context-dependent \u00e2\u20ac\u201d shown with a note, not separate classes",
+      "IntentPrimitive x IntentSource forms a 5x4 matrix at each boundary",
+      "Composition relationships (filled diamond) indicate lifecycle dependency on GovernanceBoundary",
+      "The Layer stack should be rendered vertically with L7 at top and L1 at bottom"
+    ]
+  }
+}

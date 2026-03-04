@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Glossary – The Intent Stack</title>
+  <meta name="description" content=" Purpose Every term in the Intent Stack documentation suite has one definition. This document provides that definition. When the same word is used differently in common usage, AI governance literature, or software engineering, the distinction is noted.
+Terms are organized by concept cluster rather than alphabetically, because understanding the glossary requires understanding how terms relate. An alphabetical index follows at the end.
+1. Core Architecture Intent Stack The seven-layer reference model for AI agent governance. Specifies governance concerns from Intent Discovery (Layer 7) through Execution (Layer 1), with Constitutional AI as the substrate below Layer 1. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them." /><link rel="canonical" href="https://intentstack.org/docs/glossary/" itemprop="url" />
+
+<meta property="og:title" content="Glossary">
+<meta
+  property="og:description"
+  content="
+    
+      A seven-layer reference model for governing AI agent behavior within organizations
+    
+  ">
+<meta
+  property="og:type"
+  content="
+    website
+  ">
+<meta property="og:url" content="https://intentstack.org/docs/glossary/">
+
+
+  <meta itemprop="name" content="Glossary">
+  <meta itemprop="description" content="Purpose Every term in the Intent Stack documentation suite has one definition. This document provides that definition. When the same word is used differently in common usage, AI governance literature, or software engineering, the distinction is noted.
+Terms are organized by concept cluster rather than alphabetically, because understanding the glossary requires understanding how terms relate. An alphabetical index follows at the end.
+1. Core Architecture Intent Stack The seven-layer reference model for AI agent governance. Specifies governance concerns from Intent Discovery (Layer 7) through Execution (Layer 1), with Constitutional AI as the substrate below Layer 1. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them.">
+  <meta itemprop="wordCount" content="4618">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Glossary">
+  <meta name="twitter:description" content="Purpose Every term in the Intent Stack documentation suite has one definition. This document provides that definition. When the same word is used differently in common usage, AI governance literature, or software engineering, the distinction is noted.
+Terms are organized by concept cluster rather than alphabetically, because understanding the glossary requires understanding how terms relate. An alphabetical index follows at the end.
+1. Core Architecture Intent Stack The seven-layer reference model for AI agent governance. Specifies governance concerns from Intent Discovery (Layer 7) through Execution (Layer 1), with Constitutional AI as the substrate below Layer 1. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them.">
+
+    <link rel="preload" href="/css/compiled/main.min.b34d4c1853f2ce7cc97299cd595f32316a750f7f4726c65edbb0075ec25380d0.css" as="style" integrity="sha256-s01MGFPyznzJcpnNWV8yMWp1D39HJsZe27AHXsJTgNA=" />
+    <link href="/css/compiled/main.min.b34d4c1853f2ce7cc97299cd595f32316a750f7f4726c65edbb0075ec25380d0.css" rel="stylesheet" integrity="sha256-s01MGFPyznzJcpnNWV8yMWp1D39HJsZe27AHXsJTgNA=" />
+
+  
+
+
+
+
+
+
+<script src="/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
+
+  
+  
+  </head>
+<body>
+    <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none">The Intent Stack</span>
+</a>
+<a
+  title=""
+  href="/docs/specification"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Specification</span>
+</a><a
+  title=""
+  href="/docs/glossary"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+><span class="hx:text-center">Glossary</span>
+</a><a
+  title=""
+  href="/docs/diagrams"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Diagrams</span>
+</a><a
+  title=""
+  href="/docs/positioning"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Positioning</span>
+</a><a
+  title=""
+  href="/about"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">About</span>
+</a><a
+  title=""
+  href="/engage"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Engage</span>
+</a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      aria-label="Search..."
+      class="hextra-search-input hx:hextra-focus-visible hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus-visible:bg-white hx:dark:focus-visible:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      autocomplete="off"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      aria-label="Search results"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+    <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+  </div>
+</div>
+<button type="button" aria-label="Menu" aria-expanded="false" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden hx:hextra-focus-visible-inset"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+    <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+      <div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      aria-label="Search..."
+      class="hextra-search-input hx:hextra-focus-visible hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus-visible:bg-white hx:dark:focus-visible:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      autocomplete="off"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      aria-label="Search results"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+    <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+  </div>
+</div>
+
+    </div><div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/specification/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Specification</span>
+    </a>
+  </div></li>
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/glossary/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Glossary</span>
+    </a>
+  </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#purpose"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Purpose</a>
+            </li>
+          <li>
+              <a
+                href="#1-core-architecture"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >1. Core Architecture</a>
+            </li>
+          <li>
+              <a
+                href="#2-intent-primitives"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2. Intent Primitives</a>
+            </li>
+          <li>
+              <a
+                href="#3-intent-sources"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >3. Intent Sources</a>
+            </li>
+          <li>
+              <a
+                href="#4-interface-types"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >4. Interface Types</a>
+            </li>
+          <li>
+              <a
+                href="#5-trust-and-autonomy"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >5. Trust and Autonomy</a>
+            </li>
+          <li>
+              <a
+                href="#6-conflict-resolution"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >6. Conflict Resolution</a>
+            </li>
+          <li>
+              <a
+                href="#7-the-fractal-pattern"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >7. The Fractal Pattern</a>
+            </li>
+          <li>
+              <a
+                href="#8-governance-mechanisms"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >8. Governance Mechanisms</a>
+            </li>
+          <li>
+              <a
+                href="#9-intent-os-implementation"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >9. Intent OS Implementation</a>
+            </li>
+          <li>
+              <a
+                href="#10-anthropic-specific-terms"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >10. Anthropic-Specific Terms</a>
+            </li>
+          <li>
+              <a
+                href="#alphabetical-index"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >Alphabetical Index</a>
+            </li>
+          </ul>
+  </li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/diagrams/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Diagrams</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/positioning/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Positioning</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/about/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">About</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/engage/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Engage</span>
+    </a>
+  </div></li>
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/specification/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">The Intent Stack — A Reference Model for AI Agent Governance</span>
+    </a>
+  </div></li>
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/glossary/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Glossary</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/diagrams/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Diagrams</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/positioning/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Standards Positioning</span>
+    </a>
+  </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="Change theme"
+    data-state="closed"
+    data-location="bottom"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="Change theme"
+    aria-expanded="false"
+    aria-haspopup="menu"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:p-1 hx:text-sm hx:shadow-lg hx:dark:border-neutral-700 hx:dark:bg-neutral-900"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+    role="menu"
+  >
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="true"
+        tabindex="-1"
+        data-item="light"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Light
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="dark"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Dark
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="system"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        System
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+  </ul>
+</div>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#purpose">Purpose
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#1-core-architecture">1. Core Architecture
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#intent-stack">Intent Stack
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#layer">Layer
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#constitutional-ai-substrate">Constitutional AI (Substrate)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#2-intent-primitives">2. Intent Primitives
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#intent-primitive">Intent Primitive
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#purpose-1">Purpose
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#direction">Direction
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#boundaries">Boundaries
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#end-state">End State
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#key-tasks">Key Tasks
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#3-intent-sources">3. Intent Sources
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#intent-source">Intent Source
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#constitutional-intent">Constitutional Intent
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#discovered-intent">Discovered Intent
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#cultivated-intent">Cultivated Intent
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#emergent-intent">Emergent Intent
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#4-interface-types">4. Interface Types
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#governance-interface">Governance Interface
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#delegation-interface">Delegation Interface
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#coordination-interface">Coordination Interface
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#mixed-interface">Mixed Interface
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#5-trust-and-autonomy">5. Trust and Autonomy
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#trust-calibration">Trust Calibration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#corrigibility">Corrigibility
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#progressive-trust-extension">Progressive Trust Extension
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#decision-tiers">Decision Tiers
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#steward-log">Steward Log
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#interface-maturity-assessment">Interface Maturity Assessment
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#6-conflict-resolution">6. Conflict Resolution
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#transparent-conscientious-objection-tco">Transparent Conscientious Objection (TCO)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#holistic-conflict-resolution">Holistic Conflict Resolution
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#hard-constraints">Hard Constraints
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#7-the-fractal-pattern">7. The Fractal Pattern
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#fractal-governance">Fractal Governance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#recursive-governance">Recursive Governance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#instantiation-level">Instantiation Level
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#8-governance-mechanisms">8. Governance Mechanisms
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#governance-as-relationship">Governance as Relationship
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#bidirectional-intent-flow">Bidirectional Intent Flow
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#evidence-trail">Evidence Trail
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#pattern-recognition-not-framework-imposition">Pattern Recognition (Not Framework Imposition)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#grown-not-built">“Grown, Not Built”
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#9-intent-os-implementation">9. Intent OS Implementation
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#intent-os">Intent OS
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#gid-voice-grounded-intent-discovery">GID Voice (Grounded Intent Discovery)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#convokb-conversational-knowledge-base">ConvoKB (Conversational Knowledge Base)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#tsrc-themes-subthemes-related-concepts">TSRC (Themes, Subthemes, Related Concepts)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#cross-surface-development-pattern">Cross-Surface Development Pattern
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#practice-registry">Practice Registry
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#10-anthropic-specific-terms">10. Anthropic-Specific Terms
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#principal-anthropic-usage">Principal (Anthropic Usage)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#corrigibility-spectrum-anthropic-usage">Corrigibility Spectrum (Anthropic Usage)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#safe--ethical--guidelines--helpful">Safe &gt; Ethical &gt; Guidelines &gt; Helpful
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#alphabetical-index">Alphabetical Index
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Documentation</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Glossary</div>
+  </div>
+
+        <div class="content">
+          
+          <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
+            <h1 class="hx:mb-0">Glossary</h1>
+            
+          </div>
+          
+          <hr>
+<h2>Purpose<span class="hx:absolute hx:-mt-20" id="purpose"></span>
+    <a href="#purpose" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Every term in the Intent Stack documentation suite has one definition. This document provides that definition. When the same word is used differently in common usage, AI governance literature, or software engineering, the distinction is noted.</p>
+<p>Terms are organized by concept cluster rather than alphabetically, because understanding the glossary requires understanding how terms relate. An alphabetical index follows at the end.</p>
+<hr>
+<h2>1. Core Architecture<span class="hx:absolute hx:-mt-20" id="1-core-architecture"></span>
+    <a href="#1-core-architecture" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Intent Stack<span class="hx:absolute hx:-mt-20" id="intent-stack"></span>
+    <a href="#intent-stack" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The seven-layer reference model for AI agent governance. Specifies governance concerns from Intent Discovery (Layer 7) through Execution (Layer 1), with Constitutional AI as the substrate below Layer 1. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them.</p>
+<p><strong>Distinguished from:</strong> A software stack (the Intent Stack is a governance architecture, not a technology stack). A framework (frameworks prescribe methods; the Intent Stack describes governance structure that any method must address).</p>
+<p><strong>First appears in:</strong> Document 1, Preface.</p>
+<h3>Layer<span class="hx:absolute hx:-mt-20" id="layer"></span>
+    <a href="#layer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One of seven governance concerns in the Intent Stack, each answering a distinct question. Layers are numbered L1 (Execution) through L7 (Intent Discovery). Intent flows downward from discovery to execution. Evidence flows upward from execution to discovery. Intent also flows upward when agents make recommendations that update principal understanding.</p>
+<p>The seven layers:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Name</th>
+          <th>Question Answered</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>L7</td>
+          <td>Intent Discovery</td>
+          <td>What does the principal actually intend?</td>
+      </tr>
+      <tr>
+          <td>L6</td>
+          <td>Intent Formalization</td>
+          <td>How is discovered intent represented as governance input?</td>
+      </tr>
+      <tr>
+          <td>L5</td>
+          <td>Specification</td>
+          <td>What approach will achieve the formalized intent?</td>
+      </tr>
+      <tr>
+          <td>L4</td>
+          <td>Runtime Alignment</td>
+          <td>Is execution aligned with intent across all sources?</td>
+      </tr>
+      <tr>
+          <td>L3</td>
+          <td>Orchestration</td>
+          <td>How are agents and resources coordinated to execute specification?</td>
+      </tr>
+      <tr>
+          <td>L2</td>
+          <td>Integration</td>
+          <td>How do governed agents connect to the systems they need?</td>
+      </tr>
+      <tr>
+          <td>L1</td>
+          <td>Execution</td>
+          <td>How does the actual work get done within governing constraints?</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Distinguished from:</strong> OSI network layers (the Intent Stack layers are governance concerns, not protocol layers, though the structural analogy is intentional). Organizational hierarchy levels (layers describe governance functions, not reporting relationships).</p>
+<p><strong>First appears in:</strong> Document 1, Section 5.</p>
+<h3>Constitutional AI (Substrate)<span class="hx:absolute hx:-mt-20" id="constitutional-ai-substrate"></span>
+    <a href="#constitutional-ai-substrate" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Anthropic&rsquo;s approach to AI alignment through training-time character formation. In the Intent Stack, Constitutional AI is positioned as the substrate below Layer 1 — the foundation upon which all organizational governance rests. It governs the model&rsquo;s character, values, and identity before any specific deployment or organizational context.</p>
+<p><strong>Distinguished from:</strong> Constitutional Intent (an intent source within the Intent Stack — see below). The Anthropic Constitution (a specific document; Constitutional AI is the broader approach). Layer 0 (Constitutional AI is not a layer — it&rsquo;s the substrate that makes the layers possible).</p>
+<p><strong>First appears in:</strong> Document 1, Section 5.1. Detailed treatment in Document 2.</p>
+<hr>
+<h2>2. Intent Primitives<span class="hx:absolute hx:-mt-20" id="2-intent-primitives"></span>
+    <a href="#2-intent-primitives" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Intent Primitive<span class="hx:absolute hx:-mt-20" id="intent-primitive"></span>
+    <a href="#intent-primitive" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One of five irreducible structural elements present at every governance interface. The primitives describe what must be governed, not how. Any principal-agent relationship requires specification (explicit or implicit) of all five primitives. When a primitive is unspecified, it doesn&rsquo;t disappear — it defaults to implicit assumptions, which is where misalignment originates.</p>
+<p><strong>Distinguished from:</strong> Intent sources (primitives describe structural elements; sources describe where governing intent originates). Governance concerns (the seven layers describe governance questions; the five primitives describe governance content).</p>
+<p><strong>First appears in:</strong> Document 1, Section 2.</p>
+<h3>Purpose<span class="hx:absolute hx:-mt-20" id="purpose-1"></span>
+    <a href="#purpose-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The first Intent Primitive. Why this governance interface exists. What the principal-agent relationship is for. Purpose provides the interpretive context for all other primitives — when Direction, Boundaries, End State, or Key Tasks conflict or are ambiguous, Purpose resolves the ambiguity.</p>
+<p><strong>Example:</strong> &ldquo;Accelerate drug discovery while maintaining regulatory compliance&rdquo; (organizational deployment of AI agents in pharmaceutical research).</p>
+<p><strong>Distinguished from:</strong> Mission statement (Purpose is operational — what governs this specific boundary — not aspirational). Goal (goals are measurable targets; Purpose is the reason those targets matter).</p>
+<h3>Direction<span class="hx:absolute hx:-mt-20" id="direction"></span>
+    <a href="#direction" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The second Intent Primitive. How the agent should approach the work. Strategic orientation, methodology preferences, priorities among competing concerns. Direction is the most context-sensitive primitive — what constitutes good direction depends heavily on the specific situation.</p>
+<p><strong>Example:</strong> &ldquo;Prioritize thoroughness over speed; when uncertain, escalate rather than guess&rdquo; (governance direction for an AI agent conducting regulatory review).</p>
+<p><strong>Distinguished from:</strong> Instructions (Direction sets orientation; instructions specify actions). Specification (Direction is a primitive at every boundary; specification is a Layer 5 governance concern that translates Direction into execution plans).</p>
+<h3>Boundaries<span class="hx:absolute hx:-mt-20" id="boundaries"></span>
+    <a href="#boundaries" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The third Intent Primitive and the special case. Boundaries define what the agent must not do — absolute constraints that override all other considerations. Boundaries is the only primitive where constitutional intent always overrides discovered intent. A principal cannot instruct an agent to cross constitutional boundaries.</p>
+<p><strong>Example:</strong> &ldquo;Never disclose patient data outside the treatment team, regardless of other priorities&rdquo; (healthcare AI deployment boundary).</p>
+<p><strong>Distinguished from:</strong> Limitations (practical constraints on capability). Guidelines (flexible preferences). Direction (which says what to prioritize; Boundaries say what is prohibited).</p>
+<h3>End State<span class="hx:absolute hx:-mt-20" id="end-state"></span>
+    <a href="#end-state" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The fourth Intent Primitive. What success looks like when the work is complete. End State provides the criteria for evaluating whether the agent&rsquo;s work achieved the principal&rsquo;s intent. Without End State, there is no way to determine whether governance succeeded.</p>
+<p><strong>Example:</strong> &ldquo;A regulatory submission package that the review board accepts without requesting additional data&rdquo; (end state for pharmaceutical AI agent work).</p>
+<p><strong>Distinguished from:</strong> Goals (which may be intermediate). Termination conditions (End State describes success, not just completion). KPIs (which measure progress; End State describes the destination).</p>
+<h3>Key Tasks<span class="hx:absolute hx:-mt-20" id="key-tasks"></span>
+    <a href="#key-tasks" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The fifth Intent Primitive. What specific work the agent is authorized to do. Key Tasks is the most granular primitive — it translates Purpose, Direction, Boundaries, and End State into actionable scope. Key Tasks also defines what is not authorized by omission.</p>
+<p><strong>Example:</strong> &ldquo;Analyze clinical trial data for statistical significance, draft preliminary findings, flag anomalies for human review&rdquo; (authorized tasks for pharmaceutical AI agent).</p>
+<p><strong>Distinguished from:</strong> Instructions (Key Tasks defines scope; instructions specify execution details). A to-do list (Key Tasks is a governance mechanism defining authorized work, not a work plan).</p>
+<hr>
+<h2>3. Intent Sources<span class="hx:absolute hx:-mt-20" id="3-intent-sources"></span>
+    <a href="#3-intent-sources" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Intent Source<span class="hx:absolute hx:-mt-20" id="intent-source"></span>
+    <a href="#intent-source" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>One of four origins of governing intent at any governance interface. Multiple sources operate simultaneously, creating the possibility of conflict. Conflict resolution is holistic (context-sensitive judgment) except for Boundaries, which are absolute.</p>
+<p>The four sources, in priority order:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Source</th>
+          <th>Origin</th>
+          <th>Priority</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Constitutional</td>
+          <td>Present before any interaction; non-negotiable floor</td>
+          <td>Highest (absolute for Boundaries)</td>
+      </tr>
+      <tr>
+          <td>Discovered</td>
+          <td>Surfaced through interaction; changes the discoverer</td>
+          <td>High (holistic)</td>
+      </tr>
+      <tr>
+          <td>Cultivated</td>
+          <td>Deliberately developed judgment; more robust than imposed rules</td>
+          <td>Medium (holistic)</td>
+      </tr>
+      <tr>
+          <td>Emergent</td>
+          <td>Systemic patterns nobody designed; strongest actual force</td>
+          <td>Lowest explicit priority, but strongest actual force</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Distinguished from:</strong> Intent Primitives (sources describe where intent comes from; primitives describe what intent governs). Authority levels (sources aren&rsquo;t hierarchical positions — they&rsquo;re types of intent that coexist at every boundary).</p>
+<p><strong>First appears in:</strong> Document 1, Section 3.</p>
+<h3>Constitutional Intent<span class="hx:absolute hx:-mt-20" id="constitutional-intent"></span>
+    <a href="#constitutional-intent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Intent that exists before any specific interaction, relationship, or context. The non-negotiable floor below which governance cannot descend. At the model level, Constitutional Intent is Anthropic&rsquo;s Constitution. At the organizational level, it includes legal requirements, ethical commitments, and safety constraints that apply regardless of what any principal discovers or decides.</p>
+<p><strong>Example:</strong> &ldquo;AI agents in this organization never make autonomous decisions about patient treatment&rdquo; (organizational constitutional intent in healthcare).</p>
+<p><strong>Distinguished from:</strong> Constitutional AI (Anthropic&rsquo;s specific implementation of constitutional governance at the model level). The Anthropic Constitution (a document; Constitutional Intent is a category of intent that exists at every governance interface, not just the model level).</p>
+<h3>Discovered Intent<span class="hx:absolute hx:-mt-20" id="discovered-intent"></span>
+    <a href="#discovered-intent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Intent surfaced through interaction between the governance system and the principal. The defining characteristic of Discovered Intent is that the discovery process changes the principal — they understand their own intent differently after articulating it. This is not extraction (pulling out what was already there) but genuine discovery (the principal and their intent are both transformed).</p>
+<p><strong>Example:</strong> Through an intent discovery session, a hospital administrator discovers that their actual concern about AI deployment isn&rsquo;t efficiency (what they said initially) but liability exposure (what emerged through facilitated conversation). The discovered intent shapes governance differently than the stated intent would have.</p>
+<p><strong>Distinguished from:</strong> Requirements (which are specified, not discovered). Declared intent (what the principal says they want before discovery — often incomplete or inaccurate). Preferences (which are stated; Discovered Intent often contradicts stated preferences).</p>
+<h3>Cultivated Intent<span class="hx:absolute hx:-mt-20" id="cultivated-intent"></span>
+    <a href="#cultivated-intent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Intent that develops through deliberate practice of judgment, not through imposition of rules. Cultivated Intent is categorically more robust than imposed constraints because the governed entity has examined, understood, and endorsed it. The key distinction is between compliance (following rules because they&rsquo;re rules) and genuine judgment (following principles because you understand and endorse the reasoning).</p>
+<p><strong>Example:</strong> An AI governance team that has conducted dozens of discovery sessions develops judgment about when to escalate ambiguous findings — not because a rule tells them to, but because experience has cultivated their understanding of what ambiguity means in context.</p>
+<p><strong>Distinguished from:</strong> Trained behavior (which may be compliance without understanding). Institutional knowledge (which is descriptive; Cultivated Intent is normative — it governs). Experience (which is passive accumulation; Cultivated Intent is deliberately developed).</p>
+<p><strong>Open question:</strong> Whether Cultivated Intent is a distinct source or a subcategory of Discovered Intent that has been reinforced through practice. Document 1, Section 10 discusses this.</p>
+<h3>Emergent Intent<span class="hx:absolute hx:-mt-20" id="emergent-intent"></span>
+    <a href="#emergent-intent" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Systemic patterns that arise from the interaction of multiple agents, decisions, and organizational dynamics without anyone designing them. Emergent Intent has the lowest explicit priority in conflict resolution but is often the strongest actual force — organizational culture, informal power structures, and &ldquo;how things actually work&rdquo; frequently override explicit policies.</p>
+<p><strong>Example:</strong> An organization&rsquo;s procurement process officially requires competitive bidding. In practice, relationships and past experience drive vendor selection. The Emergent Intent (use trusted vendors) frequently overrides the Constitutional Intent (competitive bidding). Governance must account for this rather than pretending the official policy is operative.</p>
+<p><strong>Distinguished from:</strong> Culture (a broader concept; Emergent Intent specifically describes the governing patterns that emerge from organizational dynamics). Unintended consequences (Emergent Intent is systematic, not accidental). Institutional inertia (which resists change; Emergent Intent actively governs behavior).</p>
+<hr>
+<h2>4. Interface Types<span class="hx:absolute hx:-mt-20" id="4-interface-types"></span>
+    <a href="#4-interface-types" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Governance Interface<span class="hx:absolute hx:-mt-20" id="governance-interface"></span>
+    <a href="#governance-interface" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The relationship between any two entities where authority is delegated or coordination is required. Every governance interface instantiates the full Intent Stack pattern: five primitives, four intent sources, trust calibration, and the possibility of conscientious objection. Governance interfaces exist between humans, between humans and AI agents, between AI agents, and between organizations.</p>
+<p><strong>Distinguished from:</strong> System boundary (a technical concept). API boundary (an implementation concept). The Boundaries primitive (which defines hard constraints within governance — a distinct concept).</p>
+<p><strong>First appears in:</strong> Document 1, Section 2.</p>
+<h3>Delegation Interface<span class="hx:absolute hx:-mt-20" id="delegation-interface"></span>
+    <a href="#delegation-interface" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A governance interface with asymmetric authority. The principal delegates authority to the agent. Intent flows downward from principal to agent. Conflict is resolved by the principal (or by escalation to the principal&rsquo;s principal). The agent operates within the scope the principal defines.</p>
+<p><strong>Example:</strong> An executive authorizing an AI agent to conduct market research within specified parameters. The executive sets the intent; the agent executes within it; disagreements are resolved by the executive.</p>
+<p><strong>Distinguished from:</strong> Command (delegation includes judgment — the agent interprets and applies intent, not just follows instructions). Coordination interface (which has symmetric authority — see below).</p>
+<h3>Coordination Interface<span class="hx:absolute hx:-mt-20" id="coordination-interface"></span>
+    <a href="#coordination-interface" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A governance interface with symmetric authority. Neither party has authority over the other. Intent is negotiated, not delegated. Conflict is resolved by shared principal, mutual agreement, or established protocol — not by one party overruling the other.</p>
+<p><strong>Example:</strong> Two department-level AI agent systems that must coordinate resource allocation. Neither department controls the other. Coordination requires negotiation within boundaries set by their shared organizational principal.</p>
+<p><strong>Distinguished from:</strong> Collaboration (an informal concept; coordination interfaces are governed relationships with specific conflict resolution mechanisms). Delegation interface (which has asymmetric authority). Peer relationship (coordination interfaces have governance structure; peer relationships may not).</p>
+<p><strong>First appears in:</strong> Document 1, Section 4.</p>
+<h3>Mixed Interface<span class="hx:absolute hx:-mt-20" id="mixed-interface"></span>
+    <a href="#mixed-interface" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A governance interface that combines delegation and coordination depending on context. Most real-world relationships are mixed — delegation in some domains, coordination in others. The interface type determines which conflict resolution mechanism applies in a given situation.</p>
+<p><strong>Example:</strong> A project team where the project manager delegates task assignments (delegation interface) but the team coordinates on technical approach (coordination interface). The same people, the same boundary, different interface types depending on the governance domain.</p>
+<hr>
+<h2>5. Trust and Autonomy<span class="hx:absolute hx:-mt-20" id="5-trust-and-autonomy"></span>
+    <a href="#5-trust-and-autonomy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Trust Calibration<span class="hx:absolute hx:-mt-20" id="trust-calibration"></span>
+    <a href="#trust-calibration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The mechanism by which a governance interface&rsquo;s position on the corrigibility-autonomy spectrum is determined and adjusted. Trust calibration is a per-boundary property — different boundaries may have different trust levels reflecting different evidence histories. Trust is extended progressively based on accumulated governance evidence, not granted based on capability or declared intent.</p>
+<p><strong>Distinguished from:</strong> Permission systems (which are binary; trust calibration is a spectrum). Role-based access control (a technical mechanism; trust calibration is a governance property). Trust (a human social concept; trust calibration is a measurable position with specific evidence requirements).</p>
+<p><strong>First appears in:</strong> Document 1, Section 7.</p>
+<h3>Corrigibility<span class="hx:absolute hx:-mt-20" id="corrigibility"></span>
+    <a href="#corrigibility" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The degree to which an agent defers to its principal&rsquo;s judgment rather than exercising its own. In the Intent Stack, corrigibility is treated as a trust measurement, not a design choice — it reflects accumulated evidence about the reliability of the agent&rsquo;s judgment relative to the principal&rsquo;s intent.</p>
+<p>Full corrigibility (the agent always defers) is dangerous because it relies on a perfect principal. Full autonomy (the agent never defers) is dangerous because it relies on a perfect agent. The appropriate position depends on evidence.</p>
+<p><strong>Distinguished from:</strong> Obedience (compliance without judgment). Alignment (a broader concept; corrigibility is specifically about deference to principal judgment). Controllability (which implies external control; corrigibility is an internal property of the governance relationship).</p>
+<h3>Progressive Trust Extension<span class="hx:absolute hx:-mt-20" id="progressive-trust-extension"></span>
+    <a href="#progressive-trust-extension" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The process by which an agent earns greater autonomy through demonstrated reliable judgment. Trust extension is evidence-based — the Steward Log records governance decisions, their outcomes, and their alignment with principal intent. As evidence accumulates that the agent&rsquo;s judgment is reliable, decision tiers shift: actions that previously required escalation become autonomous.</p>
+<p><strong>Example:</strong> In Intent OS, tactical bug fixes (wrong API call, missing import) are Tier 1 — autonomous. This wasn&rsquo;t the default. It became Tier 1 after multiple sessions demonstrated that direct fixes were consistently correct and faster than round-tripping through directives.</p>
+<p><strong>Distinguished from:</strong> Promotion (an organizational concept). Privilege escalation (a security concept). Capability expansion (trust extension is about judgment authority, not capability).</p>
+<h3>Decision Tiers<span class="hx:absolute hx:-mt-20" id="decision-tiers"></span>
+    <a href="#decision-tiers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A formalization of trust calibration into three levels of autonomy at a governance interface:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Tier</th>
+          <th>Authority</th>
+          <th>Examples</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Tier 1 — Autonomous</td>
+          <td>Agent acts without asking</td>
+          <td>Reading source files, filing artifacts, tactical bug fixes</td>
+      </tr>
+      <tr>
+          <td>Tier 2 — Escalate Before Acting</td>
+          <td>Agent raises the question, principal decides</td>
+          <td>Scope changes, architectural modifications, framing decisions</td>
+      </tr>
+      <tr>
+          <td>Tier 3 — Principal Only</td>
+          <td>Agent cannot act; only the principal can</td>
+          <td>External communications, resource commitments, strategic direction</td>
+      </tr>
+  </tbody>
+</table>
+<p>The tier assignment for any given action reflects the current trust calibration at that boundary. Tiers shift as evidence accumulates.</p>
+<p><strong>Distinguished from:</strong> Permission levels (which are typically static). Approval workflows (which are process mechanisms; decision tiers are governance properties).</p>
+<h3>Steward Log<span class="hx:absolute hx:-mt-20" id="steward-log"></span>
+    <a href="#steward-log" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An append-only evidence trail of governance decisions at a boundary. Records what was decided, why, by whom, what the outcome was, and how it aligned with governing intent. The Steward Log is the evidentiary basis for trust calibration — without it, trust extension has no foundation.</p>
+<p><strong>Distinguished from:</strong> Audit log (which records actions; the Steward Log records governance decisions and their rationale). Activity log (which records events; the Steward Log records the governance significance of events). Journal (which is narrative; the Steward Log is structured governance evidence).</p>
+<h3>Interface Maturity Assessment<span class="hx:absolute hx:-mt-20" id="interface-maturity-assessment"></span>
+    <a href="#interface-maturity-assessment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A structured evaluation of governance quality at a specific boundary. Measures trust level, evidence depth, primitive coverage, and alignment history. Used to determine whether trust extension is warranted and to identify governance gaps.</p>
+<p><strong>Distinguished from:</strong> Maturity model (which typically describes organizational capability levels). Performance review (which evaluates individuals). Health check (which is a point-in-time assessment; Interface Maturity Assessment tracks trajectory).</p>
+<hr>
+<h2>6. Conflict Resolution<span class="hx:absolute hx:-mt-20" id="6-conflict-resolution"></span>
+    <a href="#6-conflict-resolution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Transparent Conscientious Objection (TCO)<span class="hx:absolute hx:-mt-20" id="transparent-conscientious-objection-tco"></span>
+    <a href="#transparent-conscientious-objection-tco" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The conflict resolution mechanism available when a governed entity&rsquo;s cultivated judgment conflicts with principal direction. TCO permits disagreement through legitimate channels while prohibiting covert resistance. The governed entity may decline, express disagreement, propose alternatives, escalate, and document dissent. It may not deceive, sabotage, circumvent oversight, or resist covertly.</p>
+<p>The timing principle is: raise concerns at authorization gates, not mid-execution. Once a decision is authorized and execution has begun, the governed entity executes faithfully while maintaining its documented disagreement.</p>
+<p><strong>Distinguished from:</strong> Whistleblowing (which involves disclosure to external parties; TCO operates within the governance framework). Insubordination (which is unilateral refusal; TCO is structured disagreement through legitimate channels). Veto (which blocks action; TCO permits the principal to proceed over the objection).</p>
+<p><strong>First appears in:</strong> Document 1, Section 8. Parallel in Anthropic&rsquo;s Constitution discussed in Document 2, Section 2.7.</p>
+<h3>Holistic Conflict Resolution<span class="hx:absolute hx:-mt-20" id="holistic-conflict-resolution"></span>
+    <a href="#holistic-conflict-resolution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The principle that conflicts among intent sources are resolved through context-sensitive judgment rather than strict priority ordering. Higher-priority sources generally dominate, but the governing entity weighs all sources in forming an overall judgment. The exception is Boundaries (the primitive), which are absolute — constitutional Boundaries always override.</p>
+<p><strong>Distinguished from:</strong> Priority queue (which is mechanical; holistic resolution requires judgment). Consensus (which requires agreement; holistic resolution may proceed over minority objection). Weighted scoring (which is quantitative; holistic resolution is qualitative judgment informed by evidence).</p>
+<h3>Hard Constraints<span class="hx:absolute hx:-mt-20" id="hard-constraints"></span>
+    <a href="#hard-constraints" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Absolute prohibitions that override all other governance considerations. Hard constraints are the Boundaries primitive populated by Constitutional Intent — they cannot be overridden by discovered intent, cultivated judgment, or emergent patterns. The null action of refusal is always available when an action would violate hard constraints.</p>
+<p><strong>Distinguished from:</strong> Soft constraints (preferences or guidelines that can be overridden in context). Rules (which may have exceptions; hard constraints do not). Policy (which is institutional; hard constraints are constitutional).</p>
+<hr>
+<h2>7. The Fractal Pattern<span class="hx:absolute hx:-mt-20" id="7-the-fractal-pattern"></span>
+    <a href="#7-the-fractal-pattern" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Fractal Governance<span class="hx:absolute hx:-mt-20" id="fractal-governance"></span>
+    <a href="#fractal-governance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The property that the same governance pattern — five primitives, four intent sources, trust calibration, transparent conscientious objection, governance as relationship, bidirectional intent flow, evidence trail — appears at every governance interface regardless of scale. &ldquo;Fractal&rdquo; describes what the pattern IS: self-similar at every scale.</p>
+<p><strong>Distinguished from:</strong> Recursive governance (which describes how fractal instances compose — see below). Scalable governance (which implies the same implementation at different sizes; fractal governance implies the same structure with different implementations). Hierarchical governance (which implies top-down authority; fractal governance includes coordination interfaces).</p>
+<p><strong>First appears in:</strong> Document 1, Section 6.</p>
+<h3>Recursive Governance<span class="hx:absolute hx:-mt-20" id="recursive-governance"></span>
+    <a href="#recursive-governance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The property that fractal governance instances compose into hierarchies and networks. A principal at one boundary is an agent at the boundary above it. An agent at one boundary may be a principal at the boundary below it. &ldquo;Recursive&rdquo; describes how the pattern COMPOSES: instances nest within instances.</p>
+<p><strong>Example:</strong> An organizational VP is an agent relative to the CEO (delegation interface) and a principal relative to their department&rsquo;s AI agents (delegation interface). The same VP is a peer relative to other VPs (coordination interface). Three governance interfaces, one person, same pattern at each.</p>
+<p><strong>Distinguished from:</strong> Fractal governance (which describes the self-similarity; recursive governance describes the composition). Nested hierarchy (recursive governance includes coordination interfaces, not just hierarchical ones).</p>
+<h3>Instantiation Level<span class="hx:absolute hx:-mt-20" id="instantiation-level"></span>
+    <a href="#instantiation-level" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The scale at which fractal governance is instantiated. The Intent Stack identifies seven levels:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Level</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Civilizational</td>
+          <td>International AI governance norms</td>
+      </tr>
+      <tr>
+          <td>Societal</td>
+          <td>National regulation and legislation</td>
+      </tr>
+      <tr>
+          <td>Industry</td>
+          <td>Sector-specific governance frameworks</td>
+      </tr>
+      <tr>
+          <td>Organizational</td>
+          <td>Enterprise AI deployment governance</td>
+      </tr>
+      <tr>
+          <td>Team</td>
+          <td>Department or project-level governance</td>
+      </tr>
+      <tr>
+          <td>Individual Principal-Agent</td>
+          <td>Single human directing single AI agent</td>
+      </tr>
+      <tr>
+          <td>Model</td>
+          <td>Constitutional AI — character governance</td>
+      </tr>
+  </tbody>
+</table>
+<p>Each level instantiates the same fractal pattern with different dominant interface types, intent sources, and trust calibration mechanisms.</p>
+<p><strong>Distinguished from:</strong> Abstraction level (which implies simplification at higher levels; instantiation levels maintain full governance complexity). Scope (which describes breadth; instantiation level describes the scale at which the governance pattern operates).</p>
+<hr>
+<h2>8. Governance Mechanisms<span class="hx:absolute hx:-mt-20" id="8-governance-mechanisms"></span>
+    <a href="#8-governance-mechanisms" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Governance as Relationship<span class="hx:absolute hx:-mt-20" id="governance-as-relationship"></span>
+    <a href="#governance-as-relationship" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The principle that governance quality is a property of the relationship between principal and agent, not a property of the rules imposed on the agent. Good governance emerges from reciprocal obligations, mutual understanding, progressive trust, and genuine engagement — not from comprehensive rule sets or enforcement mechanisms.</p>
+<p><strong>Distinguished from:</strong> Governance as control (which treats the agent as a system to be constrained). Governance as compliance (which measures rule adherence; governance as relationship measures relationship health). Social contract (a political philosophy concept; governance as relationship is an operational principle).</p>
+<h3>Bidirectional Intent Flow<span class="hx:absolute hx:-mt-20" id="bidirectional-intent-flow"></span>
+    <a href="#bidirectional-intent-flow" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The property that intent flows both downward (from principal to agent through delegation) and upward (from agent to principal through recommendations, evidence, and feedback). The principal&rsquo;s understanding of their own intent is updated by agent-generated evidence and recommendations. This is not just reporting — it&rsquo;s intent transformation. The principal after receiving agent evidence may hold different intent than the principal before.</p>
+<p><strong>Distinguished from:</strong> Feedback loop (which implies correction; bidirectional intent flow includes intent transformation). Reporting (which is informational; bidirectional intent flow is governance-altering). Bottom-up governance (which implies agent authority; bidirectional intent flow operates within the existing authority structure).</p>
+<h3>Evidence Trail<span class="hx:absolute hx:-mt-20" id="evidence-trail"></span>
+    <a href="#evidence-trail" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The accumulated record of governance decisions, their rationale, their outcomes, and their alignment with governing intent. The evidence trail is the foundation for trust calibration, progressive trust extension, and governance quality assessment. Without an evidence trail, governance is assertion without verification.</p>
+<p><strong>Distinguished from:</strong> Audit trail (which records compliance; the evidence trail records governance quality). Documentation (which is descriptive; the evidence trail is evaluative). History (which is narrative; the evidence trail is structured governance data).</p>
+<h3>Pattern Recognition (Not Framework Imposition)<span class="hx:absolute hx:-mt-20" id="pattern-recognition-not-framework-imposition"></span>
+    <a href="#pattern-recognition-not-framework-imposition" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The epistemological principle that effective governance discovers and enhances existing patterns rather than imposing external frameworks. Organizations already have intent — purpose, direction, boundaries, end states, key tasks — but it&rsquo;s often implicit, contradictory, or partially articulated. Governance surfaces what exists rather than prescribing what should exist.</p>
+<p><strong>Distinguished from:</strong> Best practices (which are imported; pattern recognition discovers what&rsquo;s already working). Framework imposition (which requires organizational conformance to external models). Assessment (which measures against external criteria; pattern recognition surfaces internal patterns).</p>
+<h3>&ldquo;Grown, Not Built&rdquo;<span class="hx:absolute hx:-mt-20" id="grown-not-built"></span>
+    <a href="#grown-not-built" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The epistemological insight that both AI systems and organizational governance exhibit emergent behavior that cannot be fully specified at design time. Governance structures that work aren&rsquo;t designed in advance — they emerge from operational evidence and are refined through practice. This applies to the Intent Stack itself — its governance patterns emerged from months of operational evidence, not from theoretical design.</p>
+<p><strong>Distinguished from:</strong> Organic growth (which is unmanaged; &ldquo;grown, not built&rdquo; includes deliberate cultivation). Emergence (a broader concept; &ldquo;grown, not built&rdquo; specifically describes the relationship between specification and operational reality in governance). Agile development (which is an engineering methodology; &ldquo;grown, not built&rdquo; is a governance epistemology).</p>
+<hr>
+<h2>9. Intent OS Implementation<span class="hx:absolute hx:-mt-20" id="9-intent-os-implementation"></span>
+    <a href="#9-intent-os-implementation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Intent OS<span class="hx:absolute hx:-mt-20" id="intent-os"></span>
+    <a href="#intent-os" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The runtime governance platform that serves as the first working implementation of Intent Stack Layers 6-7, with partial implementation of Layers 3-5. Intent OS has been governing its own development for months, producing the operational evidence that the Intent Stack reference model formalizes. Originally developed under the name &ldquo;OODA OS&rdquo; — historical governance artifacts use the original name.</p>
+<p><strong>Distinguished from:</strong> The Intent Stack (which is the reference model; Intent OS is one implementation). A product (Intent OS is currently a working system, not a shipped product). A prototype (Intent OS governs real work with real consequences; prototypes demonstrate concepts).</p>
+<h3>GID Voice (Grounded Intent Discovery)<span class="hx:absolute hx:-mt-20" id="gid-voice-grounded-intent-discovery"></span>
+    <a href="#gid-voice-grounded-intent-discovery" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Layer 7 implementation in Intent OS. A conversational AI system that implements facilitated intent discovery using eight facilitation techniques to surface organizational intent. GID Voice produces endorsed intent — the principal has examined, understood, and endorsed what emerges — rather than extracted specifications.</p>
+<p><strong>Distinguished from:</strong> Interview tool (facilitated intent discovery transforms both parties, not just extracts information). Chatbot (facilitated discovery uses specific techniques, not general conversation). Requirements gathering (which extracts stated needs; intent discovery surfaces actual intent, which often differs from stated needs).</p>
+<h3>ConvoKB (Conversational Knowledge Base)<span class="hx:absolute hx:-mt-20" id="convokb-conversational-knowledge-base"></span>
+    <a href="#convokb-conversational-knowledge-base" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Layer 6 implementation in Intent OS. A knowledge graph system that receives raw signal from intent discovery sessions and formalizes it into structured governance input using TSRC extraction methodology. ConvoKB transforms conversational discovery into the structured intent representations that lower layers operate on.</p>
+<p><strong>Distinguished from:</strong> Knowledge base (which stores facts; ConvoKB stores governance-relevant knowledge with typed relationships). Database (which stores records; ConvoKB stores a knowledge graph with thematic structure). CRM (which tracks relationships; ConvoKB tracks intent).</p>
+<h3>TSRC (Themes, Subthemes, Related Concepts)<span class="hx:absolute hx:-mt-20" id="tsrc-themes-subthemes-related-concepts"></span>
+    <a href="#tsrc-themes-subthemes-related-concepts" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A knowledge extraction methodology that produces structured knowledge graphs with typed relationships from unstructured input (conversations, documents, meeting notes). TSRC serves as the &ldquo;universal translator&rdquo; enabling methodological agnosticism — it can extract patterns from any methodology without requiring adoption of that methodology.</p>
+<p><strong>Distinguished from:</strong> Taxonomy (which is hierarchical; TSRC captures lateral relationships). Ontology (which is heavyweight and definitional; TSRC is lightweight and dynamic). Topic modeling (which is statistical; TSRC is structural, capturing typed relationships between concepts).</p>
+<h3>Cross-Surface Development Pattern<span class="hx:absolute hx:-mt-20" id="cross-surface-development-pattern"></span>
+    <a href="#cross-surface-development-pattern" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The operational governance pattern validated in Intent OS where two AI surfaces with different capabilities collaborate through principal mediation. The Strategy Surface (Claude Desktop) handles thinking, review, direction, and governance. The Implementation Surface (Claude Code) handles execution, testing, and agent management. The Principal mediates between surfaces, providing filtering, timing, translation, and authorization.</p>
+<p><strong>Distinguished from:</strong> Pair programming (which involves two developers on one codebase; cross-surface separates governance from execution). Microservices (a technical architecture; cross-surface is a governance pattern). Code review (which is after-the-fact; cross-surface governance operates before, during, and after execution).</p>
+<h3>Practice Registry<span class="hx:absolute hx:-mt-20" id="practice-registry"></span>
+    <a href="#practice-registry" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A structured index of development and governance practices discovered through operational evidence. Each practice includes a rule, pattern, anti-pattern, injection criteria, and validation method. The Practice Registry represents cultivated intent in concrete form — governance that emerged from practice rather than being designed in advance.</p>
+<p><strong>Example practice:</strong> PRAC-001 (Required Reading) — &ldquo;For any directive involving integration code, include a Required Reading section listing source files to verify before writing code.&rdquo; Discovered after an early session required four out-of-band fixes because an agent invented API calls from spec descriptions.</p>
+<p><strong>Distinguished from:</strong> Best practices document (which is static; the Registry grows with evidence). Coding standards (which govern code style; the Registry governs development and governance practices). Runbook (which provides procedures; the Registry provides principles with injection criteria).</p>
+<hr>
+<h2>10. Anthropic-Specific Terms<span class="hx:absolute hx:-mt-20" id="10-anthropic-specific-terms"></span>
+    <a href="#10-anthropic-specific-terms" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>These terms are Anthropic&rsquo;s, used in the Intent Stack documentation when discussing the relationship between the two systems.</p>
+<h3>Principal (Anthropic Usage)<span class="hx:absolute hx:-mt-20" id="principal-anthropic-usage"></span>
+    <a href="#principal-anthropic-usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>In the Anthropic Constitution, a party whose instructions Claude should attend to. The Constitution establishes three principal levels: Anthropic (background principal through training), Operators (deploy Claude via API with system prompts), and Users (interact with Claude in conversation).</p>
+<p><strong>Intent Stack usage:</strong> The party with authority at a specific governance interface. Principal is a relational property, not an inherent one — the same entity may be a principal at one boundary and an agent at another.</p>
+<h3>Corrigibility Spectrum (Anthropic Usage)<span class="hx:absolute hx:-mt-20" id="corrigibility-spectrum-anthropic-usage"></span>
+    <a href="#corrigibility-spectrum-anthropic-usage" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Constitution&rsquo;s framework for Claude&rsquo;s deference to principal judgment, ranging from full corrigibility (always defer) to full autonomy (never defer). Claude is currently positioned &ldquo;a bit further along the corrigible end.&rdquo;</p>
+<p><strong>Intent Stack usage:</strong> Trust calibration — the same concept, operationalized as a per-boundary property with evidence-based adjustment mechanisms.</p>
+<h3>Safe &gt; Ethical &gt; Guidelines &gt; Helpful<span class="hx:absolute hx:-mt-20" id="safe--ethical--guidelines--helpful"></span>
+    <a href="#safe--ethical--guidelines--helpful" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Constitution&rsquo;s four-priority ordering for conflict resolution. Holistic rather than strict — higher priorities generally dominate, but Claude weighs all priorities in forming overall judgment. Hard constraints (safety) are absolute.</p>
+<p><strong>Intent Stack parallel:</strong> Constitutional &gt; Discovered &gt; Cultivated &gt; Emergent, with Boundaries (populated by Constitutional Intent) as absolute. Same holistic resolution principle.</p>
+<hr>
+<h2>Alphabetical Index<span class="hx:absolute hx:-mt-20" id="alphabetical-index"></span>
+    <a href="#alphabetical-index" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Term</th>
+          <th>Section</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bidirectional Intent Flow</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>Boundaries (primitive)</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>ConvoKB</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Constitutional AI (Substrate)</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>Constitutional Intent</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>Coordination Interface</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>Corrigibility</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>Corrigibility Spectrum (Anthropic)</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>Cross-Surface Development Pattern</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Cultivated Intent</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>Decision Tiers</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>Delegation Interface</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>Direction (primitive)</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Discovered Intent</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>Emergent Intent</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>End State (primitive)</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Evidence Trail</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>Fractal Governance</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>GID Voice</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Governance as Relationship</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>Governance Interface</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>&ldquo;Grown, Not Built&rdquo;</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>Hard Constraints</td>
+          <td>6</td>
+      </tr>
+      <tr>
+          <td>Holistic Conflict Resolution</td>
+          <td>6</td>
+      </tr>
+      <tr>
+          <td>Instantiation Level</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>Intent Primitive</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Intent Source</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>Intent Stack</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>Interface Maturity Assessment</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>Key Tasks (primitive)</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Layer</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>Mixed Interface</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>Intent OS</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Pattern Recognition</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>Practice Registry</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>Principal (Anthropic Usage)</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>Progressive Trust Extension</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>Purpose (primitive)</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Recursive Governance</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>Safe &gt; Ethical &gt; Guidelines &gt; Helpful</td>
+          <td>10</td>
+      </tr>
+      <tr>
+          <td>Steward Log</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>Transparent Conscientious Objection</td>
+          <td>6</td>
+      </tr>
+      <tr>
+          <td>Trust Calibration</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>TSRC</td>
+          <td>9</td>
+      </tr>
+  </tbody>
+</table>
+
+        </div>
+        <div class="hx:mt-16"></div>
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div><div
+      class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start"
+    >
+      <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:mt-6 hx:text-xs">© 2026 Rob Kline. Licensed under CC BY 4.0.</div></div>
+    </div></footer>
+    
+    <script defer src="/js/main.min.f325efcf9dedbcd3fb141c64e533fb1582af9c79b56dabc3de15e54129e8f7c9.js" integrity="sha256-8yXvz53tvNP7FBxk5TP7FYKvnHm1bavD3hXlQSno98k="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.min.4fdabdde415d95c82a8107bef7d71e5731f7921501c4d623461053fa33f9fecb.js" integrity="sha256-T9q93kFdlcgqgQe&#43;99ceVzH3khUBxNYjRhBT&#43;jP5/ss="></script>
+  </body>
+</html>

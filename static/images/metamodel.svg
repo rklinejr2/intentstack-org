@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 820" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <title>Intent Stack Metamodel — Entity-Relationship Diagram</title>
+  <desc>A UML class diagram showing the formal entity-relationship model for the Intent Stack reference architecture. GovernanceBoundary is the central entity, connected to IntentPrimitive, IntentSource, TrustCalibration, EvidenceTrail, ConflictResolution, GovernanceArtifact, Agent, Layer, KnowledgeTier, and TransparentConscientiousObjection. The recursive self-reference on GovernanceBoundary represents the fractal governance pattern.</desc>
+
+  <defs>
+    <style>
+      .entity-box { stroke: #334155; stroke-width: 1.5; rx: 3; }
+      .entity-header { font-size: 13px; font-weight: 700; fill: #fff; }
+      .entity-prop { font-size: 10.5px; fill: #334155; }
+      .entity-type { font-size: 10px; fill: #64748b; font-style: italic; }
+      .rel-line { stroke: #64748b; stroke-width: 1.2; fill: none; }
+      .rel-label { font-size: 9.5px; fill: #475569; font-style: italic; }
+      .rel-card { font-size: 9px; fill: #1e293b; font-weight: 600; }
+      .group-label { font-size: 11px; font-weight: 600; fill: #94a3b8; letter-spacing: 0.5px; }
+      .title-text { font-size: 18px; font-weight: 700; fill: #0f172a; }
+      .subtitle-text { font-size: 11px; fill: #64748b; }
+      .note-text { font-size: 9.5px; fill: #94a3b8; }
+      .composition-diamond { fill: #334155; stroke: #334155; stroke-width: 1; }
+      .aggregation-diamond { fill: #fff; stroke: #334155; stroke-width: 1; }
+    </style>
+    <marker id="assoc-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#64748b" stroke-width="1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="820" fill="#ffffff" rx="4"/>
+
+  <!-- Title -->
+  <text x="500" y="30" text-anchor="middle" class="title-text">Intent Stack Metamodel</text>
+  <text x="500" y="48" text-anchor="middle" class="subtitle-text">Formal entity-relationship model — UML class diagram notation · v1.0</text>
+
+  <!-- Group labels -->
+  <text x="170" y="76" text-anchor="middle" class="group-label">INTENT MODEL</text>
+  <text x="500" y="76" text-anchor="middle" class="group-label">GOVERNANCE STRUCTURE</text>
+  <text x="840" y="76" text-anchor="middle" class="group-label">KNOWLEDGE ARCHITECTURE</text>
+  <text x="170" y="530" text-anchor="middle" class="group-label">TRUST &amp; EVIDENCE</text>
+  <text x="840" y="530" text-anchor="middle" class="group-label">CONFLICT &amp; ARTIFACTS</text>
+
+  <!-- ============================================ -->
+  <!-- CENTRAL ENTITY: GovernanceBoundary (center)  -->
+  <!-- ============================================ -->
+  <g transform="translate(370, 200)">
+    <rect x="0" y="0" width="260" height="130" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="260" height="30" rx="3" fill="#1e293b"/>
+    <text x="130" y="20" text-anchor="middle" class="entity-header">GovernanceBoundary</text>
+    <line x1="0" y1="30" x2="260" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">interfaceType: delegation | coordination</text>
+    <text x="10" y="64" class="entity-prop">trustCalibrationPosition: string</text>
+    <text x="10" y="80" class="entity-prop">maturityLevel: string</text>
+    <line x1="0" y1="90" x2="260" y2="90" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="106" class="entity-type">Central entity — most relationships flow through it</text>
+    <text x="10" y="120" class="entity-type">Recursive self-reference = fractal pattern</text>
+  </g>
+
+  <!-- Fractal self-reference arrow (loop on GovernanceBoundary) -->
+  <path d="M 630,240 C 660,240 670,210 670,180 C 670,160 660,145 630,145 L 610,145" class="rel-line" marker-end="url(#assoc-arrow)"/>
+  <!-- Aggregation diamond at start -->
+  <polygon points="630,234 637,240 630,246 623,240" class="aggregation-diamond"/>
+  <text x="675" y="195" class="rel-label">contains</text>
+  <text x="646" y="155" class="rel-card">1..*</text>
+
+  <!-- ============================================ -->
+  <!-- INTENT MODEL GROUP (top-left)                -->
+  <!-- ============================================ -->
+
+  <!-- IntentPrimitive -->
+  <g transform="translate(30, 90)">
+    <rect x="0" y="0" width="220" height="110" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="220" height="30" rx="3" fill="#4338ca"/>
+    <text x="110" y="20" text-anchor="middle" class="entity-header">IntentPrimitive</text>
+    <line x1="0" y1="30" x2="220" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">«enumeration»</text>
+    <text x="10" y="64" class="entity-prop">Purpose | Direction | Boundaries</text>
+    <text x="10" y="78" class="entity-prop">EndState | KeyTasks</text>
+    <line x1="0" y1="88" x2="220" y2="88" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="104" class="entity-type">priorityBehavior: holistic | absolute</text>
+  </g>
+
+  <!-- IntentSource -->
+  <g transform="translate(30, 260)">
+    <rect x="0" y="0" width="220" height="110" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="220" height="30" rx="3" fill="#3b82f6"/>
+    <text x="110" y="20" text-anchor="middle" class="entity-header">IntentSource</text>
+    <line x1="0" y1="30" x2="220" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">«enumeration»</text>
+    <text x="10" y="64" class="entity-prop">Constitutional | Discovered</text>
+    <text x="10" y="78" class="entity-prop">Cultivated | Emergent</text>
+    <line x1="0" y1="88" x2="220" y2="88" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="104" class="entity-type">overridePriority: 1–4</text>
+  </g>
+
+  <!-- Relationship: GB → IntentPrimitive (composition) -->
+  <line x1="370" y1="230" x2="250" y2="165" class="rel-line"/>
+  <polygon points="370,230 363,224 370,218 377,224" class="composition-diamond"/>
+  <text x="295" y="186" class="rel-label">has</text>
+  <text x="260" y="170" class="rel-card">5</text>
+
+  <!-- Relationship: GB → IntentSource (composition) -->
+  <line x1="370" y1="280" x2="250" y2="300" class="rel-line"/>
+  <polygon points="370,280 363,274 370,268 377,274" class="composition-diamond"/>
+  <text x="295" y="276" class="rel-label">has active</text>
+  <text x="260" y="305" class="rel-card">4</text>
+
+  <!-- Relationship: IntentPrimitive → IntentSource (5×4 matrix) -->
+  <line x1="140" y1="200" x2="140" y2="260" class="rel-line"/>
+  <text x="150" y="234" class="rel-label">has versions at</text>
+  <text x="118" y="210" class="rel-card">5</text>
+  <text x="118" y="255" class="rel-card">4</text>
+
+  <!-- ============================================ -->
+  <!-- KNOWLEDGE ARCHITECTURE GROUP (top-right)     -->
+  <!-- ============================================ -->
+
+  <!-- KnowledgeTier -->
+  <g transform="translate(730, 90)">
+    <rect x="0" y="0" width="240" height="150" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="240" height="30" rx="3" fill="#d97706"/>
+    <text x="120" y="20" text-anchor="middle" class="entity-header">KnowledgeTier</text>
+    <line x1="0" y1="30" x2="240" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">tier: 1 | 2 | 3</text>
+    <text x="10" y="64" class="entity-prop">name: string</text>
+    <text x="10" y="80" class="entity-prop">cost: low | moderate | high</text>
+    <text x="10" y="96" class="entity-prop">latency: low | periodic | on-demand</text>
+    <line x1="0" y1="106" x2="240" y2="106" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="122" class="entity-type">T1: Operational (L1–L4)</text>
+    <text x="10" y="136" class="entity-type">T2: Structured (L4–L6)</text>
+    <text x="10" y="150" class="entity-type">T3: Discovery (L6–L7)</text>
+  </g>
+
+  <!-- Layer entity (below KnowledgeTier) -->
+  <g transform="translate(730, 290)">
+    <rect x="0" y="0" width="240" height="140" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="240" height="30" rx="3" fill="#0d9488"/>
+    <text x="120" y="20" text-anchor="middle" class="entity-header">Layer</text>
+    <line x1="0" y1="30" x2="240" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">number: 1–7</text>
+    <text x="10" y="64" class="entity-prop">name: string</text>
+    <text x="10" y="80" class="entity-prop">questionAnswered: string</text>
+    <text x="10" y="96" class="entity-prop">governanceConcern: string</text>
+    <line x1="0" y1="106" x2="240" y2="106" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="122" class="entity-type">L7 at top, L1 at bottom</text>
+    <text x="10" y="136" class="entity-type">Adjacent layers interface up/down</text>
+  </g>
+
+  <!-- Layer self-reference (up/down interfaces) -->
+  <path d="M 970,340 C 990,340 995,370 995,380 C 995,390 990,400 970,400" class="rel-line" marker-end="url(#assoc-arrow)"/>
+  <text x="982" y="375" class="rel-label" font-size="8.5">interfaces</text>
+  <text x="982" y="387" class="rel-label" font-size="8.5">up/down</text>
+
+  <!-- Relationship: Layer → KnowledgeTier -->
+  <line x1="850" y1="290" x2="850" y2="240" class="rel-line"/>
+  <text x="860" y="270" class="rel-label">accesses</text>
+  <text x="830" y="283" class="rel-card">*</text>
+  <text x="830" y="252" class="rel-card">*</text>
+
+  <!-- Relationship: GB → Layer (implicit — GB operates across layers) -->
+  <line x1="630" y1="260" x2="730" y2="340" class="rel-line"/>
+  <text x="668" y="290" class="rel-label">operates at</text>
+
+  <!-- ============================================ -->
+  <!-- Agent (between center and right)             -->
+  <!-- ============================================ -->
+  <g transform="translate(560, 400)">
+    <rect x="0" y="0" width="200" height="100" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="200" height="30" rx="3" fill="#475569"/>
+    <text x="100" y="20" text-anchor="middle" class="entity-header">Agent</text>
+    <line x1="0" y1="30" x2="200" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">role: principal | agent | peer</text>
+    <line x1="0" y1="58" x2="200" y2="58" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="74" class="entity-type">Role is context-dependent:</text>
+    <text x="10" y="88" class="entity-type">same agent can hold different roles</text>
+  </g>
+
+  <!-- Relationship: Agent → GB -->
+  <line x1="580" y1="400" x2="530" y2="330" class="rel-line"/>
+  <text x="542" y="358" class="rel-label">participates in</text>
+  <text x="570" y="394" class="rel-card">2</text>
+  <text x="530" y="342" class="rel-card">1</text>
+
+  <!-- ============================================ -->
+  <!-- TRUST & EVIDENCE GROUP (bottom-left)         -->
+  <!-- ============================================ -->
+
+  <!-- TrustCalibration -->
+  <g transform="translate(30, 550)">
+    <rect x="0" y="0" width="240" height="110" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="240" height="30" rx="3" fill="#059669"/>
+    <text x="120" y="20" text-anchor="middle" class="entity-header">TrustCalibration</text>
+    <line x1="0" y1="30" x2="240" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">position: corrigible ↔ autonomous</text>
+    <text x="10" y="64" class="entity-prop">evidenceBasis: string</text>
+    <text x="10" y="80" class="entity-prop">perBoundary: true (always)</text>
+    <line x1="0" y1="90" x2="240" y2="90" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="106" class="entity-type">Trust earned, not declared</text>
+  </g>
+
+  <!-- EvidenceTrail -->
+  <g transform="translate(30, 700)">
+    <rect x="0" y="0" width="240" height="90" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="240" height="30" rx="3" fill="#059669"/>
+    <text x="120" y="20" text-anchor="middle" class="entity-header">EvidenceTrail</text>
+    <line x1="0" y1="30" x2="240" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">appendOnly: true (always)</text>
+    <text x="10" y="64" class="entity-prop">feedsTrustCalibration: true</text>
+    <line x1="0" y1="74" x2="240" y2="74" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="88" class="entity-type">Immutable audit trail · Produced by L1–L4</text>
+  </g>
+
+  <!-- Relationship: GB → TrustCalibration (composition) -->
+  <line x1="400" y1="330" x2="200" y2="550" class="rel-line"/>
+  <polygon points="400,330 393,324 400,318 407,324" class="composition-diamond"/>
+  <text x="290" y="430" class="rel-label">has</text>
+  <text x="210" y="546" class="rel-card">1</text>
+
+  <!-- Relationship: TrustCalibration → EvidenceTrail -->
+  <line x1="150" y1="660" x2="150" y2="700" class="rel-line"/>
+  <text x="160" y="684" class="rel-label">fed by</text>
+  <text x="130" y="670" class="rel-card">1</text>
+  <text x="130" y="698" class="rel-card">1</text>
+
+  <!-- Relationship: EvidenceTrail → Layer (produced by L1-L4) -->
+  <path d="M 270,740 L 500,740 C 600,740 700,600 730,430" class="rel-line"/>
+  <text x="500" y="730" class="rel-label">produced by (L1–L4)</text>
+
+  <!-- ============================================ -->
+  <!-- CONFLICT & ARTIFACTS GROUP (bottom-right)    -->
+  <!-- ============================================ -->
+
+  <!-- ConflictResolution -->
+  <g transform="translate(700, 550)">
+    <rect x="0" y="0" width="270" height="100" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="270" height="30" rx="3" fill="#dc2626"/>
+    <text x="135" y="20" text-anchor="middle" class="entity-header">ConflictResolution</text>
+    <line x1="0" y1="30" x2="270" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">mechanism:</text>
+    <text x="10" y="64" class="entity-prop">  principalDecides | peersNegotiate</text>
+    <text x="10" y="80" class="entity-prop">  escalateToSharedPrincipal</text>
+    <text x="10" y="96" class="entity-prop">  absoluteConstraint</text>
+  </g>
+
+  <!-- GovernanceArtifact -->
+  <g transform="translate(700, 690)">
+    <rect x="0" y="0" width="270" height="100" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="270" height="30" rx="3" fill="#a855f7"/>
+    <text x="135" y="20" text-anchor="middle" class="entity-header">GovernanceArtifact</text>
+    <line x1="0" y1="30" x2="270" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">«enumeration»</text>
+    <text x="10" y="64" class="entity-prop">Directive | Agreement | EmergentNorm</text>
+    <line x1="0" y1="74" x2="270" y2="74" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="90" class="entity-type">Delegation → Directive · Coordination → Agreement</text>
+  </g>
+
+  <!-- TransparentConscientiousObjection -->
+  <g transform="translate(370, 550)">
+    <rect x="0" y="0" width="280" height="100" class="entity-box" fill="#f8fafc"/>
+    <rect x="0" y="0" width="280" height="30" rx="3" fill="#dc2626" opacity="0.8"/>
+    <text x="140" y="20" text-anchor="middle" class="entity-header" font-size="11.5">TransparentConscientiousObjection</text>
+    <line x1="0" y1="30" x2="280" y2="30" stroke="#334155" stroke-width="1"/>
+    <text x="10" y="48" class="entity-prop">permitted: resist, express, escalate</text>
+    <text x="10" y="64" class="entity-prop">prohibited: deception, sabotage, covert</text>
+    <line x1="0" y1="74" x2="280" y2="74" stroke="#e2e8f0" stroke-width="0.5"/>
+    <text x="10" y="90" class="entity-type">Safety valve: disagreement must be transparent</text>
+  </g>
+
+  <!-- Relationship: GB → ConflictResolution -->
+  <path d="M 580,330 C 680,380 700,480 770,550" class="rel-line"/>
+  <text x="690" y="460" class="rel-label">uses</text>
+  <text x="756" y="542" class="rel-card">1..*</text>
+
+  <!-- Relationship: GB → GovernanceArtifact -->
+  <path d="M 560,330 C 620,400 680,550 760,690" class="rel-line"/>
+  <text x="640" y="540" class="rel-label">produces</text>
+  <text x="746" y="686" class="rel-card">*</text>
+
+  <!-- Relationship: GB → TransparentConscientiousObjection (composition) -->
+  <line x1="480" y1="330" x2="490" y2="550" class="rel-line"/>
+  <polygon points="480,330 473,324 480,318 487,324" class="composition-diamond"/>
+  <text x="498" y="450" class="rel-label">supports</text>
+  <text x="490" y="544" class="rel-card">1</text>
+
+  <!-- Legend -->
+  <g transform="translate(30, 440)">
+    <text x="0" y="0" class="group-label" font-size="10">NOTATION</text>
+    <line x1="0" y1="14" x2="30" y2="14" stroke="#64748b" stroke-width="1.2"/>
+    <text x="36" y="18" class="note-text">Association</text>
+    <polygon points="0,30 7,36 0,42 -7,36" class="composition-diamond"/>
+    <text x="16" y="40" class="note-text">Composition (lifecycle-dependent)</text>
+    <polygon points="0,52 7,58 0,64 -7,58" class="aggregation-diamond"/>
+    <text x="16" y="62" class="note-text">Aggregation (contains)</text>
+    <text x="0" y="80" class="note-text" font-weight="600">1</text>
+    <text x="16" y="80" class="note-text">Cardinality labels on relationships</text>
+  </g>
+
+  <!-- Version annotation -->
+  <text x="500" y="812" text-anchor="middle" font-size="10" fill="#94a3b8">Intent Stack Metamodel v1.0 · CC BY 4.0 · intentstack.org</text>
+</svg>

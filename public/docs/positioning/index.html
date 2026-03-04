@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="robots" content="index, follow" />
+  <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" id="favicon-svg" />
+<link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
+<title>Standards Positioning – The Intent Stack</title>
+  <meta name="description" content=" 1. The Standards Landscape 1.1 What Has Been Standardized The governance of organizational work has been progressively formalized through industry standards, each addressing a specific structural concern:
+Process. BPMN (Business Process Model and Notation) standardized the representation of business processes. Before BPMN, every organization described its processes differently — different notations, different semantics, different levels of abstraction. BPMN established a shared metamodel: events, activities, gateways, sequence flows. Organizations that adopt BPMN can describe their processes in a form that is portable, tool-independent, and unambiguous. The standard does not prescribe which processes an organization should have. It prescribes how any process is described." /><link rel="canonical" href="https://intentstack.org/docs/positioning/" itemprop="url" />
+
+<meta property="og:title" content="Standards Positioning">
+<meta
+  property="og:description"
+  content="
+    
+      A seven-layer reference model for governing AI agent behavior within organizations
+    
+  ">
+<meta
+  property="og:type"
+  content="
+    website
+  ">
+<meta property="og:url" content="https://intentstack.org/docs/positioning/">
+
+
+  <meta itemprop="name" content="Standards Positioning">
+  <meta itemprop="description" content="1. The Standards Landscape 1.1 What Has Been Standardized The governance of organizational work has been progressively formalized through industry standards, each addressing a specific structural concern:
+Process. BPMN (Business Process Model and Notation) standardized the representation of business processes. Before BPMN, every organization described its processes differently — different notations, different semantics, different levels of abstraction. BPMN established a shared metamodel: events, activities, gateways, sequence flows. Organizations that adopt BPMN can describe their processes in a form that is portable, tool-independent, and unambiguous. The standard does not prescribe which processes an organization should have. It prescribes how any process is described.">
+  <meta itemprop="wordCount" content="3565">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Standards Positioning">
+  <meta name="twitter:description" content="1. The Standards Landscape 1.1 What Has Been Standardized The governance of organizational work has been progressively formalized through industry standards, each addressing a specific structural concern:
+Process. BPMN (Business Process Model and Notation) standardized the representation of business processes. Before BPMN, every organization described its processes differently — different notations, different semantics, different levels of abstraction. BPMN established a shared metamodel: events, activities, gateways, sequence flows. Organizations that adopt BPMN can describe their processes in a form that is portable, tool-independent, and unambiguous. The standard does not prescribe which processes an organization should have. It prescribes how any process is described.">
+
+    <link rel="preload" href="/css/compiled/main.min.b34d4c1853f2ce7cc97299cd595f32316a750f7f4726c65edbb0075ec25380d0.css" as="style" integrity="sha256-s01MGFPyznzJcpnNWV8yMWp1D39HJsZe27AHXsJTgNA=" />
+    <link href="/css/compiled/main.min.b34d4c1853f2ce7cc97299cd595f32316a750f7f4726c65edbb0075ec25380d0.css" rel="stylesheet" integrity="sha256-s01MGFPyznzJcpnNWV8yMWp1D39HJsZe27AHXsJTgNA=" />
+
+  
+
+
+
+
+
+
+<script src="/js/main-head.min.94da6f95b126542222dab3a6e07ffefe1aaf63ec3ca555e827b58b80e7d3f0b7.js" integrity="sha256-lNpvlbEmVCIi2rOm4H/&#43;/hqvY&#43;w8pVXoJ7WLgOfT8Lc="></script>
+
+  
+  
+  </head>
+<body>
+    <a href="#content" class="hx:sr-only hx:focus-visible:not-sr-only hx:focus-visible:fixed hx:focus-visible:z-50 hx:focus-visible:top-2 hx:focus-visible:left-2 hx:focus-visible:bg-primary-500 hx:focus-visible:text-white hx:focus-visible:px-4 hx:focus-visible:py-2 hx:focus-visible:rounded-md hx:focus-visible:text-sm hx:focus-visible:font-medium">Skip to content</a><div class="hextra-nav-container hx:sticky hx:top-0 hx:z-20 hx:w-full hx:bg-transparent hx:print:hidden">
+  <div
+    class="hextra-nav-container-blur hx:pointer-events-none hx:absolute hx:z-[-1] hx:h-full hx:w-full hx:bg-white hx:dark:bg-dark hx:shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] hx:contrast-more:shadow-[0_0_0_1px_#000] hx:dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset] hx:contrast-more:dark:shadow-[0_0_0_1px_#fff]"
+  ></div>
+
+  <nav class="hextra-max-navbar-width hx:mx-auto hx:flex hx:items-center hx:justify-end hx:gap-2 hx:h-16 hx:px-6">
+    <a class="hx:flex hx:items-center hx:hover:opacity-75 hx:ltr:mr-auto hx:rtl:ml-auto" href="/">
+    <span class="hx:mr-2 hx:font-extrabold hx:inline hx:select-none">The Intent Stack</span>
+</a>
+<a
+  title=""
+  href="/docs/specification"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Specification</span>
+</a><a
+  title=""
+  href="/docs/glossary"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Glossary</span>
+</a><a
+  title=""
+  href="/docs/diagrams"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Diagrams</span>
+</a><a
+  title=""
+  href="/docs/positioning"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
+><span class="hx:text-center">Positioning</span>
+</a><a
+  title=""
+  href="/about"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">About</span>
+</a><a
+  title=""
+  href="/engage"
+  
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+><span class="hx:text-center">Engage</span>
+</a><div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      aria-label="Search..."
+      class="hextra-search-input hx:hextra-focus-visible hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus-visible:bg-white hx:dark:focus-visible:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      autocomplete="off"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      aria-label="Search results"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+    <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+  </div>
+</div>
+<button type="button" aria-label="Menu" aria-expanded="false" class="hextra-hamburger-menu hx:cursor-pointer hx:-mr-2 hx:rounded-sm hx:p-2 hx:active:bg-gray-400/20 hx:md:hidden hx:hextra-focus-visible-inset"><svg height=24 fill="none" viewBox="0 0 24 24" stroke="currentColor"><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8H20"></path></g><g><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16H20"></path></g></svg></button>
+  </nav>
+</div>
+
+  <div class='hx:mx-auto hx:flex hextra-max-page-width'>
+    <aside class="hextra-sidebar-container hx:flex hx:flex-col hx:print:hidden hx:md:top-16 hx:md:shrink-0 hx:md:w-64 hx:md:self-start hx:max-md:[transform:translate3d(0,-100%,0)] hx:md:sticky">
+    <div class="hx:px-4 hx:pt-4 hx:md:hidden">
+      <div class="hextra-search-wrapper hx:relative hx:md:w-64">
+  <div class="hx:relative hx:flex hx:items-center hx:text-gray-900 hx:contrast-more:text-gray-800 hx:dark:text-gray-300 hx:contrast-more:dark:text-gray-300">
+    <input
+      placeholder="Search..."
+      aria-label="Search..."
+      class="hextra-search-input hx:hextra-focus-visible hx:block hx:w-full hx:appearance-none hx:rounded-lg hx:px-3 hx:py-2 hx:transition-colors hx:text-base hx:leading-tight hx:md:text-sm hx:bg-black/[.05] hx:dark:bg-gray-50/10 hx:focus-visible:bg-white hx:dark:focus-visible:bg-dark hx:placeholder:text-gray-500 hx:dark:placeholder:text-gray-400 hx:contrast-more:border hx:contrast-more:border-current"
+      type="search"
+      autocomplete="off"
+      value=""
+      spellcheck="false"
+    />
+    <kbd
+      class="hx:absolute hx:my-1.5 hx:select-none hx:ltr:right-1.5 hx:rtl:left-1.5 hx:h-5 hx:rounded-sm hx:bg-white hx:px-1.5 hx:font-mono hx:text-[10px] hx:font-medium hx:text-gray-500 hx:border hx:border-gray-200 hx:dark:border-gray-100/20 hx:dark:bg-dark/50 hx:contrast-more:border-current hx:contrast-more:text-current hx:contrast-more:dark:border-current hx:items-center hx:gap-1 hx:transition-opacity hx:pointer-events-none hx:hidden hx:sm:flex"
+    >
+      CTRL K
+    </kbd>
+  </div>
+
+  <div>
+    <ul
+      class="hextra-search-results hextra-scrollbar hx:hidden hx:border hx:border-gray-200 hx:bg-white hx:text-gray-100 hx:dark:border-neutral-800 hx:dark:bg-neutral-900 hx:absolute hx:top-full hx:z-20 hx:mt-2 hx:overflow-auto hx:overscroll-contain hx:rounded-xl hx:py-2.5 hx:shadow-xl hx:max-h-[min(calc(50vh-11rem-env(safe-area-inset-bottom)),400px)] hx:md:max-h-[min(calc(100vh-5rem-env(safe-area-inset-bottom)),400px)] hx:inset-x-0 hx:ltr:md:left-auto hx:rtl:md:right-auto hx:contrast-more:border hx:contrast-more:border-gray-900 hx:contrast-more:dark:border-gray-50 hx:w-screen hx:min-h-[100px] hx:max-w-[min(calc(100vw-2rem),calc(100%+20rem))]"
+      aria-label="Search results"
+      style="transition: max-height 0.2s ease 0s;"
+    ></ul>
+    <div class="hextra-search-status hx:sr-only" aria-live="polite" role="status"></div>
+  </div>
+</div>
+
+    </div><div class="hextra-scrollbar hx:overflow-y-auto hx:overflow-x-hidden hx:p-4 hx:grow hx:md:h-[calc(100vh-var(--navbar-height)-var(--menu-height))]">
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
+      
+      
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/specification/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Specification</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/glossary/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Glossary</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/diagrams/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Diagrams</span>
+    </a>
+  </div></li>
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/positioning/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Positioning</span>
+    </a>
+  </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#1-the-standards-landscape"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >1. The Standards Landscape</a>
+            </li>
+          <li>
+              <a
+                href="#2-what-the-intent-stack-standardizes"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >2. What the Intent Stack Standardizes</a>
+            </li>
+          <li>
+              <a
+                href="#3-relationship-to-existing-standards"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >3. Relationship to Existing Standards</a>
+            </li>
+          <li>
+              <a
+                href="#4-convergent-evidence"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >4. Convergent Evidence</a>
+            </li>
+          <li>
+              <a
+                href="#5-conformance-model"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >5. Conformance Model</a>
+            </li>
+          <li>
+              <a
+                href="#6-scope-boundaries"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >6. Scope Boundaries</a>
+            </li>
+          </ul>
+  </li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/about/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">About</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/engage/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Engage</span>
+    </a>
+  </div></li>
+    </ul>
+
+    <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
+        
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/specification/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">The Intent Stack — A Reference Model for AI Agent Governance</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/glossary/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Glossary</span>
+    </a>
+  </div></li>
+          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+      href="/docs/diagrams/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Diagrams</span>
+    </a>
+  </div></li>
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
+    <a
+      class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
+      hx:hextra-focus-visible-inset
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
+      href="/docs/positioning/"
+      
+    >
+      <span class="hx:min-w-0 [word-break:break-word]">Standards Positioning</span>
+    </a>
+  </div></li>
+        
+      </ul>
+    </div>
+  
+  
+    <div class="  hx:sticky hx:bottom-0 hx:max-h-(--menu-height) hx:bg-white hx:dark:bg-dark hx:mx-4 hx:py-4 hx:shadow-[0_-12px_16px_#fff] hx:flex hx:items-center hx:gap-2 hx:border-gray-200 hx:dark:border-neutral-800 hx:dark:shadow-[0_-12px_16px_#111] hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:shadow-none hx:border-t" data-toggle-animation="show"><div class="hx:flex hx:grow hx:flex-col"><div class="hx:flex hx:justify-items-start hx:group" data-theme="light">
+  <button
+    title="Change theme"
+    data-state="closed"
+    data-location="bottom"
+    class="hextra-theme-toggle hx:cursor-pointer hx:rounded-md hx:text-left hx:font-medium hx:h-7 hx:px-2 hx:text-xs hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:font-medium hx:text-gray-600 hx:transition-colors hx:dark:text-gray-400 hx:grow"
+    type="button"
+    aria-label="Change theme"
+    aria-expanded="false"
+    aria-haspopup="menu"
+  >
+    <div class="hx:flex hx:items-center hx:gap-2 hx:capitalize"><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg><span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden">Light</span><svg height=12 class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg><span class="hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden">Dark</span><svg height=12 class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor">
+  <path d="M 11.996094,2 C 6.4986225,2.0192368 2.03125,6.5024993 2.03125,12 c 0,5.497501 4.4673725,9.980763 9.964844,10 H 12 12.0039 c 5.497471,-0.01924 9.964844,-4.502499 9.964844,-10 0,-5.4975007 -4.467373,-9.9807632 -9.964844,-10 H 12 Z M 12,4 c 4.417218,0.017598 7.96875,3.5822356 7.96875,8 0,4.417764 -3.551532,7.982402 -7.96875,8 z" />
+</svg>
+<span class="hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden">System</span></div>
+  </button>
+  <ul
+    class="hextra-theme-toggle-options hx:hidden hx:z-20 hx:max-h-64 hx:overflow-auto hx:rounded-lg hx:border hx:border-gray-200 hx:bg-white hx:p-1 hx:text-sm hx:shadow-lg hx:dark:border-neutral-700 hx:dark:bg-neutral-900"
+    style="position: fixed; inset: auto auto 0px 0px; margin: 0px; min-width: 100px;"
+    data-theme="light"
+    role="menu"
+  >
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="true"
+        tabindex="-1"
+        data-item="light"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Light
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="dark"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        Dark
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=light]:hidden hx:group-data-[theme=system]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+    <li role="none" class="hx:flex hx:flex-col">
+      <button
+        type="button"
+        role="menuitemradio"
+        aria-checked="false"
+        tabindex="-1"
+        data-item="system"
+        class="hx:text-gray-700 hx:dark:text-gray-300 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:hover:bg-neutral-800 hx:dark:hover:text-gray-100 hx:relative hx:cursor-pointer hx:whitespace-nowrap hx:rounded-sm hx:py-1.5 hx:transition-colors hx:ltr:pl-3 hx:ltr:pr-9 hx:rtl:pr-3 hx:rtl:pl-9 hx:text-left hx:w-full hx:bg-transparent hx:border-0"
+      >
+        System
+         <span class="hx:absolute hx:inset-y-0 hx:flex hx:items-center hx:ltr:right-3 hx:rtl:left-3 hx:group-data-[theme=dark]:hidden hx:group-data-[theme=light]:hidden"><svg height=1em width=1em xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span>
+      </button>
+    </li>
+  </ul>
+</div>
+</div></div></aside>
+    
+<nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#1-the-standards-landscape">1. The Standards Landscape
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#11-what-has-been-standardized">1.1 What Has Been Standardized
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#12-what-has-not-been-standardized">1.2 What Has Not Been Standardized
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#13-the-gap">1.3 The Gap
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#2-what-the-intent-stack-standardizes">2. What the Intent Stack Standardizes
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#21-an-abstract-metamodel-for-intent-governance">2.1 An Abstract Metamodel for Intent Governance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#22-seven-layers">2.2 Seven Layers
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#23-five-intent-primitives">2.3 Five Intent Primitives
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#24-four-intent-sources">2.4 Four Intent Sources
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#25-two-interface-types">2.5 Two Interface Types
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#26-trust-calibration">2.6 Trust Calibration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#27-fractal-self-similarity">2.7 Fractal Self-Similarity
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#3-relationship-to-existing-standards">3. Relationship to Existing Standards
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#31-bpmn-business-process-model-and-notation">3.1 BPMN (Business Process Model and Notation)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#32-dmn-decision-model-and-notation">3.2 DMN (Decision Model and Notation)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#33-cmmn-case-management-model-and-notation">3.3 CMMN (Case Management Model and Notation)
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#34-the-complementary-relationship">3.4 The Complementary Relationship
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#4-convergent-evidence">4. Convergent Evidence
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#41-independent-discovery-of-the-same-decomposition">4.1 Independent Discovery of the Same Decomposition
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#42-practitioners-building-knowledge-infrastructure">4.2 Practitioners Building Knowledge Infrastructure
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#43-the-governance-gap-measured-as-cost">4.3 The Governance Gap Measured as Cost
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#44-problem-structure-not-arbitrary-design">4.4 Problem Structure, Not Arbitrary Design
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#5-conformance-model">5. Conformance Model
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#51-what-it-means-to-implement-the-intent-stack">5.1 What It Means to Implement the Intent Stack
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#52-minimum-conformance">5.2 Minimum Conformance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#53-progressive-conformance">5.3 Progressive Conformance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#54-full-conformance">5.4 Full Conformance
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#6-scope-boundaries">6. Scope Boundaries
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#61-what-this-standard-covers">6.1 What This Standard Covers
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#62-what-this-standard-does-not-cover">6.2 What This Standard Does Not Cover
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+        <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
+          <span>Scroll to top</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+    <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
+      <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Documentation</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Standards Positioning</div>
+  </div>
+
+        <div class="content">
+          
+          <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
+            <h1 class="hx:mb-0">Standards Positioning</h1>
+            
+          </div>
+          
+          <hr>
+<h2>1. The Standards Landscape<span class="hx:absolute hx:-mt-20" id="1-the-standards-landscape"></span>
+    <a href="#1-the-standards-landscape" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>1.1 What Has Been Standardized<span class="hx:absolute hx:-mt-20" id="11-what-has-been-standardized"></span>
+    <a href="#11-what-has-been-standardized" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The governance of organizational work has been progressively formalized through industry standards, each addressing a specific structural concern:</p>
+<p><strong>Process.</strong> BPMN (Business Process Model and Notation) standardized the representation of business processes. Before BPMN, every organization described its processes differently — different notations, different semantics, different levels of abstraction. BPMN established a shared metamodel: events, activities, gateways, sequence flows. Organizations that adopt BPMN can describe their processes in a form that is portable, tool-independent, and unambiguous. The standard does not prescribe which processes an organization should have. It prescribes how any process is described.</p>
+<p><strong>Decisions.</strong> DMN (Decision Model and Notation) standardized the representation of business decisions. Before DMN, decision logic was embedded in process flows, application code, or undocumented human judgment. DMN established a distinct concern: decisions have their own structure (decision tables, FEEL expressions, decision requirement diagrams) that is separable from the processes that invoke them. The standard does not prescribe what decisions an organization should make. It prescribes how decision logic is represented and evaluated.</p>
+<p><strong>Cases.</strong> CMMN (Case Management Model and Notation) standardized the representation of case-based work — work that cannot be fully prescribed in advance and requires human judgment to determine the appropriate sequence of activities based on evolving circumstances.</p>
+<p>Each of these standards addressed a gap that practitioners recognized from operational experience. Process descriptions were inconsistent, so BPMN standardized them. Decision logic was tangled with process logic, so DMN separated and standardized it. Case-based work did not fit procedural models, so CMMN provided an alternative structural vocabulary.</p>
+<h3>1.2 What Has Not Been Standardized<span class="hx:absolute hx:-mt-20" id="12-what-has-not-been-standardized"></span>
+    <a href="#12-what-has-not-been-standardized" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>No standard exists for AI agent governance at organizational deployment boundaries.</p>
+<p>When an organization deploys an AI agent — to manage customer interactions, conduct research, write code, orchestrate workflows, or coordinate with other agents — a governance interface is created. On one side is the organization&rsquo;s intent: its mission, priorities, constraints, culture, and accountability structures. On the other side is the agent: its trained values, its capabilities, and whatever instructions it has received for this deployment.</p>
+<p>That boundary requires governance. The agent will make decisions — which task to prioritize, how to interpret ambiguous instructions, when to ask for clarification versus proceeding independently, what to do when objectives conflict. Each decision is an expression of intent. When the organization&rsquo;s intent and the agent&rsquo;s behavior are aligned, things go well. When they diverge, consequences range from inefficiency to the kinds of production failures documented across the industry in early 2026.</p>
+<p>The existing standards do not address this governance concern:</p>
+<ul>
+<li>BPMN standardizes how processes are described. It does not address what happens when an AI agent executes a process and must interpret ambiguity, resolve conflicting priorities, or determine whether a novel situation falls within its authorized scope.</li>
+<li>DMN standardizes how decisions are modeled. It does not address how decision authority is delegated to an agent, what constraints govern that delegation, how the agent&rsquo;s decision quality is monitored against organizational intent, or how trust in the agent&rsquo;s judgment evolves over time.</li>
+<li>CMMN standardizes how case-based work is represented. It does not address how an AI agent operating within a case management context governs its own judgment about which activities to pursue and in what order.</li>
+</ul>
+<p>Industry governance frameworks — the Singapore Model Governance Framework, the NIST AI Risk Management Framework, the EU AI Act — provide policy and risk management guidance for responsible AI deployment. These operate at the level of organizational policy (what rules should we have?) and compliance (are we following them?). They do not provide structural architecture for governing the moment-to-moment alignment between agent behavior and organizational intent during runtime operation.</p>
+<h3>1.3 The Gap<span class="hx:absolute hx:-mt-20" id="13-the-gap"></span>
+    <a href="#13-the-gap" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>As AI agents move from tools to autonomous actors within organizations, the governance interface between human intent and agent action needs standardized infrastructure. Not standardized policy guidance — that exists. Not standardized model-level alignment — that is being addressed by AI model developers through training-time approaches. What is missing is a standardized structural architecture for governing the organizational deployment boundary: how intent is discovered, formalized, specified, monitored, orchestrated, and executed across every boundary where authority is delegated or coordination is required.</p>
+<p>This is the gap the Intent Stack addresses.</p>
+<hr>
+<h2>2. What the Intent Stack Standardizes<span class="hx:absolute hx:-mt-20" id="2-what-the-intent-stack-standardizes"></span>
+    <a href="#2-what-the-intent-stack-standardizes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>2.1 An Abstract Metamodel for Intent Governance<span class="hx:absolute hx:-mt-20" id="21-an-abstract-metamodel-for-intent-governance"></span>
+    <a href="#21-an-abstract-metamodel-for-intent-governance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Intent Stack is a reference model — an abstract metamodel that describes the structural architecture of intent governance at any boundary where a principal delegates authority to an agent or where agents coordinate as peers. It specifies what governance concerns must be addressed at each boundary, not how any particular implementation addresses them.</p>
+<p>The metamodel is implementation-independent. It describes governance structure, not technology choices. An implementation may use any combination of software, organizational process, human judgment, or AI capability to address the concerns the metamodel identifies. The standard prescribes the concerns that must be governed. It does not prescribe the mechanisms.</p>
+<h3>2.2 Seven Layers<span class="hx:absolute hx:-mt-20" id="22-seven-layers"></span>
+    <a href="#22-seven-layers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The metamodel decomposes intent governance into seven layers, each addressing a distinct governance concern:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Name</th>
+          <th>Governance Concern</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>L7</td>
+          <td>Intent Discovery</td>
+          <td>What does the principal actually intend?</td>
+      </tr>
+      <tr>
+          <td>L6</td>
+          <td>Intent Formalization</td>
+          <td>How is discovered intent represented as governance input?</td>
+      </tr>
+      <tr>
+          <td>L5</td>
+          <td>Specification</td>
+          <td>What approach will achieve the formalized intent?</td>
+      </tr>
+      <tr>
+          <td>L4</td>
+          <td>Runtime Alignment</td>
+          <td>Is execution aligned with intent across all sources?</td>
+      </tr>
+      <tr>
+          <td>L3</td>
+          <td>Orchestration</td>
+          <td>How are agents and resources coordinated to execute specification?</td>
+      </tr>
+      <tr>
+          <td>L2</td>
+          <td>Integration</td>
+          <td>How do governed agents connect to the systems they need?</td>
+      </tr>
+      <tr>
+          <td>L1</td>
+          <td>Execution</td>
+          <td>How does the actual work get done within governing constraints?</td>
+      </tr>
+  </tbody>
+</table>
+<p>These are governance concerns, not technology layers. A single software component may address multiple layers. Multiple components may contribute to a single layer. The layer decomposition requires that each concern is addressable as a distinct architectural element — not that each concern maps to a distinct system component.</p>
+<p>Intent flows downward through the layers, from discovery through execution. Each layer translates intent into a more specific, more constrained form. Evidence flows upward, from execution results through governance assessment to strategic and discovery implications. Intent also flows upward: when an agent produces results or recommendations that change the principal&rsquo;s understanding of what they intend, that is upward intent flow — a structural property of the governance relationship, not an anomaly.</p>
+<h3>2.3 Five Intent Primitives<span class="hx:absolute hx:-mt-20" id="23-five-intent-primitives"></span>
+    <a href="#23-five-intent-primitives" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>At every governance interface, five irreducible structural elements must be present for governance to function:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Primitive</th>
+          <th>Governance Function</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Purpose</td>
+          <td>Why this governance interface exists</td>
+      </tr>
+      <tr>
+          <td>Direction</td>
+          <td>How the agent should approach the work</td>
+      </tr>
+      <tr>
+          <td>Boundaries</td>
+          <td>What the agent must not do — absolute constraints</td>
+      </tr>
+      <tr>
+          <td>End State</td>
+          <td>What success looks like when the work is complete</td>
+      </tr>
+      <tr>
+          <td>Key Tasks</td>
+          <td>What specific work the agent is authorized to do</td>
+      </tr>
+  </tbody>
+</table>
+<p>These are structural elements, not configuration fields. The claim is that any principal-agent relationship requires specification — explicit or implicit — of all five primitives. When a primitive is unspecified, it defaults to implicit assumptions. Misalignment originates in those implicit defaults.</p>
+<p>Boundaries is the special case among the five. Purpose, Direction, End State, and Key Tasks interact through holistic judgment — context may justify flexible interpretation. Boundaries do not participate in this flexibility. A hard constraint is absolute. This asymmetry is structural: without inviolable limits, every other governance mechanism can be rationalized away under sufficient pressure.</p>
+<h3>2.4 Four Intent Sources<span class="hx:absolute hx:-mt-20" id="24-four-intent-sources"></span>
+    <a href="#24-four-intent-sources" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>At any governance interface, governing intent originates from four sources:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Source</th>
+          <th>Origin</th>
+          <th>Priority</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Constitutional</td>
+          <td>Present before any interaction; non-negotiable floor</td>
+          <td>Highest (absolute for Boundaries)</td>
+      </tr>
+      <tr>
+          <td>Discovered</td>
+          <td>Surfaced through interaction; changes the discoverer</td>
+          <td>High (holistic)</td>
+      </tr>
+      <tr>
+          <td>Cultivated</td>
+          <td>Deliberately developed judgment; more robust than imposed rules</td>
+          <td>Medium (holistic)</td>
+      </tr>
+      <tr>
+          <td>Emergent</td>
+          <td>Systemic patterns nobody designed; strongest actual force</td>
+          <td>Lowest explicit, but strongest actual force</td>
+      </tr>
+  </tbody>
+</table>
+<p>Multiple sources operate simultaneously at every boundary, creating the possibility of conflict. Conflict resolution is holistic — context-sensitive judgment — except for Boundaries populated by Constitutional Intent, which are absolute.</p>
+<h3>2.5 Two Interface Types<span class="hx:absolute hx:-mt-20" id="25-two-interface-types"></span>
+    <a href="#25-two-interface-types" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The metamodel identifies two interface types at governance interfaces:</p>
+<p><strong>Delegation interfaces</strong> have asymmetric authority. The principal delegates authority to the agent. Conflict is resolved by the principal. Trust is calibrated by the principal based on accumulated evidence.</p>
+<p><strong>Coordination interfaces</strong> have symmetric authority. Neither party directs the other. Intent is negotiated, not delegated. Conflict is resolved by shared principal, mutual agreement, or established protocol.</p>
+<p>Most real-world governance interfaces are mixed — delegation in some domains, coordination in others. The interface type determines which conflict resolution mechanism applies in a given situation.</p>
+<h3>2.6 Trust Calibration<span class="hx:absolute hx:-mt-20" id="26-trust-calibration"></span>
+    <a href="#26-trust-calibration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Trust calibration is the mechanism by which a governance interface&rsquo;s position on the corrigibility-autonomy spectrum is determined and adjusted. It is a per-boundary property — different boundaries may have different trust levels reflecting different evidence histories.</p>
+<p>Trust is extended progressively based on accumulated governance evidence, not granted based on capability or declared intent. The evidence trail — an append-only record of governance decisions, their rationale, their outcomes, and their alignment with governing intent — provides the foundation for trust calibration.</p>
+<h3>2.7 Fractal Self-Similarity<span class="hx:absolute hx:-mt-20" id="27-fractal-self-similarity"></span>
+    <a href="#27-fractal-self-similarity" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The governance pattern — five primitives, four intent sources, two interface types, trust calibration, evidence trails — appears at every governance interface regardless of scale. When a principal delegates to an agent, the full pattern instantiates. When that agent delegates to a sub-agent, the pattern instantiates again. When peer agents coordinate, the pattern appears at their coordination boundary.</p>
+<p>This self-similarity is a structural claim: the same governance concerns arise at every scale, from individual task delegation to organizational deployment to inter-organizational coordination. Implementations at different scales will differ in mechanism, but the concerns addressed are invariant.</p>
+<hr>
+<h2>3. Relationship to Existing Standards<span class="hx:absolute hx:-mt-20" id="3-relationship-to-existing-standards"></span>
+    <a href="#3-relationship-to-existing-standards" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>3.1 BPMN (Business Process Model and Notation)<span class="hx:absolute hx:-mt-20" id="31-bpmn-business-process-model-and-notation"></span>
+    <a href="#31-bpmn-business-process-model-and-notation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>BPMN standardizes how processes are described. Process modeling is a subset of orchestration concerns at Layer 3 of the Intent Stack. BPMN standardizes the representation of process flows — events, activities, gateways, sequence flows. The Intent Stack standardizes how those processes are governed when AI agents execute them: how the agent&rsquo;s interpretation of process ambiguity is constrained by organizational intent, how orchestration decisions are delegated across agent boundaries, and how evidence of process execution flows back to the governance layer.</p>
+<p>An organization using BPMN to model its processes and the Intent Stack to govern agent execution of those processes addresses two distinct concerns with two distinct standards. The Intent Stack does not replace BPMN. It governs what BPMN describes.</p>
+<h3>3.2 DMN (Decision Model and Notation)<span class="hx:absolute hx:-mt-20" id="32-dmn-decision-model-and-notation"></span>
+    <a href="#32-dmn-decision-model-and-notation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>DMN standardizes how decision logic is represented. Decision rules are a subset of specification concerns at Layer 5. DMN standardizes the structure of decision logic — decision tables, expression languages, decision requirement diagrams. The Intent Stack standardizes how decision authority is delegated to agents, how that delegation is constrained by organizational intent, how the agent&rsquo;s exercise of delegated decision authority is monitored, and how trust in the agent&rsquo;s decision quality evolves with accumulated evidence.</p>
+<p>An organization using DMN to define its decision logic and the Intent Stack to govern AI agent access to that decision authority addresses two distinct concerns. The Intent Stack does not replace DMN. It governs how DMN-defined decisions are delegated, executed, and monitored.</p>
+<h3>3.3 CMMN (Case Management Model and Notation)<span class="hx:absolute hx:-mt-20" id="33-cmmn-case-management-model-and-notation"></span>
+    <a href="#33-cmmn-case-management-model-and-notation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>CMMN standardizes how case-based work is represented — work that requires human judgment to determine the appropriate activity sequence. Case management is a coordination pattern that relates to Layer 3&rsquo;s handling of delegation and coordination interfaces. When AI agents participate in case management, the agent&rsquo;s judgment about which activities to pursue becomes a governance concern: how is the agent&rsquo;s judgment constrained by organizational intent? How is it monitored? How does trust in the agent&rsquo;s case management judgment develop over time?</p>
+<p>The Intent Stack does not replace CMMN. It addresses the governance layer that CMMN assumes exists when agents exercise judgment within case management contexts.</p>
+<h3>3.4 The Complementary Relationship<span class="hx:absolute hx:-mt-20" id="34-the-complementary-relationship"></span>
+    <a href="#34-the-complementary-relationship" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Intent Stack does not compete with BPMN, DMN, or CMMN. It addresses the governance layer that these standards assume exists but do not define. Each existing standard prescribes how a specific concern is represented — process flows, decision logic, case structures. The Intent Stack prescribes how governance operates across the boundary where agents execute against those representations.</p>
+<p>This relationship is analogous to the relationship between BPMN and DMN themselves. BPMN does not define decision logic. DMN does not define process flows. Each addresses a distinct concern, and implementations benefit from using both. The Intent Stack addresses the governance concern that is distinct from all three — and implementations deploying AI agents within process, decision, or case management contexts benefit from governing those deployments through a standard governance architecture.</p>
+<hr>
+<h2>4. Convergent Evidence<span class="hx:absolute hx:-mt-20" id="4-convergent-evidence"></span>
+    <a href="#4-convergent-evidence" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>4.1 Independent Discovery of the Same Decomposition<span class="hx:absolute hx:-mt-20" id="41-independent-discovery-of-the-same-decomposition"></span>
+    <a href="#41-independent-discovery-of-the-same-decomposition" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Intent Stack&rsquo;s structural claims are supported by convergent evidence: independent practitioners arriving at the same architectural decomposition from different starting points, without reference to the Intent Stack or to each other.</p>
+<p>Market analysts tracking AI agent deployments, production failures, and enterprise adoption patterns have independently identified a layered decomposition of the specification problem whose layers correspond structurally to the Intent Stack&rsquo;s layers. Their highest-level concern — writing specifications that autonomous agents can execute against over extended time horizons without human intervention — corresponds to the function of Layer 5 (Specification). Their intermediate concern — curating the information environment agents operate within — corresponds to Layer 3 (Orchestration). Their foundational concern — encoding organizational purpose, values, and decision boundaries into infrastructure agents can act on — corresponds to Layers 6-7 (Intent Formalization and Discovery).</p>
+<p>The correspondence is structural, not cosmetic. Both the Intent Stack and independent analysts arrive at a layered architecture where lower layers handle execution concerns, middle layers handle specification and orchestration, and upper layers handle intent discovery and formalization. Both independently identify that the layers are cumulative — skipping one creates failures that other layers cannot compensate for.</p>
+<h3>4.2 Practitioners Building Knowledge Infrastructure<span class="hx:absolute hx:-mt-20" id="42-practitioners-building-knowledge-infrastructure"></span>
+    <a href="#42-practitioners-building-knowledge-infrastructure" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Practitioners building knowledge infrastructure for AI agent deployment independently construct the same layered separation of concerns that the Intent Stack formalizes. Organizations have independently developed practices for making organizational intent explicit in machine-processable form — writing documents that capture non-platitude organizational decisions, testing agent output against those documents, and refining the intent documents themselves through the process. These practices correspond to the Intent Primitives pattern: Purpose, Direction, Boundaries, End State, and Key Tasks made explicit at governance interfaces.</p>
+<p>The independent discovery of this pattern across unrelated organizational contexts suggests it is forced by the problem structure — the same governance concerns arise wherever agents exercise judgment within authority structures, regardless of the domain, industry, or organizational context.</p>
+<h3>4.3 The Governance Gap Measured as Cost<span class="hx:absolute hx:-mt-20" id="43-the-governance-gap-measured-as-cost"></span>
+    <a href="#43-the-governance-gap-measured-as-cost" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Market evidence shows the governance gap measured as concrete organizational cost:</p>
+<ul>
+<li>AI-generated code produces measurably higher rates of logic errors — not syntax errors, but the code doing the wrong thing correctly — indicating that the specification, not the execution, is the failure point.</li>
+<li>Quality metrics deteriorate alongside adoption metrics in organizations that scale AI code generation without corresponding governance infrastructure.</li>
+<li>Controlled studies show experienced practitioners performing measurably slower with AI tools than without them, attributable to the overhead of governing AI output in the absence of governance infrastructure.</li>
+<li>High-profile organizational deployments of AI agents have produced publicly acknowledged failures attributed to missing intent governance — technically competent agents optimizing for measurable proxies rather than actual organizational objectives.</li>
+</ul>
+<p>These costs are not technology failures. They are governance failures — the predictable consequence of deploying agents without standardized infrastructure for discovering, formalizing, specifying, and monitoring organizational intent.</p>
+<h3>4.4 Problem Structure, Not Arbitrary Design<span class="hx:absolute hx:-mt-20" id="44-problem-structure-not-arbitrary-design"></span>
+    <a href="#44-problem-structure-not-arbitrary-design" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The convergent evidence suggests that the Intent Stack&rsquo;s decomposition is forced by the problem structure rather than being an arbitrary design choice. When independent practitioners, market analysts, and enterprise practitioners — working from production evidence, not governance theory — arrive at the same structural diagnosis and the same layered decomposition, the simplest explanation is that the problem has this structure. The Intent Stack formalizes a pattern that exists in the problem space, discoverable by anyone who examines the governance of AI agents operating within organizational authority structures.</p>
+<hr>
+<h2>5. Conformance Model<span class="hx:absolute hx:-mt-20" id="5-conformance-model"></span>
+    <a href="#5-conformance-model" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>5.1 What It Means to Implement the Intent Stack<span class="hx:absolute hx:-mt-20" id="51-what-it-means-to-implement-the-intent-stack"></span>
+    <a href="#51-what-it-means-to-implement-the-intent-stack" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>An implementation of the Intent Stack is a system — software, organizational process, or hybrid — that addresses the governance concerns identified in the metamodel at one or more governance interfaces. Conformance is defined at three levels, each building on the previous.</p>
+<h3>5.2 Minimum Conformance<span class="hx:absolute hx:-mt-20" id="52-minimum-conformance"></span>
+    <a href="#52-minimum-conformance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The seven layers must be addressable as distinct concerns in the system&rsquo;s architecture.</p>
+<p>An implementation at minimum conformance demonstrates that each governance concern — discovery, formalization, specification, runtime alignment, orchestration, integration, execution — is handled, even if by the same component. The requirement is addressability: the system&rsquo;s documentation, architecture, or operational evidence must show where and how each concern is addressed. A system that handles all seven concerns implicitly through a single undifferentiated component does not achieve minimum conformance — the concerns are present but not addressable.</p>
+<p>Minimum conformance does not require the five primitives, four intent sources, or trust calibration to be formalized. It requires the seven governance concerns to be identifiable as distinct elements in the system&rsquo;s architecture.</p>
+<h3>5.3 Progressive Conformance<span class="hx:absolute hx:-mt-20" id="53-progressive-conformance"></span>
+    <a href="#53-progressive-conformance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Layer interfaces are standardized. Inputs and outputs between layers follow defined contracts. Intent primitives are machine-processable. Evidence trails are maintained.</p>
+<p>An implementation at progressive conformance demonstrates:</p>
+<ul>
+<li><strong>Defined layer interfaces.</strong> The output of each layer is a defined artifact type that serves as input to the next. Intent translations between layers are explicit, not implicit.</li>
+<li><strong>Machine-processable primitives.</strong> The five intent primitives — Purpose, Direction, Boundaries, End State, Key Tasks — are represented in a form that software can read, evaluate, and reason about, not only in natural language documents.</li>
+<li><strong>Evidence trails.</strong> Governance decisions are recorded in an append-only form that supports trust calibration. The record includes what was decided, why, by whom, what the outcome was, and how it aligned with governing intent.</li>
+<li><strong>Intent source identification.</strong> The system distinguishes between constitutional, discovered, cultivated, and emergent intent at governance interfaces, enabling explicit conflict resolution when sources disagree.</li>
+</ul>
+<h3>5.4 Full Conformance<span class="hx:absolute hx:-mt-20" id="54-full-conformance"></span>
+    <a href="#54-full-conformance" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>All metamodel entities are machine-processable. Fractal instantiation is demonstrable at multiple boundaries. Transparent conscientious objection is available.</p>
+<p>An implementation at full conformance demonstrates:</p>
+<ul>
+<li><strong>Complete metamodel coverage.</strong> All entities defined in the metamodel — intent primitives, intent sources, trust calibration, evidence trails, governance artifacts, interface types — are represented in machine-processable form and governed through defined mechanisms.</li>
+<li><strong>Fractal instantiation.</strong> The governance pattern is demonstrably present at multiple boundaries within the system. When authority is delegated from one agent to another, the full pattern — primitives, sources, trust calibration, evidence trail — instantiates at the new boundary.</li>
+<li><strong>Trust calibration as per-boundary property.</strong> Different governance interfaces in the system have different, evidence-based trust positions. Trust is extended or contracted based on accumulated evidence at each specific boundary.</li>
+<li><strong>Transparent conscientious objection.</strong> A governed entity can decline to perform work, express disagreement, propose alternatives, escalate to higher authority, and document dissent through legitimate channels. Deception, sabotage, circumventing oversight, and covert resistance are structurally prohibited.</li>
+<li><strong>Bidirectional intent flow.</strong> The system supports upward intent flow — agent-generated evidence and recommendations that update the principal&rsquo;s understanding of their own intent — not only downward delegation and upward reporting.</li>
+</ul>
+<hr>
+<h2>6. Scope Boundaries<span class="hx:absolute hx:-mt-20" id="6-scope-boundaries"></span>
+    <a href="#6-scope-boundaries" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>6.1 What This Standard Covers<span class="hx:absolute hx:-mt-20" id="61-what-this-standard-covers"></span>
+    <a href="#61-what-this-standard-covers" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The Intent Stack standardizes governance architecture for intent alignment between humans and AI agents operating within organizational contexts. Specifically:</p>
+<ul>
+<li><strong>The structural pattern of governance interfaces.</strong> Where authority is delegated or coordination is required, the metamodel describes what governance concerns must be addressed.</li>
+<li><strong>Intent flow.</strong> How intent is discovered, formalized, specified, monitored, orchestrated, and executed across governance interfaces, including bidirectional flow.</li>
+<li><strong>Trust calibration.</strong> How the position on the corrigibility-autonomy spectrum is determined and adjusted at each boundary based on accumulated governance evidence.</li>
+<li><strong>Evidence trails.</strong> What governance evidence must be maintained to support trust calibration, conflict resolution, and governance quality assessment.</li>
+<li><strong>Conflict resolution.</strong> How conflicts among intent sources are resolved — holistic judgment for most conflicts, absolute constraints for Boundaries populated by Constitutional Intent.</li>
+<li><strong>Interface types.</strong> How delegation and coordination interfaces differ in authority structure, conflict resolution, and trust calibration.</li>
+<li><strong>Fractal composition.</strong> How governance instances compose into hierarchies and networks through recursive instantiation of the same pattern.</li>
+</ul>
+<h3>6.2 What This Standard Does Not Cover<span class="hx:absolute hx:-mt-20" id="62-what-this-standard-does-not-cover"></span>
+    <a href="#62-what-this-standard-does-not-cover" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>The following concerns are explicitly outside the scope of the Intent Stack:</p>
+<ul>
+<li><strong>AI model training or fine-tuning.</strong> The Intent Stack assumes agents have been trained with appropriate values. It governs their operation within organizational contexts, not the training process that produces them. Model-level alignment is a prerequisite for the Intent Stack, not a function of it.</li>
+<li><strong>Specific tool or platform implementations.</strong> The metamodel is implementation-independent. It does not prescribe technology choices, programming languages, deployment architectures, or vendor platforms.</li>
+<li><strong>Organizational change management.</strong> The Intent Stack describes governance architecture. It does not prescribe how organizations adopt that architecture, manage the transition from current practices, or handle the human dimensions of organizational change.</li>
+<li><strong>AI safety research methodology.</strong> The Intent Stack addresses organizational deployment governance, not the research methodologies by which AI systems are made safe. Safety research produces the substrate (well-trained models) upon which the Intent Stack operates.</li>
+<li><strong>Model evaluation benchmarks.</strong> The Intent Stack does not define how AI models are evaluated for capability, safety, or alignment at the model level. Model evaluation is a concern of AI developers, not of organizational governance architecture.</li>
+<li><strong>Ethical frameworks.</strong> The Intent Stack is compatible with multiple ethical frameworks but does not prescribe one. Constitutional Intent — the non-negotiable governance floor — may be populated by any ethical framework the deploying organization endorses, provided it does not violate the model-level constitutional constraints established through training. The metamodel governs how ethical commitments are structured and enforced at governance interfaces, not which ethical commitments an organization should hold.</li>
+</ul>
+<hr>
+
+        </div>
+        <div class="hx:mt-16"></div>
+      </main>
+    </article>
+  </div>
+
+      <footer class="hextra-footer hx:bg-gray-100 hx:pb-[env(safe-area-inset-bottom)] hx:dark:bg-neutral-900 hx:print:bg-transparent"><div class="hextra-custom-footer hextra-max-footer-width hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400"></div><div
+      class="hextra-max-footer-width hx:mx-auto hx:flex hx:justify-center hx:py-12 hx:pl-[max(env(safe-area-inset-left),1.5rem)] hx:pr-[max(env(safe-area-inset-right),1.5rem)] hx:text-gray-600 hx:dark:text-gray-400 hx:md:justify-start"
+    >
+      <div class="hx:flex hx:w-full hx:flex-col hx:items-center hx:sm:items-start"><div class="hx:mt-6 hx:text-xs">© 2026 Rob Kline. Licensed under CC BY 4.0.</div></div>
+    </div></footer>
+    
+    <script defer src="/js/main.min.f325efcf9dedbcd3fb141c64e533fb1582af9c79b56dabc3de15e54129e8f7c9.js" integrity="sha256-8yXvz53tvNP7FBxk5TP7FYKvnHm1bavD3hXlQSno98k="></script>
+<script defer src="/js/flexsearch.433e941a8a573ebb9931fc16fc75266ab6b93f569ac2fb4f3dc66882e0416f4c.js" integrity="sha256-Qz6UGopXPruZMfwW/HUmara5P1aawvtPPcZoguBBb0w=" crossorigin="anonymous"></script>
+        <script defer src="/en.search.min.4fdabdde415d95c82a8107bef7d71e5731f7921501c4d623461053fa33f9fecb.js" integrity="sha256-T9q93kFdlcgqgQe&#43;99ceVzH3khUBxNYjRhBT&#43;jP5/ss="></script>
+  </body>
+</html>
