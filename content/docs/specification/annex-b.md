@@ -7,7 +7,7 @@ weight: 140
 
 *(Informative)*
 
-**Anthropic.** ["Claude's Model Specification."](https://www.anthropic.com/model-spec) Published at anthropic.com. Provides the constitutional governance framework operating as the substrate below this specification's scope.
+**Anthropic.** ["Claude's Constitution."](https://www.anthropic.com/constitution) Defines the values, priorities, and behavioral principles governing Claude's conduct at the model layer — the governance substrate below this specification's scope.
 
 **Amodei, D.** ["Machines of Loving Grace."](https://darioamodei.com/essay/machines-of-loving-grace) Essay on the potential beneficial impact of advanced AI systems.
 
