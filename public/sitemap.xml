@@ -2,24 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://intentstack.org/docs/specification/</loc>
+    <loc>http://localhost:1313/docs/specification/</loc>
   </url><url>
-    <loc>https://intentstack.org/docs/glossary/</loc>
+    <loc>http://localhost:1313/docs/glossary/</loc>
   </url><url>
-    <loc>https://intentstack.org/docs/diagrams/</loc>
+    <loc>http://localhost:1313/docs/diagrams/</loc>
   </url><url>
-    <loc>https://intentstack.org/docs/positioning/</loc>
+    <loc>http://localhost:1313/docs/positioning/</loc>
   </url><url>
-    <loc>https://intentstack.org/about/</loc>
+    <loc>http://localhost:1313/docs/specification/1-scope/</loc>
   </url><url>
-    <loc>https://intentstack.org/categories/</loc>
+    <loc>http://localhost:1313/docs/specification/2-conformance/</loc>
   </url><url>
-    <loc>https://intentstack.org/docs/</loc>
+    <loc>http://localhost:1313/docs/specification/3-normative-references/</loc>
   </url><url>
-    <loc>https://intentstack.org/engage/</loc>
+    <loc>http://localhost:1313/docs/specification/4-terms-and-definitions/</loc>
   </url><url>
-    <loc>https://intentstack.org/tags/</loc>
+    <loc>http://localhost:1313/docs/specification/5-intent-primitives/</loc>
   </url><url>
-    <loc>https://intentstack.org/</loc>
+    <loc>http://localhost:1313/docs/specification/6-intent-sources/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/7-interface-types/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/8-seven-layers/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/9-fractal-governance/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/10-trust-calibration/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/11-tco/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/12-open-questions/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/annex-a/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/specification/annex-b/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/docs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/engage/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
   </url>
 </urlset>

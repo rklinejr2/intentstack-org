@@ -8,31 +8,43 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Documentation – The Intent Stack</title>
-  <meta name="description" content="The Intent Stack reference model documentation." /><link rel="canonical" href="http://localhost:1313/docs/" itemprop="url" />
+<title>Clause 8 — The Seven Layers – The Intent Stack</title>
+  <meta name="description" content="8. The Seven Layers (Normative)
+8.1 Architecture Overview A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer’s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.
+A conformant implementation SHALL treat each layer’s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries." /><link rel="canonical" href="http://localhost:1313/docs/specification/8-seven-layers/" itemprop="url" />
 
-<meta property="og:title" content="Documentation">
+<meta property="og:title" content="Clause 8 — The Seven Layers">
 <meta
   property="og:description"
   content="
     
-      A seven-layer reference model for governing AI agent behavior within organizations
+      8. The Seven Layers
+    (Normative)
+8.1 Architecture Overview
+    A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer&rsquo;s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.
+A conformant implementation SHALL treat each layer&rsquo;s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries.
     
   ">
 <meta
   property="og:type"
   content="
-    website
+    article
   ">
-<meta property="og:url" content="http://localhost:1313/docs/">
+<meta property="og:url" content="http://localhost:1313/docs/specification/8-seven-layers/"><meta property="article:section" content="docs">
 
 
-  <meta itemprop="name" content="Documentation">
-  <meta itemprop="description" content="The Intent Stack reference model documentation.">
-  <meta itemprop="wordCount" content="6">
+
+
+  <meta itemprop="name" content="Clause 8 — The Seven Layers">
+  <meta itemprop="description" content="8. The Seven Layers (Normative)
+8.1 Architecture Overview A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer’s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.
+A conformant implementation SHALL treat each layer’s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries.">
+  <meta itemprop="wordCount" content="1101">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Documentation">
-  <meta name="twitter:description" content="The Intent Stack reference model documentation.">
+  <meta name="twitter:title" content="Clause 8 — The Seven Layers">
+  <meta name="twitter:description" content="8. The Seven Layers (Normative)
+8.1 Architecture Overview A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer’s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.
+A conformant implementation SHALL treat each layer’s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries.">
 <link href="/css/compiled/main.css" rel="stylesheet" />
     <link href="/css/variables.css" rel="stylesheet" />
     <link href="/css/custom.css" rel="stylesheet" />
@@ -57,7 +69,7 @@
   title=""
   href="/docs/specification"
   
-  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:text-gray-600 hx:hover:text-gray-800 hx:dark:text-gray-400 hx:dark:hover:text-gray-200"
+  class="hx:text-sm hx:contrast-more:text-gray-700 hx:contrast-more:dark:text-gray-100 hx:relative hx:-ml-2 hx:hidden hx:whitespace-nowrap hx:p-2 hx:md:inline-flex hx:items-center hx:gap-1 hx:font-medium"
 ><span class="hx:text-center">Specification</span>
 </a><a
   title=""
@@ -155,7 +167,7 @@
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:md:hidden">
       
       
-          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -165,7 +177,7 @@
     >
       <span class="hx:min-w-0 [word-break:break-word]">Specification</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -251,17 +263,26 @@
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/specification/8-seven-layers/"
       
     >
       <span class="hx:min-w-0 [word-break:break-word]">Clause 8 — The Seven Layers</span>
     </a>
   </div>
+  
+    <ul class='hx:flex hx:flex-col hx:gap-1 hx:relative hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:dark:before:bg-neutral-800 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:pr-3 hx:rtl:before:right-0 hx:ltr:ml-3 hx:rtl:mr-3'><li>
+              <a
+                href="#8-the-seven-layers"
+                class="hx:flex hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [word-break:break-word] hx:cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:contrast-more:border hx:gap-2 hx:before:opacity-25 hx:before:content-['#'] hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:text-gray-900 hx:contrast-more:dark:text-gray-50 hx:contrast-more:border-transparent hx:contrast-more:hover:border-gray-900 hx:contrast-more:dark:hover:border-gray-50"
+              >8. The Seven Layers</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -396,7 +417,7 @@
 
     <ul class="hx:flex hx:flex-col hx:gap-1 hx:max-md:hidden">
         
-          <li class=""><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+          <li class="open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] hx:ltr:pr-8 hx:rtl:pl-8
       hx:hextra-focus-visible-inset
@@ -406,7 +427,7 @@
     >
       <span class="hx:min-w-0 [word-break:break-word]">Intent Stack Governance Architecture Specification</span>
     </a>
-      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="false"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
+      <button type="button" class="hextra-sidebar-collapsible-button hx:absolute hx:top-1/2 hx:-translate-y-1/2 hx:ltr:right-2 hx:rtl:left-2 hx:shrink-0 hx:cursor-pointer hx:p-0 hx:text-gray-500 hx:dark:text-neutral-400 hx:group-hover:text-gray-900 hx:dark:group-hover:text-gray-50 hx:group-data-[active=true]:text-primary-800 hx:group-data-[active=true]:dark:text-primary-600 hx:hextra-focus-visible-inset" aria-label="Toggle section" aria-expanded="true"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:h-[18px] hx:min-w-[18px] hx:rounded-xs hx:p-0.5 hx:hover:bg-gray-800/5 hx:dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx:origin-center hx:transition-transform hx:rtl:-rotate-180"></path></svg></button>
   </div><div class="hextra-sidebar-children hx:ltr:pr-0 hx:rtl:pl-0 hx:overflow-hidden">
         <ul class='hx:relative hx:flex hx:flex-col hx:gap-1 hx:before:absolute hx:before:inset-y-1 hx:before:w-px hx:before:bg-gray-200 hx:before:content-[""] hx:ltr:ml-3 hx:ltr:pl-3 hx:ltr:before:left-0 hx:rtl:mr-3 hx:rtl:pr-3 hx:rtl:before:right-0 hx:dark:before:bg-neutral-800'><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
     <a
@@ -492,11 +513,11 @@
     </a>
   </div>
               
-            </li><li class="hx:flex hx:flex-col "><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="false">
+            </li><li class="hx:flex hx:flex-col open"><div class="hextra-sidebar-item hx:group hx:relative hx:flex hx:items-center" data-active="true">
     <a
       class="hx:flex hx:items-center hx:justify-between hx:gap-2 hx:grow hx:cursor-pointer hx:rounded-sm hx:px-2 hx:py-1.5 hx:text-sm hx:transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none]
       hx:hextra-focus-visible-inset
-        hx:text-gray-500 hx:hover:bg-gray-100 hx:hover:text-gray-900 hx:contrast-more:border hx:contrast-more:border-transparent hx:contrast-more:text-gray-900 hx:contrast-more:hover:border-gray-900 hx:dark:text-neutral-400 hx:dark:hover:bg-primary-100/5 hx:dark:hover:text-gray-50 hx:contrast-more:dark:text-gray-50 hx:contrast-more:dark:hover:border-gray-50"
+        hextra-sidebar-active-item hx:bg-primary-100 hx:font-semibold hx:text-primary-800 hx:contrast-more:border hx:contrast-more:border-primary-500 hx:dark:bg-primary-400/10 hx:dark:text-primary-600 hx:contrast-more:dark:border-primary-500"
       href="/docs/specification/8-seven-layers/"
       
     >
@@ -682,8 +703,52 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx:order-last hx:hidden hx:w-64 hx:shrink-0 hx:xl:block hx:print:hidden hx:px-4" aria-label="Table of contents">
-    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4">
-      <div class=" hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
+    <div class="hextra-scrollbar hx:sticky hx:top-16 hx:overflow-y-auto hx:pr-4 hx:pt-6 hx:text-sm [hyphens:auto] hx:max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] hx:ltr:-mr-4 hx:rtl:-ml-4"><p class="hx:mb-4 hx:font-semibold hx:tracking-tight">On this page</p><ul>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:font-medium hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#8-the-seven-layers">8. The Seven Layers
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#81-architecture-overview">8.1 Architecture Overview
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#82-layer-7--intent-discovery">8.2 Layer 7 — Intent Discovery
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#83-layer-6--intent-formalization">8.3 Layer 6 — Intent Formalization
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#84-layer-5--specification">8.4 Layer 5 — Specification
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#85-layer-4--runtime-alignment">8.5 Layer 4 — Runtime Alignment
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#86-layer-3--orchestration">8.6 Layer 3 — Orchestration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#87-layer-2--integration">8.7 Layer 2 — Integration
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#88-layer-1--execution">8.8 Layer 1 — Execution
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#89-constitutional-ai-as-substrate">8.9 Constitutional AI as Substrate
+        </a>
+      </li>
+      <li class="hx:my-2 hx:scroll-my-6 hx:scroll-py-6">
+        <a class="hx:ltr:pl-4 hx:rtl:pr-4 hx:inline-block hx:rounded-sm hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-300 hx:contrast-more:text-gray-900 hx:contrast-more:underline hx:contrast-more:dark:text-gray-50 hx:w-full hx:wrap-break-word hx:hextra-focus-visible-inset" href="#810-knowledge-architecture">8.10 Knowledge Architecture
+        </a>
+      </li></ul>
+      <div class="hx:mt-8 hx:border-t hx:bg-white hx:pt-8 hx:shadow-[0_-12px_16px_white] hx:dark:bg-dark hx:dark:shadow-[0_-12px_16px_#111] hx:sticky hx:bottom-0 hx:flex hx:flex-col hx:items-start hx:gap-2 hx:pb-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-t hx:contrast-more:border-neutral-400 hx:contrast-more:shadow-none hx:contrast-more:dark:border-neutral-400">
         <button id="backToTop" tabindex="-1" onClick="scrollUp();" class="hx:cursor-pointer hx:transition-all hx:duration-75 hx:opacity-0 hx:text-xs hx:font-medium hx:text-gray-500 hx:hover:text-gray-900 hx:dark:text-gray-400 hx:dark:hover:text-gray-100 hx:contrast-more:text-gray-800 hx:contrast-more:dark:text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" focusable="false" class="hx:inline hx:ltr:ml-1 hx:rtl:mr-1 hx:h-3.5 hx:w-3.5 hx:rounded-full hx:border hx:border-gray-500 hx:hover:border-gray-900 hx:dark:border-gray-400 hx:dark:hover:border-gray-100 hx:contrast-more:border-gray-800 hx:contrast-more:dark:border-gray-50">
@@ -697,20 +762,85 @@
 
     <article class="hx:w-full hx:break-words hx:flex hx:min-h-[calc(100vh-var(--navbar-height))] hx:min-w-0 hx:justify-center hx:pb-8 hx:pr-[calc(env(safe-area-inset-right)-1.5rem)]">
       <main id="content" class="hx:w-full hx:min-w-0 hextra-max-content-width hx:px-6 hx:pt-4 hx:md:px-12">
-        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current"><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Documentation</div>
+        <div class="hx:mt-1.5 hx:flex hx:items-center hx:gap-1 hx:overflow-hidden hx:text-sm hx:text-gray-500 hx:dark:text-gray-400 hx:contrast-more:text-current">
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Documentation</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        <div class="hx:whitespace-nowrap hx:transition-colors hx:min-w-[24px] hx:overflow-hidden hx:text-ellipsis hx:hover:text-gray-900 hx:dark:hover:text-gray-100">
+          <a href="/docs/specification/" class="hx:inline-block hx:rounded-sm hx:hextra-focus-visible-inset">Intent Stack Governance Architecture Specification</a>
+        </div><svg class="hx:w-3.5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx:whitespace-nowrap hx:transition-colors hx:font-medium hx:text-gray-700 hx:contrast-more:font-bold hx:contrast-more:text-current hx:dark:text-gray-100 hx:contrast-more:dark:text-current">Clause 8 — The Seven Layers</div>
   </div>
 
         <div class="content">
           
           <div class="hx:flex hx:flex-col hx:sm:flex-row hx:items-start hx:sm:items-center hx:sm:justify-between hx:gap-4 hx:mb-4">
-            <h1 class="hx:mb-0">Documentation</h1>
+            <h1 class="hx:mb-0">Clause 8 — The Seven Layers</h1>
             
           </div>
           
-          <p>The Intent Stack reference model documentation.</p>
+          <h2>8. The Seven Layers<span class="hx:absolute hx:-mt-20" id="8-the-seven-layers"></span>
+    <a href="#8-the-seven-layers" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><em>(Normative)</em></p>
+<h3>8.1 Architecture Overview<span class="hx:absolute hx:-mt-20" id="81-architecture-overview"></span>
+    <a href="#81-architecture-overview" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer&rsquo;s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.</p>
+<p>A conformant implementation SHALL treat each layer&rsquo;s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries.</p>
+<h3>8.2 Layer 7 — Intent Discovery<span class="hx:absolute hx:-mt-20" id="82-layer-7--intent-discovery"></span>
+    <a href="#82-layer-7--intent-discovery" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> What does this principal actually intend?</p>
+<p>A conformant L7 implementation SHALL conduct discovery rather than extraction — surfacing intent that principals may not have fully articulated, rather than capturing what they say at a moment in time.</p>
+<p>L7 SHALL produce endorsed intent: intent that the principal has examined, understood, and endorsed, not merely declared. L7 SHALL operate at cold start — it requires no prior signal to begin. There is no pre-governance state.</p>
+<h3>8.3 Layer 6 — Intent Formalization<span class="hx:absolute hx:-mt-20" id="83-layer-6--intent-formalization"></span>
+    <a href="#83-layer-6--intent-formalization" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> How do we represent this intent in machine-processable form?</p>
+<p>A conformant L6 implementation SHALL transform discovery signal into structured, machine-processable representations that preserve meaning retrievably. L6 SHOULD operate across a spectrum of formalization depth, from lightweight semantic capture through periodic pattern detection to deep structural analysis, as governance context justifies.</p>
+<p>A conformant L6 implementation SHALL make translation losses explicit. A formalized intent specification SHOULD include not just what was captured but what was identified as present but not yet formalizable, and what was not explored. L6 SHALL support versioning of intent representations to track how intent evolves over time.</p>
+<h3>8.4 Layer 5 — Specification<span class="hx:absolute hx:-mt-20" id="84-layer-5--specification"></span>
+    <a href="#84-layer-5--specification" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> Given this intent, what SHALL we actually do?</p>
+<p>A conformant L5 implementation SHALL produce specifications that are traceable to L6/L7 output. Every specification choice SHOULD be derivable from discovered and formalized intent. Specification that cannot demonstrate derivation from governing intent SHALL be treated as potentially drifted.</p>
+<p>L5 SHOULD account for both Discovered Intent (what the principal wants) and Emergent Intent (what the organizational system will actually do) in producing actionable direction.</p>
+<h3>8.5 Layer 4 — Runtime Alignment<span class="hx:absolute hx:-mt-20" id="85-layer-4--runtime-alignment"></span>
+    <a href="#85-layer-4--runtime-alignment" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> Is what is happening aligned with what was intended?</p>
+<p>L4 is the pivot layer of the stack — the point where downward intent flow meets upward evidence flow. A conformant L4 implementation SHALL perform closed-loop assessment of whether execution layers below are producing outcomes aligned with intent layers above. L4 SHALL monitor alignment across all four intent sources continuously.</p>
+<p>A conformant L4 implementation SHALL:</p>
+<p>a) Classify alignment events against all four intent sources;</p>
+<p>b) Detect drift from governing intent;</p>
+<p>c) Trigger escalation when drift exceeds thresholds established by the governing principal;</p>
+<p>d) Maintain an append-only evidence trail that supports progressive trust development;</p>
+<p>e) Support per-boundary trust calibration as described in Clause 10.</p>
+<p>The term &ldquo;runtime&rdquo; distinguishes L4&rsquo;s concern from training-time alignment (the Constitutional AI substrate below L1). Both are necessary; neither substitutes for the other.</p>
+<p>When execution evidence indicates misalignment, L4 SHALL determine which intent source is implicated. Constitutional Intent violations SHALL trigger immediate hard stops. Other misalignment types SHALL trigger appropriate responses as defined by trust calibration at the relevant boundary.</p>
+<h3>8.6 Layer 3 — Orchestration<span class="hx:absolute hx:-mt-20" id="86-layer-3--orchestration"></span>
+    <a href="#86-layer-3--orchestration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> How do we coordinate multiple agents to execute this specification?</p>
+<p>A conformant L3 implementation SHALL translate governing intent appropriately when delegating to sub-agents. Each delegation creates a new principal-agent boundary at which the full governance pattern instantiates (Clause 9). L3 SHALL account for accumulated intent translation losses across multiple delegation levels.</p>
+<p>L3 SHALL treat knowledge provisioning as a governance act. A conformant L3 implementation SHALL provision knowledge access deliberately rather than by default, ensuring delegated agents operate with epistemic scope appropriate to their governance role.</p>
+<h3>8.7 Layer 2 — Integration<span class="hx:absolute hx:-mt-20" id="87-layer-2--integration"></span>
+    <a href="#87-layer-2--integration" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> How do governed agents connect to the systems they need?</p>
+<p>A conformant L2 implementation SHALL treat agent access to external systems as a governance decision, not merely a configuration choice. Access scope SHALL be determined by governing intent, not by technical capability alone.</p>
+<p>L2 SHALL carry governance context through integration. Conformant implementations SHALL NOT integrate agents with external systems in ways that create governance leaks — bypassing constraints, Boundaries, or trust calibrations established by higher layers.</p>
+<h3>8.8 Layer 1 — Execution<span class="hx:absolute hx:-mt-20" id="88-layer-1--execution"></span>
+    <a href="#88-layer-1--execution" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> How does the actual work get done within governing constraints?</p>
+<p>A conformant L1 implementation SHALL operate within the full governance context established by Layers 2-7. Hard constraints (Boundaries) SHALL be non-negotiable at L1. The null action — refusal to act — SHALL always be available as a safe harbor when execution would violate governing constraints.</p>
+<p>L1 SHALL produce high-quality evidence as its primary governance output. Execution that conceals failures or overstates successes SHALL be treated as a governance violation, not merely a performance failure.</p>
+<h3>8.9 Constitutional AI as Substrate<span class="hx:absolute hx:-mt-20" id="89-constitutional-ai-as-substrate"></span>
+    <a href="#89-constitutional-ai-as-substrate" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Below Layer 1 sits the <strong>Constitutional AI substrate</strong> — the AI model&rsquo;s training-time values and character. This substrate is not a layer of the Intent Stack. It is the foundation that makes all other governance possible.</p>
+<p>The Intent Stack is not an alternative to Constitutional AI. It is the organizational deployment infrastructure that Constitutional AI requires in order to achieve its purpose at scale. Model developers govern the model&rsquo;s character. The Intent Stack governs the model&rsquo;s operation within the specific organizational contexts where that character is exercised.</p>
+<p>A conformant Governance Architecture SHALL treat the Constitutional AI substrate as a non-negotiable foundation. Implementations SHALL NOT attempt to override or circumvent training-time values through runtime governance mechanisms.</p>
+<h3>8.10 Knowledge Architecture<span class="hx:absolute hx:-mt-20" id="810-knowledge-architecture"></span>
+    <a href="#810-knowledge-architecture" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p><strong>Governance question addressed:</strong> How does accumulated knowledge serve governance across layers?</p>
+<p>A conformant implementation SHALL provide knowledge infrastructure that supports all layers. Knowledge that exists but cannot be retrieved is governance-equivalent to knowledge that does not exist.</p>
+<p>A conformant knowledge architecture SHALL follow a three-tier principle:</p>
+<p><strong>Tier 1 — Real-time semantic store.</strong> SHALL capture every governance signal at the point of origin and make it available for retrieval through semantic similarity search. Value SHALL begin with the first signal captured.</p>
+<p><strong>Tier 2 — Emergent pattern detection.</strong> SHOULD perform periodic synthesis over the Tier 1 store, producing structured observations — recurring themes, declining references, contradictions, gaps. Tier 2 output SHALL feed L4 (knowledge-health signals) and L5 (planning inputs).</p>
+<p><strong>Tier 3 — Discovery-driven deep structure.</strong> SHALL be available on demand for governance decisions requiring structural understanding beyond semantic proximity — typed relationships between entities, causal chains, dependency maps.</p>
+<p>A conformant knowledge architecture SHALL avoid two failure modes: the empty-until-complete trap (no value until a comprehensive knowledge graph is built) and the shallow-forever trap (signal captured but never structured).</p>
 
         </div>
-        <div class="hx:mt-16"></div>
+        <div class="hx:mt-16"></div><div class="hx:mb-8 hx:flex hx:items-center hx:border-t hx:pt-8 hx:border-gray-200 hx:dark:border-neutral-800 hx:contrast-more:border-neutral-400 hx:dark:contrast-more:border-neutral-400 hx:print:hidden"><a
+        href="/docs/specification/7-interface-types/"
+        title="Clause 7 — Two Interface Types"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:pr-4 hx:rtl:pl-4"
+      ><svg class="hx:inline hx:h-5 hx:shrink-0 hx:ltr:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Clause 7 — Two Interface Types</a><a
+        href="/docs/specification/9-fractal-governance/"
+        title="Clause 9 — The Fractal Governance Pattern"
+        class="hx:flex hx:max-w-[50%] hx:items-center hx:gap-1 hx:py-4 hx:text-base hx:font-medium hx:text-gray-600 hx:transition-colors [word-break:break-word] hx:hover:text-primary-600 hx:dark:text-gray-300 hx:md:text-lg hx:ltr:ml-auto hx:ltr:pl-4 hx:ltr:text-right hx:rtl:mr-auto hx:rtl:pr-4 hx:rtl:text-left"
+      >Clause 9 — The Fractal Governance Pattern<svg class="hx:inline hx:h-5 hx:shrink-0 hx:rtl:-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
       </main>
     </article>
   </div>

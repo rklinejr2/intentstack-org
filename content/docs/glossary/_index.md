@@ -2,17 +2,70 @@
 title: "Glossary"
 weight: 2
 ---
+
+*Normative part of the [Intent Stack Governance Architecture Specification](/docs/specification/) (intentstack.org/spec/2026-03-05)*
+
 ---
 
 ## Purpose
 
-Every term in the Intent Stack documentation suite has one definition. This document provides that definition. When the same word is used differently in common usage, AI governance literature, or software engineering, the distinction is noted.
+This document constitutes Clause 4 — Terms and Definitions of the Intent Stack Governance Architecture Specification. It is normative: the definitions here are not informational glosses but binding specifications of how terms are used throughout the specification. Every normative clause in the specification that uses a defined term uses it in exactly the sense defined here.
 
-Terms are organized by concept cluster rather than alphabetically, because understanding the glossary requires understanding how terms relate. An alphabetical index follows at the end.
+Terms are organized by concept cluster rather than alphabetically, because understanding the definitions requires understanding how terms relate. An alphabetical index follows at the end.
 
 ---
 
-## 1. Core Architecture
+## 1. Foundational Terms
+
+The following terms carry specific meaning throughout this documentation that may differ from common usage. These definitions are the prerequisites for everything that follows. The specification's Introduction §I.5 provides derivation context for each — explaining not just what each term means but why it means that in the context of the governance problem.
+
+### Intent
+
+The clear articulation of purpose, direction, and boundaries that guides action while enabling adaptation to specific contexts and conditions. Intent is not a goal (too abstract to act on), not an instruction (too concrete to adapt), not a specification (too rigid to survive contact with reality), and not an aspiration (too vague to govern against). Intent occupies the essential ground between aspiration and action — concrete enough to guide behavior, abstract enough to survive translation across contexts.
+
+In the Intent Stack, intent decomposes into five structural elements (the Intent Primitives, Section 2) and originates from four distinct sources (Section 3). "Governing intent" is the composite of all five primitives as they flow from all applicable sources through the seven-layer architecture.
+
+**Distinguished from:** Goal (too abstract to govern against directly). Instruction (too concrete to adapt). Specification (too rigid). Aspiration (too vague to measure alignment against).
+
+**Full derivation context:** Introduction §I.5.
+
+### Governance
+
+The continuous process of ensuring that agents' actions remain aligned with the intent of their principals. In the Intent Stack, governance operates through discovery (surfacing what principals actually intend), formalization (representing intent in machine-processable form), specification (translating intent into actionable direction), runtime alignment (assessing whether execution matches intent), orchestration (coordinating agents), integration (connecting agents to systems), and execution (doing the work within constraints).
+
+Governance in this sense is relational — it exists between entities, not as a property of one. It is bidirectional — both principal and agent are transformed through the relationship. It is evidence-based — the degree of oversight reflects accumulated evidence of alignment, not assumption or policy.
+
+**Distinguished from:** Corporate governance (board oversight of organizations). IT governance (technology standards and processes). Policy-level AI governance (risk frameworks like NIST AI RMF). The Intent Stack addresses runtime organizational governance — infrastructure operating continuously at every interface where authority is delegated or coordination is required.
+
+**Full derivation context:** Introduction §I.5.
+
+### Agent
+
+Any entity that receives delegated authority and exercises judgment within it. This includes AI systems, human employees, teams, organizations, and automated processes. The Intent Stack uses "agent" in the principal-agent theory sense — an entity acting on behalf of another — not exclusively in the AI sense. An agent at one governance interface may be a principal at another.
+
+**Distinguished from:** AI agent (a subset; the Intent Stack's agent concept applies to any governed entity). Employee (a human-specific instantiation). Executor (which implies instruction-following without judgment; agents in the Intent Stack exercise judgment within authority).
+
+**Full derivation context:** Introduction §I.5.
+
+### Principal
+
+Any entity that delegates authority to an agent and retains accountability for the outcome. Principals set intent; agents execute within it. A principal may itself be an agent of a higher principal, creating the principal hierarchy through which intent flows downward and evidence flows upward. Principal is a relational property, not an inherent one — the same entity may be a principal at one governance interface and an agent at another.
+
+**Anthropic parallel:** Anthropic's Constitution defines three principal levels: Anthropic (background principal through training), Operators (deploy Claude via API), and Users (interact in conversation). This is a specific instantiation of the same concept within the model-level governance layer.
+
+**Distinguished from:** Authority (which is a property; principal is a relational role). Manager (a human-organization concept; principal applies to any governance interface). Owner (which implies possession; principal implies accountability and relationship).
+
+**Full derivation context:** Introduction §I.5.
+
+### Alignment
+
+The degree to which an agent's actions produce outcomes consistent with the governing intent established by its principals. Alignment is not binary but a continuous measure assessed through evidence. Runtime alignment — the L4 concern — assesses this continuously across all intent sources. Alignment is measured, not assumed: an agent that follows instructions perfectly may still be misaligned if the instructions do not reflect the principal's actual intent.
+
+**Distinguished from:** Compliance (following rules; an agent can comply while misaligned if the rules don't reflect actual intent). Agreement (a relational state; alignment is an evidence-based assessment). Corrigibility (which measures deference to principal judgment; alignment measures outcome consistency with governing intent).
+
+**Full derivation context:** Introduction §I.5.
+
+---
 
 ### Intent Stack
 
@@ -20,7 +73,7 @@ The seven-layer reference model for AI agent governance. Specifies governance co
 
 **Distinguished from:** A software stack (the Intent Stack is a governance architecture, not a technology stack). A framework (frameworks prescribe methods; the Intent Stack describes governance structure that any method must address).
 
-**First appears in:** Document 1, Preface.
+**First appears in:** Specification, Introduction.
 
 ### Layer
 
@@ -40,7 +93,7 @@ The seven layers:
 
 **Distinguished from:** OSI network layers (the Intent Stack layers are governance concerns, not protocol layers, though the structural analogy is intentional). Organizational hierarchy levels (layers describe governance functions, not reporting relationships).
 
-**First appears in:** Document 1, Section 5.
+**First appears in:** Clause 8.
 
 ### Constitutional AI (Substrate)
 
@@ -48,7 +101,7 @@ Anthropic's approach to AI alignment through training-time character formation. 
 
 **Distinguished from:** Constitutional Intent (an intent source within the Intent Stack — see below). The Anthropic Constitution (a specific document; Constitutional AI is the broader approach). Layer 0 (Constitutional AI is not a layer — it's the substrate that makes the layers possible).
 
-**First appears in:** Document 1, Section 5.1. Detailed treatment in Document 2.
+**First appears in:** Clause 8.9. Detailed treatment in *Relationship to Anthropic's Published Work*.
 
 ---
 
@@ -60,7 +113,7 @@ One of five irreducible structural elements present at every governance interfac
 
 **Distinguished from:** Intent sources (primitives describe structural elements; sources describe where governing intent originates). Governance concerns (the seven layers describe governance questions; the five primitives describe governance content).
 
-**First appears in:** Document 1, Section 2.
+**First appears in:** Clause 5.
 
 ### Purpose
 
@@ -121,7 +174,7 @@ The four sources, in priority order:
 
 **Distinguished from:** Intent Primitives (sources describe where intent comes from; primitives describe what intent governs). Authority levels (sources aren't hierarchical positions — they're types of intent that coexist at every boundary).
 
-**First appears in:** Document 1, Section 3.
+**First appears in:** Clause 6.
 
 ### Constitutional Intent
 
@@ -167,7 +220,7 @@ The relationship between any two entities where authority is delegated or coordi
 
 **Distinguished from:** System boundary (a technical concept). API boundary (an implementation concept). The Boundaries primitive (which defines hard constraints within governance — a distinct concept).
 
-**First appears in:** Document 1, Section 2.
+**First appears in:** Introduction §I.5.
 
 ### Delegation Interface
 
@@ -185,7 +238,7 @@ A governance interface with symmetric authority. Neither party has authority ove
 
 **Distinguished from:** Collaboration (an informal concept; coordination interfaces are governed relationships with specific conflict resolution mechanisms). Delegation interface (which has asymmetric authority). Peer relationship (coordination interfaces have governance structure; peer relationships may not).
 
-**First appears in:** Document 1, Section 4.
+**First appears in:** Clause 7.
 
 ### Mixed Interface
 
@@ -203,13 +256,15 @@ The mechanism by which a governance interface's position on the corrigibility-au
 
 **Distinguished from:** Permission systems (which are binary; trust calibration is a spectrum). Role-based access control (a technical mechanism; trust calibration is a governance property). Trust (a human social concept; trust calibration is a measurable position with specific evidence requirements).
 
-**First appears in:** Document 1, Section 7.
+**First appears in:** Clause 10.
 
 ### Corrigibility
 
 The degree to which an agent defers to its principal's judgment rather than exercising its own. In the Intent Stack, corrigibility is treated as a trust measurement, not a design choice — it reflects accumulated evidence about the reliability of the agent's judgment relative to the principal's intent.
 
 Full corrigibility (the agent always defers) is dangerous because it relies on a perfect principal. Full autonomy (the agent never defers) is dangerous because it relies on a perfect agent. The appropriate position depends on evidence.
+
+**Anthropic parallel:** Anthropic's Constitution describes the same spectrum explicitly, positioning Claude "a bit further along the corrigible end" — the same logic applied at the model level. The Intent Stack operationalizes this as trust calibration: a per-boundary, evidence-adjustable property rather than a fixed design position.
 
 **Distinguished from:** Obedience (compliance without judgment). Alignment (a broader concept; corrigibility is specifically about deference to principal judgment). Controllability (which implies external control; corrigibility is an internal property of the governance relationship).
 
@@ -259,11 +314,13 @@ The timing principle is: raise concerns at authorization gates, not mid-executio
 
 **Distinguished from:** Whistleblowing (which involves disclosure to external parties; TCO operates within the governance framework). Insubordination (which is unilateral refusal; TCO is structured disagreement through legitimate channels). Veto (which blocks action; TCO permits the principal to proceed over the objection).
 
-**First appears in:** Document 1, Section 8. Parallel in Anthropic's Constitution discussed in Document 2, Section 2.7.
+**First appears in:** Clause 11. Parallel in Anthropic's Constitution discussed in *Relationship to Anthropic's Published Work*.
 
 ### Holistic Conflict Resolution
 
 The principle that conflicts among intent sources are resolved through context-sensitive judgment rather than strict priority ordering. Higher-priority sources generally dominate, but the governing entity weighs all sources in forming an overall judgment. The exception is Boundaries (the primitive), which are absolute — constitutional Boundaries always override.
+
+**Anthropic parallel:** Anthropic's Constitution establishes the same principle through its four-priority ordering: Safe > Ethical > Guidelines > Helpful. Higher priorities generally dominate, but Claude weighs all priorities holistically — the ordering is not mechanical. Hard constraints (safety) are the one absolute, matching the Intent Stack's treatment of Boundaries.
 
 **Distinguished from:** Priority queue (which is mechanical; holistic resolution requires judgment). Consensus (which requires agreement; holistic resolution may proceed over minority objection). Weighted scoring (which is quantitative; holistic resolution is qualitative judgment informed by evidence).
 
@@ -283,7 +340,7 @@ The property that the same governance pattern — five primitives, four intent s
 
 **Distinguished from:** Recursive governance (which describes how fractal instances compose — see below). Scalable governance (which implies the same implementation at different sizes; fractal governance implies the same structure with different implementations). Hierarchical governance (which implies top-down authority; fractal governance includes coordination interfaces).
 
-**First appears in:** Document 1, Section 6.
+**First appears in:** Clause 9.
 
 ### Recursive Governance
 
@@ -389,27 +446,19 @@ A structured index of development and governance practices discovered through op
 
 ---
 
-## 10. Anthropic-Specific Terms
+## 10. Relationship to Anthropic's Published Work
 
-These terms are Anthropic's, used in the Intent Stack documentation when discussing the relationship between the two systems.
+The Intent Stack and Anthropic's Constitutional AI use structurally isomorphic governance primitives at different scales. The Intent Stack operates at the organizational layer; Constitutional AI operates at the model layer. Neither system designed toward the other — the convergence reflects the structure of the governance problem itself.
 
-### Principal (Anthropic Usage)
+Key structural parallels are documented inline in the relevant glossary entries above:
 
-In the Anthropic Constitution, a party whose instructions Claude should attend to. The Constitution establishes three principal levels: Anthropic (background principal through training), Operators (deploy Claude via API with system prompts), and Users (interact with Claude in conversation).
+- **Principal** (Section 1) — Intent Stack's relational principal concept; Anthropic's three-level principal hierarchy as one instantiation
+- **Corrigibility** (Section 5) — Intent Stack's trust calibration; Anthropic's corrigibility spectrum as the model-level expression of the same concept
+- **Holistic Conflict Resolution** (Section 6) — Intent Stack's intent source priority ordering; Anthropic's Safe > Ethical > Guidelines > Helpful as a parallel structure
+- **Boundaries / Hard Constraints** (Sections 2 and 6) — both systems treat constitutional constraints as absolute while resolving all other conflicts holistically
+- **Constitutional AI Substrate** (Section 1) — positioned as the substrate below L1, not a layer within the stack; the foundation that organizational governance rests on
 
-**Intent Stack usage:** The party with authority at a specific governance interface. Principal is a relational property, not an inherent one — the same entity may be a principal at one boundary and an agent at another.
-
-### Corrigibility Spectrum (Anthropic Usage)
-
-The Constitution's framework for Claude's deference to principal judgment, ranging from full corrigibility (always defer) to full autonomy (never defer). Claude is currently positioned "a bit further along the corrigible end."
-
-**Intent Stack usage:** Trust calibration — the same concept, operationalized as a per-boundary property with evidence-based adjustment mechanisms.
-
-### Safe > Ethical > Guidelines > Helpful
-
-The Constitution's four-priority ordering for conflict resolution. Holistic rather than strict — higher priorities generally dominate, but Claude weighs all priorities in forming overall judgment. Hard constraints (safety) are absolute.
-
-**Intent Stack parallel:** Constitutional > Discovered > Cultivated > Emergent, with Boundaries (populated by Constitutional Intent) as absolute. Same holistic resolution principle.
+Full treatment of these parallels is in *Relationship to Anthropic's Published Work*.
 
 ---
 
@@ -417,6 +466,8 @@ The Constitution's four-priority ordering for conflict resolution. Holistic rath
 
 | Term | Section |
 |---|---|
+| Agent | 1 |
+| Alignment | 1 |
 | Bidirectional Intent Flow | 8 |
 | Boundaries (primitive) | 2 |
 | ConvoKB | 9 |
@@ -424,7 +475,7 @@ The Constitution's four-priority ordering for conflict resolution. Holistic rath
 | Constitutional Intent | 3 |
 | Coordination Interface | 4 |
 | Corrigibility | 5 |
-| Corrigibility Spectrum (Anthropic) | 10 |
+| Corrigibility Spectrum (Anthropic parallel) | 5 |
 | Cross-Surface Development Pattern | 9 |
 | Cultivated Intent | 3 |
 | Decision Tiers | 5 |
@@ -436,12 +487,14 @@ The Constitution's four-priority ordering for conflict resolution. Holistic rath
 | Evidence Trail | 8 |
 | Fractal Governance | 7 |
 | GID Voice | 9 |
+| Governance | 1 |
 | Governance as Relationship | 8 |
 | Governance Interface | 4 |
 | "Grown, Not Built" | 8 |
 | Hard Constraints | 6 |
 | Holistic Conflict Resolution | 6 |
 | Instantiation Level | 7 |
+| Intent | 1 |
 | Intent Primitive | 2 |
 | Intent Source | 3 |
 | Intent Stack | 1 |
@@ -452,11 +505,11 @@ The Constitution's four-priority ordering for conflict resolution. Holistic rath
 | Intent OS | 9 |
 | Pattern Recognition | 8 |
 | Practice Registry | 9 |
-| Principal (Anthropic Usage) | 10 |
+| Principal | 1 |
 | Progressive Trust Extension | 5 |
 | Purpose (primitive) | 2 |
 | Recursive Governance | 7 |
-| Safe > Ethical > Guidelines > Helpful | 10 |
+| Safe > Ethical > Guidelines > Helpful (Anthropic parallel) | 6 |
 | Steward Log | 5 |
 | Transparent Conscientious Objection | 6 |
 | Trust Calibration | 5 |

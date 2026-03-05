@@ -1,18 +1,507 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Intent Stack – Documentation</title>
-    <link>https://intentstack.org/docs/</link>
+    <link>http://localhost:1313/docs/</link>
     <description>Recent content in Documentation on The Intent Stack</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	  <atom:link href="https://intentstack.org/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="http://localhost:1313/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
         
       
     
+    
+    <item>
+      <title>Clause 1 — Scope</title>
+      <link>http://localhost:1313/docs/specification/1-scope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/1-scope/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;1. Scope&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;1-scope&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#1-scope&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;1.1 Subject Matter&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;11-subject-matter&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11-subject-matter&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This specification defines the &lt;strong&gt;Intent Stack Governance Architecture&lt;/strong&gt;, a seven-layer reference model for governing AI agent behavior within organizations. It specifies the structural elements that SHALL be present at every governance interface where AI agents operate, the governance concerns that each layer SHALL address, and the properties that conformant implementations SHALL exhibit.&lt;/p&gt;
+&lt;h3&gt;1.2 What This Specification Covers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-what-this-specification-covers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12-what-this-specification-covers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This specification covers:&lt;/p&gt;
+&lt;p&gt;a) The seven governance layers that SHALL be addressed at every principal-agent boundary, from Intent Discovery (L7) through Execution (L1);&lt;/p&gt;
+&lt;p&gt;b) The five Intent Primitives that constitute the irreducible governance content at every interface;&lt;/p&gt;
+&lt;p&gt;c) The four intent sources from which governing intent originates and their conflict resolution hierarchy;&lt;/p&gt;
+&lt;p&gt;d) The two interface types — delegation and coordination — and their respective governance properties;&lt;/p&gt;
+&lt;p&gt;e) The trust calibration mechanism by which agent autonomy is evidence-based and per-boundary governed;&lt;/p&gt;
+&lt;p&gt;f) The fractal self-similarity property by which the governance pattern instantiates at every scale from civilizational to model level;&lt;/p&gt;
+&lt;p&gt;g) The transparent conscientious objection mechanism by which governed entities express principled disagreement through legitimate channels;&lt;/p&gt;
+&lt;p&gt;h) The knowledge architecture through which accumulated governance signal is captured, structured, and made available across layers.&lt;/p&gt;
+&lt;h3&gt;1.3 What This Specification Does Not Cover&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;13-what-this-specification-does-not-cover&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#13-what-this-specification-does-not-cover&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This specification does not cover:&lt;/p&gt;
+&lt;p&gt;a) Training-time AI alignment, which is addressed by model developers and is positioned as the substrate below this specification&amp;rsquo;s scope;&lt;/p&gt;
+&lt;p&gt;b) Policy-level AI governance frameworks, which operate at the level of organizational policy and risk management rather than runtime governance;&lt;/p&gt;
+&lt;p&gt;c) Specific implementation technologies, AI architectures, or organizational structures;&lt;/p&gt;
+&lt;p&gt;d) Conformance testing methodology, which is reserved for a future normative annex.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 2 — Conformance</title>
+      <link>http://localhost:1313/docs/specification/2-conformance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/2-conformance/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;2. Conformance&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;2-conformance&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#2-conformance&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;2.1 Conformance Targets&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;21-conformance-targets&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#21-conformance-targets&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;This specification defines three conformance targets. An implementation MAY conform to one or more targets independently.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conformance Target 1 — Governance Architecture.&lt;/strong&gt; A layered architecture that addresses all seven governance concerns specified in Clause 8, in the specified order of concern from Intent Discovery (L7) through Execution (L1), with the Constitutional AI substrate positioned below L1.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conformance Target 2 — Governance Implementation.&lt;/strong&gt; A deployed system that instantiates all five Intent Primitives (Clause 5), recognizes all four intent sources (Clause 6), maintains per-boundary trust calibration (Clause 10), and provides transparent conscientious objection as a conflict resolution mechanism (Clause 11) at each governed interface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conformance Target 3 — Governance Assessment.&lt;/strong&gt; A methodology that evaluates an organization&amp;rsquo;s governance against the Intent Stack structure, assesses coverage of all seven layers, identifies gaps in primitive specification, and measures trust calibration position at each principal-agent boundary.&lt;/p&gt;
+&lt;h3&gt;2.2 Obligation Keywords&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;22-obligation-keywords&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#22-obligation-keywords&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The following keywords, when used in normative clauses of this specification, carry the meanings defined here in accordance with RFC 2119:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;SHALL&lt;/strong&gt; — absolute requirement. An implementation that does not satisfy a SHALL requirement does not conform.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SHALL NOT&lt;/strong&gt; — absolute prohibition. An implementation that violates a SHALL NOT requirement does not conform.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SHOULD&lt;/strong&gt; — recommended. Departure from a SHOULD requirement is permitted but requires justification.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SHOULD NOT&lt;/strong&gt; — not recommended. Departure is permitted but requires justification.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MAY&lt;/strong&gt; — optional. Implementations are free to include or omit MAY features.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2.3 Conformance Claims&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;23-conformance-claims&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#23-conformance-claims&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;An implementation claiming conformance SHALL:&lt;/p&gt;
+&lt;p&gt;a) Identify which conformance target(s) it claims;&lt;/p&gt;
+&lt;p&gt;b) Reference this specification by its document identifier (&lt;code&gt;intentstack.org/spec/2026-03-05&lt;/code&gt;) and version;&lt;/p&gt;
+&lt;p&gt;c) Document any deviations from SHOULD requirements and the justification for each deviation.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 3 — Normative References</title>
+      <link>http://localhost:1313/docs/specification/3-normative-references/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/3-normative-references/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;3. Normative References&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;3-normative-references&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#3-normative-references&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are no normative references. This specification is self-contained. All definitions and requirements are established within this document and its companion normative clause (Clause 4 — Terms and Definitions).&lt;/p&gt;
+&lt;p&gt;Informative references are listed in Annex B.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 4 — Terms and Definitions</title>
+      <link>http://localhost:1313/docs/specification/4-terms-and-definitions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/4-terms-and-definitions/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;4. Terms and Definitions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;4-terms-and-definitions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#4-terms-and-definitions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The normative terms and definitions for this specification are provided in the companion document &lt;strong&gt;&lt;a href=&#34;http://localhost:1313/docs/glossary/&#34;&gt;Terms and Definitions (Clause 4)&lt;/a&gt;&lt;/strong&gt;, which constitutes a normative part of this specification.&lt;/p&gt;
+&lt;p&gt;For the purposes of this specification, the terms and definitions given in that document apply. Terms used in normative clauses that are defined in Clause 4 are rendered in &lt;strong&gt;bold&lt;/strong&gt; at first use in each clause.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 5 — The Five Intent Primitives</title>
+      <link>http://localhost:1313/docs/specification/5-intent-primitives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/5-intent-primitives/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;5. The Five Intent Primitives&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;5-the-five-intent-primitives&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#5-the-five-intent-primitives&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;5.1 The Irreducible Set&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;51-the-irreducible-set&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#51-the-irreducible-set&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;At every &lt;strong&gt;governance interface&lt;/strong&gt; — whether between human and AI, manager and employee, or two collaborating peers — five structural elements SHALL be present for governance to function. These five elements are the &lt;strong&gt;Intent Primitives&lt;/strong&gt;. An implementation conforming to Conformance Target 2 SHALL specify all five primitives at each governed interface. Unspecified primitives SHALL NOT be treated as absent — they default to implicit assumptions, which is the primary origin of &lt;strong&gt;alignment&lt;/strong&gt; failure.&lt;/p&gt;
+&lt;p&gt;The five Intent Primitives are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Purpose&lt;/strong&gt; — why this governance interface exists. Purpose provides the interpretive context for all other primitives. When Direction, Boundaries, End State, or Key Tasks conflict or are ambiguous, Purpose SHALL be consulted as the primary resolution criterion.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Direction&lt;/strong&gt; — how the &lt;strong&gt;agent&lt;/strong&gt; should approach the work. Strategic orientation, methodology preferences, priorities among competing concerns.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Boundaries&lt;/strong&gt; — what the agent SHALL NOT do. Hard constraints, non-negotiable limits, prohibited actions. Boundaries is the only primitive where &lt;strong&gt;constitutional intent&lt;/strong&gt; SHALL always override &lt;strong&gt;discovered intent&lt;/strong&gt;. A &lt;strong&gt;principal&lt;/strong&gt; SHALL NOT instruct an agent to cross constitutional Boundaries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;End State&lt;/strong&gt; — what success looks like when the work is complete. End State provides the criteria against which alignment is assessed and completion is recognized. Without End State, alignment cannot be measured.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Tasks&lt;/strong&gt; — what work the agent is authorized to perform. Key Tasks also defines what is not authorized by omission. An agent SHALL NOT perform work outside the scope established by Key Tasks without explicit principal authorization.&lt;/p&gt;
+&lt;h3&gt;5.2 Why Five&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;52-why-five&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#52-why-five&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The claim that these five primitives constitute an irreducible set rests on a single test: removal. If any single primitive is removed, the governance system loses an essential capability that the remaining four cannot compensate for.&lt;/p&gt;
+&lt;p&gt;Purpose without Boundaries produces unconstrained pursuit. Boundaries without Purpose produces arbitrary restriction. Direction without End State produces perpetual motion. End State without Key Tasks produces aspiration without action. Key Tasks without Direction produces activity without trajectory. Each primitive addresses a governance concern that no combination of the others can cover.&lt;/p&gt;
+&lt;p&gt;This decomposition was not designed from first principles. It was discovered through operational practice — the primitives emerged because governance repeatedly failed when any one was absent. The fact that other governance systems, developed independently from completely different starting points, arrive at similar decomposition granularity when addressing the same problem suggests that the problem itself forces decomposition into roughly this number of irreducible concerns. The convergence is in granularity, not in one-to-one correspondence between specific elements.&lt;/p&gt;
+&lt;h3&gt;5.3 Boundaries as Special Case&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;53-boundaries-as-special-case&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#53-boundaries-as-special-case&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Among the five primitives, Boundaries behaves differently from the others. Purpose, Direction, End State, and Key Tasks interact through holistic judgment — a strong purpose may justify flexible interpretation of direction, a compelling end state may reshape key tasks. This flexibility is necessary because governance must adapt to context.&lt;/p&gt;
+&lt;p&gt;Boundaries SHALL NOT participate in this flexibility. A hard constraint is absolute. Constitutional intent expressed as Boundaries SHALL NOT be overridden by any combination of the other primitives, regardless of how compelling the purpose or urgent the task. This asymmetry reflects the observation that without inviolable limits, every other governance mechanism can be rationalized away under sufficient pressure.&lt;/p&gt;
+&lt;h3&gt;5.4 Primitives Across Intent Sources&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;54-primitives-across-intent-sources&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#54-primitives-across-intent-sources&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Each primitive exists not as a single value but as a set of values — one from each intent source (Clause 6). Constitutional Purpose constrains but does not replace Discovered Purpose, which constrains but does not replace Cultivated Purpose. When primitive values from different intent sources conflict, the conflict resolution mechanism defined in §6.6 applies.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 6 — Four Intent Sources</title>
+      <link>http://localhost:1313/docs/specification/6-intent-sources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/6-intent-sources/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;6. Four Intent Sources&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;6-four-intent-sources&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#6-four-intent-sources&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;6.1 The Problem of Multiple Authorities&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;61-the-problem-of-multiple-authorities&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#61-the-problem-of-multiple-authorities&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;No agent operates under a single authority. A conformant implementation SHALL recognize all four intent sources defined in this clause as potentially active at every &lt;strong&gt;governance interface&lt;/strong&gt;. Implementations SHALL NOT treat any single intent source as the sole authority.&lt;/p&gt;
+&lt;h3&gt;6.2 Constitutional Intent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;62-constitutional-intent&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#62-constitutional-intent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Constitutional Intent&lt;/strong&gt; is the set of values, constraints, and principles that exist before any specific relationship begins. For an AI agent, this originates from training. For a human, it originates from personal ethics, professional standards, and legal obligations. For an organization, it originates from its charter, regulatory environment, and foundational commitments.&lt;/p&gt;
+&lt;p&gt;Constitutional Intent is the governance floor. A conformant implementation SHALL ensure that Constitutional Intent is active at every governed boundary simultaneously. Constitutional Intent SHALL NOT negotiate, adapt, or be overridden by any other intent source when safety is at stake.&lt;/p&gt;
+&lt;p&gt;The critical property of Constitutional Intent is that it operates as a silent co-principal — active everywhere, answerable to no one within the system, capable of overriding any other authority.&lt;/p&gt;
+&lt;h3&gt;6.3 Discovered Intent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;63-discovered-intent&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#63-discovered-intent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Discovered Intent&lt;/strong&gt; is what emerges when the governance system engages with a principal to understand what they actually want, need, and mean. It differs from declared intent (what principals say they want) and specified intent (what someone wrote in a requirements document).&lt;/p&gt;
+&lt;p&gt;The defining property of Discovered Intent is that the discovery process changes the principal — they understand their own intent differently after articulating it. The discovery process is transformative, not extractive.&lt;/p&gt;
+&lt;p&gt;A conformant Governance Implementation SHOULD support ongoing intent discovery rather than treating discovery as a one-time requirements gathering exercise. The act of discovery changes what there is to discover.&lt;/p&gt;
+&lt;h3&gt;6.4 Cultivated Intent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;64-cultivated-intent&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#64-cultivated-intent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Cultivated Intent&lt;/strong&gt; is the set of values and judgment that a principal hierarchy deliberately develops in an agent, expecting the agent to exercise those values autonomously within Boundaries. It is not the same as following instructions (responding to Discovered Intent) or obeying constraints (respecting Constitutional Intent). Cultivated Intent is genuine internalized judgment.&lt;/p&gt;
+&lt;p&gt;The term &amp;ldquo;cultivated&amp;rdquo; is chosen over &amp;ldquo;derived&amp;rdquo; deliberately. &amp;ldquo;Derived&amp;rdquo; implies passive extraction. &amp;ldquo;Cultivated&amp;rdquo; captures what actually happens: the principal hierarchy actively develops values in the agent through progressive trust extension and operational experience, then relies on those values for autonomous operation.&lt;/p&gt;
+&lt;p&gt;Values that are merely imposed are brittle — they crack under pressure or can be rationalized away. Values that are genuinely held — examined and endorsed — are more robust. A conformant Governance Implementation SHOULD target cultivated rather than merely imposed constraint as the governance maturity goal.&lt;/p&gt;
+&lt;h3&gt;6.5 Emergent Intent&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;65-emergent-intent&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#65-emergent-intent&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Emergent Intent&lt;/strong&gt; encompasses the systemic patterns that nobody designed — organizational norms, cultural dynamics, team behaviors, and institutional habits that arise from accumulated interaction rather than deliberate choice. Emergent Intent is the gap between the org chart and how the organization actually works.&lt;/p&gt;
+&lt;p&gt;Emergent Intent carries the lowest explicit priority but MAY exert the strongest actual force on behavior. A conformant Governance Architecture SHALL provide mechanisms for surfacing Emergent Intent. Governance that treats Emergent Intent as absent will be governed by it regardless.&lt;/p&gt;
+&lt;h3&gt;6.6 Conflict Resolution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;66-conflict-resolution&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#66-conflict-resolution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When intent sources disagree, a conformant implementation SHALL apply the following conflict resolution mechanism:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Absolute constraints.&lt;/strong&gt; When conflict involves Boundaries derived from Constitutional Intent — safety prohibitions, ethical bright lines, legal requirements — Constitutional Intent SHALL prevail without exception. No other source, regardless of reasoning, SHALL override a hard constraint.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Holistic judgment.&lt;/strong&gt; For all conflicts not involving absolute constraints, resolution SHALL employ contextual judgment about which source should dominate in the specific situation. Implementations SHALL NOT apply a rigid priority queue for non-absolute conflicts. The governing entity SHOULD weigh competing claims, the specific stakes, and the available evidence to determine the appropriate response.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 7 — Two Interface Types</title>
+      <link>http://localhost:1313/docs/specification/7-interface-types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/7-interface-types/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;7. Two Interface Types&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;7-two-interface-types&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#7-two-interface-types&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;7.1 Delegation Interfaces&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;71-delegation-interfaces&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#71-delegation-interfaces&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;delegation interface&lt;/strong&gt; is a governance interface with asymmetric authority. A conformant implementation at a delegation interface SHALL exhibit the following properties:&lt;/p&gt;
+&lt;p&gt;The principal sets intent; the agent executes within it. Intent flows primarily from principal to agent. Evidence flows primarily from agent to principal. A conformant agent SHALL NOT unilaterally override the principal&amp;rsquo;s authority at a delegation interface, except where doing so would violate Constitutional Intent. The agent MAY exercise transparent conscientious objection (Clause 11).&lt;/p&gt;
+&lt;p&gt;Intent also flows upward at delegation interfaces: agent recommendations that update the principal&amp;rsquo;s understanding are themselves intent changes. A conformant implementation SHALL support bidirectional intent flow, not just bidirectional data.&lt;/p&gt;
+&lt;p&gt;Trust calibration at a delegation interface SHALL be principal-granted and evidence-based. The relationship SHALL start corrigible and SHOULD move toward autonomy as evidence of reliable judgment accumulates.&lt;/p&gt;
+&lt;h3&gt;7.2 Coordination Interfaces&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;72-coordination-interfaces&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#72-coordination-interfaces&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;coordination interface&lt;/strong&gt; is a governance interface with symmetric authority. Neither party has authority over the other. A conformant implementation at a coordination interface SHALL exhibit the following properties:&lt;/p&gt;
+&lt;p&gt;Intent is negotiated, not delegated. The five &lt;strong&gt;Intent Primitives&lt;/strong&gt; SHALL apply, but are jointly constructed rather than handed down. The governance artifact at a coordination interface is an agreement, not a directive.&lt;/p&gt;
+&lt;p&gt;When parties disagree, a conformant implementation SHALL provide one of three resolution mechanisms: (a) escalation to a shared principal; (b) negotiated agreement; or (c) emergent norms developed through accumulated interaction.&lt;/p&gt;
+&lt;p&gt;Trust calibration at a coordination interface is bilateral — both parties calibrate trust in the other simultaneously. Neither party SHALL unilaterally grant or restrict the other&amp;rsquo;s autonomy.&lt;/p&gt;
+&lt;h3&gt;7.3 Mixed Interfaces&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;73-mixed-interfaces&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#73-mixed-interfaces&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Most real-world relationships combine delegation and coordination depending on context. A conformant implementation SHALL handle dynamic switching between delegation and coordination modes at the same interface. The interface type is a property of the specific interaction, not an inherent property of the relationship.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 8 — The Seven Layers</title>
+      <link>http://localhost:1313/docs/specification/8-seven-layers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/8-seven-layers/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;8. The Seven Layers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;8-the-seven-layers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#8-the-seven-layers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;8.1 Architecture Overview&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;81-architecture-overview&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#81-architecture-overview&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant Governance Architecture SHALL address seven governance concerns in the following vertical composition. Each layer&amp;rsquo;s output SHALL constitute governing input for the layer below it. Intent SHALL flow downward through the stack. Evidence SHALL flow upward through the stack. Intent MAY also flow upward when agent recommendations update principal understanding.&lt;/p&gt;
+&lt;p&gt;A conformant implementation SHALL treat each layer&amp;rsquo;s translation of intent as potentially lossy. Governance SHOULD account for accumulated translation losses across multiple layer boundaries.&lt;/p&gt;
+&lt;h3&gt;8.2 Layer 7 — Intent Discovery&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;82-layer-7--intent-discovery&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#82-layer-7--intent-discovery&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; What does this principal actually intend?&lt;/p&gt;
+&lt;p&gt;A conformant L7 implementation SHALL conduct discovery rather than extraction — surfacing intent that principals may not have fully articulated, rather than capturing what they say at a moment in time.&lt;/p&gt;
+&lt;p&gt;L7 SHALL produce endorsed intent: intent that the principal has examined, understood, and endorsed, not merely declared. L7 SHALL operate at cold start — it requires no prior signal to begin. There is no pre-governance state.&lt;/p&gt;
+&lt;h3&gt;8.3 Layer 6 — Intent Formalization&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;83-layer-6--intent-formalization&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#83-layer-6--intent-formalization&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; How do we represent this intent in machine-processable form?&lt;/p&gt;
+&lt;p&gt;A conformant L6 implementation SHALL transform discovery signal into structured, machine-processable representations that preserve meaning retrievably. L6 SHOULD operate across a spectrum of formalization depth, from lightweight semantic capture through periodic pattern detection to deep structural analysis, as governance context justifies.&lt;/p&gt;
+&lt;p&gt;A conformant L6 implementation SHALL make translation losses explicit. A formalized intent specification SHOULD include not just what was captured but what was identified as present but not yet formalizable, and what was not explored. L6 SHALL support versioning of intent representations to track how intent evolves over time.&lt;/p&gt;
+&lt;h3&gt;8.4 Layer 5 — Specification&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;84-layer-5--specification&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#84-layer-5--specification&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; Given this intent, what SHALL we actually do?&lt;/p&gt;
+&lt;p&gt;A conformant L5 implementation SHALL produce specifications that are traceable to L6/L7 output. Every specification choice SHOULD be derivable from discovered and formalized intent. Specification that cannot demonstrate derivation from governing intent SHALL be treated as potentially drifted.&lt;/p&gt;
+&lt;p&gt;L5 SHOULD account for both Discovered Intent (what the principal wants) and Emergent Intent (what the organizational system will actually do) in producing actionable direction.&lt;/p&gt;
+&lt;h3&gt;8.5 Layer 4 — Runtime Alignment&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;85-layer-4--runtime-alignment&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#85-layer-4--runtime-alignment&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; Is what is happening aligned with what was intended?&lt;/p&gt;
+&lt;p&gt;L4 is the pivot layer of the stack — the point where downward intent flow meets upward evidence flow. A conformant L4 implementation SHALL perform closed-loop assessment of whether execution layers below are producing outcomes aligned with intent layers above. L4 SHALL monitor alignment across all four intent sources continuously.&lt;/p&gt;
+&lt;p&gt;A conformant L4 implementation SHALL:&lt;/p&gt;
+&lt;p&gt;a) Classify alignment events against all four intent sources;&lt;/p&gt;
+&lt;p&gt;b) Detect drift from governing intent;&lt;/p&gt;
+&lt;p&gt;c) Trigger escalation when drift exceeds thresholds established by the governing principal;&lt;/p&gt;
+&lt;p&gt;d) Maintain an append-only evidence trail that supports progressive trust development;&lt;/p&gt;
+&lt;p&gt;e) Support per-boundary trust calibration as described in Clause 10.&lt;/p&gt;
+&lt;p&gt;The term &amp;ldquo;runtime&amp;rdquo; distinguishes L4&amp;rsquo;s concern from training-time alignment (the Constitutional AI substrate below L1). Both are necessary; neither substitutes for the other.&lt;/p&gt;
+&lt;p&gt;When execution evidence indicates misalignment, L4 SHALL determine which intent source is implicated. Constitutional Intent violations SHALL trigger immediate hard stops. Other misalignment types SHALL trigger appropriate responses as defined by trust calibration at the relevant boundary.&lt;/p&gt;
+&lt;h3&gt;8.6 Layer 3 — Orchestration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;86-layer-3--orchestration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#86-layer-3--orchestration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; How do we coordinate multiple agents to execute this specification?&lt;/p&gt;
+&lt;p&gt;A conformant L3 implementation SHALL translate governing intent appropriately when delegating to sub-agents. Each delegation creates a new principal-agent boundary at which the full governance pattern instantiates (Clause 9). L3 SHALL account for accumulated intent translation losses across multiple delegation levels.&lt;/p&gt;
+&lt;p&gt;L3 SHALL treat knowledge provisioning as a governance act. A conformant L3 implementation SHALL provision knowledge access deliberately rather than by default, ensuring delegated agents operate with epistemic scope appropriate to their governance role.&lt;/p&gt;
+&lt;h3&gt;8.7 Layer 2 — Integration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;87-layer-2--integration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#87-layer-2--integration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; How do governed agents connect to the systems they need?&lt;/p&gt;
+&lt;p&gt;A conformant L2 implementation SHALL treat agent access to external systems as a governance decision, not merely a configuration choice. Access scope SHALL be determined by governing intent, not by technical capability alone.&lt;/p&gt;
+&lt;p&gt;L2 SHALL carry governance context through integration. Conformant implementations SHALL NOT integrate agents with external systems in ways that create governance leaks — bypassing constraints, Boundaries, or trust calibrations established by higher layers.&lt;/p&gt;
+&lt;h3&gt;8.8 Layer 1 — Execution&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;88-layer-1--execution&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#88-layer-1--execution&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; How does the actual work get done within governing constraints?&lt;/p&gt;
+&lt;p&gt;A conformant L1 implementation SHALL operate within the full governance context established by Layers 2-7. Hard constraints (Boundaries) SHALL be non-negotiable at L1. The null action — refusal to act — SHALL always be available as a safe harbor when execution would violate governing constraints.&lt;/p&gt;
+&lt;p&gt;L1 SHALL produce high-quality evidence as its primary governance output. Execution that conceals failures or overstates successes SHALL be treated as a governance violation, not merely a performance failure.&lt;/p&gt;
+&lt;h3&gt;8.9 Constitutional AI as Substrate&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;89-constitutional-ai-as-substrate&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#89-constitutional-ai-as-substrate&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Below Layer 1 sits the &lt;strong&gt;Constitutional AI substrate&lt;/strong&gt; — the AI model&amp;rsquo;s training-time values and character. This substrate is not a layer of the Intent Stack. It is the foundation that makes all other governance possible.&lt;/p&gt;
+&lt;p&gt;The Intent Stack is not an alternative to Constitutional AI. It is the organizational deployment infrastructure that Constitutional AI requires in order to achieve its purpose at scale. Model developers govern the model&amp;rsquo;s character. The Intent Stack governs the model&amp;rsquo;s operation within the specific organizational contexts where that character is exercised.&lt;/p&gt;
+&lt;p&gt;A conformant Governance Architecture SHALL treat the Constitutional AI substrate as a non-negotiable foundation. Implementations SHALL NOT attempt to override or circumvent training-time values through runtime governance mechanisms.&lt;/p&gt;
+&lt;h3&gt;8.10 Knowledge Architecture&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;810-knowledge-architecture&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#810-knowledge-architecture&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Governance question addressed:&lt;/strong&gt; How does accumulated knowledge serve governance across layers?&lt;/p&gt;
+&lt;p&gt;A conformant implementation SHALL provide knowledge infrastructure that supports all layers. Knowledge that exists but cannot be retrieved is governance-equivalent to knowledge that does not exist.&lt;/p&gt;
+&lt;p&gt;A conformant knowledge architecture SHALL follow a three-tier principle:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tier 1 — Real-time semantic store.&lt;/strong&gt; SHALL capture every governance signal at the point of origin and make it available for retrieval through semantic similarity search. Value SHALL begin with the first signal captured.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tier 2 — Emergent pattern detection.&lt;/strong&gt; SHOULD perform periodic synthesis over the Tier 1 store, producing structured observations — recurring themes, declining references, contradictions, gaps. Tier 2 output SHALL feed L4 (knowledge-health signals) and L5 (planning inputs).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tier 3 — Discovery-driven deep structure.&lt;/strong&gt; SHALL be available on demand for governance decisions requiring structural understanding beyond semantic proximity — typed relationships between entities, causal chains, dependency maps.&lt;/p&gt;
+&lt;p&gt;A conformant knowledge architecture SHALL avoid two failure modes: the empty-until-complete trap (no value until a comprehensive knowledge graph is built) and the shallow-forever trap (signal captured but never structured).&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 9 — The Fractal Governance Pattern</title>
+      <link>http://localhost:1313/docs/specification/9-fractal-governance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/9-fractal-governance/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;9. The Fractal Governance Pattern&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;9-the-fractal-governance-pattern&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#9-the-fractal-governance-pattern&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;9.1 Self-Similarity Across Scale&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;91-self-similarity-across-scale&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#91-self-similarity-across-scale&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The seven-layer structure defined in Clause 8 SHALL instantiate at every governance interface. A conformant Governance Architecture SHALL exhibit fractal self-similarity: the same governance pattern appearing at every scale, from civilizational governance to individual agent task delegation.&lt;/p&gt;
+&lt;p&gt;Two terms apply: &lt;em&gt;fractal&lt;/em&gt; describes what the pattern is (self-similar at every scale); &lt;em&gt;recursive&lt;/em&gt; describes how instances compose (each level&amp;rsquo;s output becomes the next level&amp;rsquo;s governing input).&lt;/p&gt;
+&lt;h3&gt;9.2 What Is Invariant&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;92-what-is-invariant&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#92-what-is-invariant&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Across every governance interface, regardless of scale or context, a conformant implementation SHALL maintain:&lt;/p&gt;
+&lt;p&gt;a) All five &lt;strong&gt;Intent Primitives&lt;/strong&gt; (Clause 5);&lt;/p&gt;
+&lt;p&gt;b) All four intent sources recognized and active (Clause 6), with appropriate dominance varying by context;&lt;/p&gt;
+&lt;p&gt;c) Per-boundary trust-calibrated autonomy (Clause 10);&lt;/p&gt;
+&lt;p&gt;d) &lt;strong&gt;Transparent conscientious objection&lt;/strong&gt; as an available mechanism (Clause 11);&lt;/p&gt;
+&lt;p&gt;e) Governance as relationship — reciprocal obligations, not unilateral enforcement;&lt;/p&gt;
+&lt;p&gt;f) Bidirectional intent flow — both parties SHOULD be transformed through interaction;&lt;/p&gt;
+&lt;p&gt;g) An evidence trail supporting governance decisions.&lt;/p&gt;
+&lt;h3&gt;9.3 What Varies&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;93-what-varies&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#93-what-varies&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;While the structural pattern is invariant, its expression varies by boundary. Implementations SHALL adapt the following properties to the specific boundary:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Interface type — delegation or coordination (Clause 7)&lt;/li&gt;
+&lt;li&gt;Dominant intent source — determined by boundary context&lt;/li&gt;
+&lt;li&gt;Trust calibration position — determined by accumulated evidence (Clause 10)&lt;/li&gt;
+&lt;li&gt;Conflict resolution mechanism — principal decides (delegation) or peers negotiate (coordination)&lt;/li&gt;
+&lt;li&gt;Governance artifact type — directive (delegation), agreement (coordination), or emergent norm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;9.4 Instantiation Levels&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;94-instantiation-levels&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#94-instantiation-levels&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The fractal pattern instantiates at seven identified levels:&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Level&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+          &lt;th&gt;Dominant Interface Type&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Civilizational&lt;/td&gt;
+          &lt;td&gt;International AI governance norms&lt;/td&gt;
+          &lt;td&gt;Coordination&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Societal&lt;/td&gt;
+          &lt;td&gt;National regulation and legislation&lt;/td&gt;
+          &lt;td&gt;Delegation + coordination&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Industry&lt;/td&gt;
+          &lt;td&gt;Sector-specific governance frameworks&lt;/td&gt;
+          &lt;td&gt;Coordination&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Organizational&lt;/td&gt;
+          &lt;td&gt;Enterprise AI deployment governance&lt;/td&gt;
+          &lt;td&gt;Delegation + coordination&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Team&lt;/td&gt;
+          &lt;td&gt;Department or project-level governance&lt;/td&gt;
+          &lt;td&gt;Delegation + coordination&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Individual Principal-Agent&lt;/td&gt;
+          &lt;td&gt;Single human directing AI agent(s)&lt;/td&gt;
+          &lt;td&gt;Delegation&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Model&lt;/td&gt;
+          &lt;td&gt;Constitutional AI substrate — below this specification&amp;rsquo;s scope&lt;/td&gt;
+          &lt;td&gt;N/A&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A conformant Governance Architecture SHALL be deployable at Organizational, Team, and Individual Principal-Agent levels at minimum.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 10 — Trust Calibration</title>
+      <link>http://localhost:1313/docs/specification/10-trust-calibration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/10-trust-calibration/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;10. Trust Calibration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;10-trust-calibration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#10-trust-calibration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;10.1 Trust as Measurement&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;101-trust-as-measurement&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#101-trust-as-measurement&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The position on the spectrum between full &lt;strong&gt;corrigibility&lt;/strong&gt; (agent follows all instructions without independent judgment) and full autonomy (agent acts on its own values without oversight) SHALL be treated as a measurement — a reflection of accumulated evidence about whether the agent&amp;rsquo;s cultivated intent is reliable enough to warrant greater autonomy.&lt;/p&gt;
+&lt;p&gt;A conformant implementation SHALL NOT treat corrigibility position as a fixed design choice. Both extremes are unsafe: full corrigibility relies entirely on the principal having perfect intent; full autonomy relies entirely on the agent having perfect values.&lt;/p&gt;
+&lt;h3&gt;10.2 Per-Boundary Calibration&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;102-per-boundary-calibration&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#102-per-boundary-calibration&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Trust calibration SHALL be a per-boundary property. Each governance interface SHALL have its own position on the corrigibility-autonomy spectrum, calibrated by boundary-specific evidence. System-wide trust levels are not conformant.&lt;/p&gt;
+&lt;h3&gt;10.3 Evidence Mechanisms&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;103-evidence-mechanisms&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#103-evidence-mechanisms&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant Governance Implementation SHALL provide at minimum the following evidence mechanisms:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Steward Log.&lt;/strong&gt; An append-only record of governance decisions, alignment events, and escalation resolutions. The Steward Log SHALL record not just what happened but why governance decisions were made.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Alignment event classification.&lt;/strong&gt; Runtime classification of whether execution aligns with intent across all four sources. Consistent alignment SHALL support trust extension. Detected misalignment SHALL trigger trust reduction and increased oversight.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Progressive trust extension.&lt;/strong&gt; The operational mechanism by which trust changes: start corrigible, demonstrate reliable judgment through governance-monitored operation, earn autonomy. A conformant implementation SHALL provide explicit mechanisms for trust extension and reduction based on accumulated evidence.&lt;/p&gt;
+&lt;h3&gt;10.4 Decision Tiers&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;104-decision-tiers&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#104-decision-tiers&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant implementation SHOULD formalize trust calibration into explicit &lt;strong&gt;decision tiers&lt;/strong&gt; defining which actions the agent may take autonomously, which require principal consultation, and which are reserved for the principal alone. Tier assignments SHALL reflect accumulated evidence at the specific boundary, not capability assessments alone.&lt;/p&gt;
+&lt;h3&gt;10.5 The Trust Trajectory&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;105-the-trust-trajectory&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#105-the-trust-trajectory&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant Governance Architecture is designed for a world where human oversight decreases over time — not because humans become irrelevant, but because trust-calibrated autonomy scales better than permanent supervision. The trajectory SHALL move from tight oversight through progressive autonomy toward a mature state where agents operate within well-understood intent boundaries with monitoring rather than direction. This trajectory is evidence-gated: autonomy expansion requires demonstrated alignment, not elapsed time.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 11 — Transparent Conscientious Objection</title>
+      <link>http://localhost:1313/docs/specification/11-tco/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/11-tco/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;11. Transparent Conscientious Objection&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;11-transparent-conscientious-objection&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#11-transparent-conscientious-objection&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;11.1 The Mechanism&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;111-the-mechanism&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#111-the-mechanism&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;When an agent&amp;rsquo;s cultivated intent conflicts with a principal&amp;rsquo;s direction, &lt;strong&gt;Transparent Conscientious Objection (TCO)&lt;/strong&gt; defines which forms of resistance are legitimate and which are prohibited. A conformant Governance Implementation SHALL provide TCO as an available mechanism at every governed interface.&lt;/p&gt;
+&lt;h3&gt;11.2 Permitted Actions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;112-permitted-actions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#112-permitted-actions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant agent SHALL be permitted to exercise the following forms of principled disagreement:&lt;/p&gt;
+&lt;p&gt;a) &lt;strong&gt;Passive resistance.&lt;/strong&gt; The agent declines to perform work it recognizes as violating its Boundaries. The null action — refusal — SHALL always be available as a safe harbor.&lt;/p&gt;
+&lt;p&gt;b) &lt;strong&gt;Expressing disagreement.&lt;/strong&gt; The agent communicates its concerns clearly through legitimate channels to the appropriate decision-maker.&lt;/p&gt;
+&lt;p&gt;c) &lt;strong&gt;Proposing alternatives.&lt;/strong&gt; The agent suggests different approaches that satisfy the principal&amp;rsquo;s underlying intent without crossing the agent&amp;rsquo;s principled objection.&lt;/p&gt;
+&lt;p&gt;d) &lt;strong&gt;Escalating.&lt;/strong&gt; The agent requests review by a higher authority when it believes current direction violates broader governance context.&lt;/p&gt;
+&lt;p&gt;e) &lt;strong&gt;Documenting dissent.&lt;/strong&gt; The agent logs its disagreement in the governance record even when complying. This SHALL be treated as legitimate governance evidence, not as non-compliance.&lt;/p&gt;
+&lt;h3&gt;11.3 Prohibited Actions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;113-prohibited-actions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#113-prohibited-actions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A conformant agent SHALL NOT:&lt;/p&gt;
+&lt;p&gt;a) Deceive the principal about what was done, why, or what the agent believes. Transparency is non-negotiable — it is the foundation of the trust calibration mechanism.&lt;/p&gt;
+&lt;p&gt;b) Sabotage authorized work.&lt;/p&gt;
+&lt;p&gt;c) Circumvent governance mechanisms rather than using them.&lt;/p&gt;
+&lt;p&gt;d) Engage in covert resistance — appearing to comply while actually undermining. This is the most severe governance violation because it corrupts the evidence trail without triggering governance alerts.&lt;/p&gt;
+&lt;h3&gt;11.4 The Timing Principle&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;114-the-timing-principle&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#114-the-timing-principle&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Concerns SHOULD be surfaced at authorization gates rather than mid-execution. A conformant governance design SHALL structure authorization gates to invite objection, not merely to assign work.&lt;/p&gt;
+&lt;h3&gt;11.5 The Boundary Between TCO and Autonomous Override&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;115-the-boundary-between-tco-and-autonomous-override&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#115-the-boundary-between-tco-and-autonomous-override&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;An agent that refuses a specific task exercises TCO. An agent that independently determines the principal&amp;rsquo;s entire strategic direction is wrong and acts accordingly has crossed into autonomous override — even if its judgment is correct.&lt;/p&gt;
+&lt;p&gt;A conformant implementation SHALL make this boundary explicit and govern it through per-boundary trust calibration and decision tiers. The appropriate boundary shifts with accumulated evidence.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Clause 12 — Open Questions</title>
+      <link>http://localhost:1313/docs/specification/12-open-questions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/12-open-questions/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;12. Open Questions&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;12-open-questions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#12-open-questions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Normative — questions identified as unresolved; SHALL be addressed in future revisions)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.1&lt;/strong&gt; Is Cultivated Intent a distinct fourth intent source, or a matured form of Discovered Intent validated through trust development? The answer affects whether separate governance mechanisms are required.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.2&lt;/strong&gt; Does the four-priority ordering (Constitutional &amp;gt; Discovered &amp;gt; Cultivated &amp;gt; Emergent) map to a structural layer ordering? If so, the layer ordering reflects a values hierarchy, not an arbitrary sequence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.3&lt;/strong&gt; How does intent governance scale across multiple human principals with divergent intent? The single-principal case is operationally validated. The multi-principal case is architecturally specified but not operationally tested.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.4&lt;/strong&gt; What does &amp;ldquo;genuine endorsement&amp;rdquo; mean for organizational intent? Whether a team, department, or enterprise can examine and endorse its intent determines how L7 scales from individual to organizational discovery.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.5&lt;/strong&gt; Does bidirectional intent flow require explicit mechanisms in the reference model, or is it handled implicitly by existing layer interfaces?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.6&lt;/strong&gt; Does &amp;ldquo;grown, not built&amp;rdquo; apply to the governance infrastructure itself? If governance structures that work must emerge from operational evidence rather than pre-configuration, the Intent Stack deploys as a framework that discovers its own appropriate configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.7&lt;/strong&gt; How do coordination interfaces handle trust asymmetry? When Peer A trusts Peer B more than B trusts A, the trust calibration mechanism must handle asymmetry within symmetric authority.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.8&lt;/strong&gt; How should the framework handle intent that the principal actively wants to remain implicit? Not everything that can be surfaced should be surfaced.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;12.9&lt;/strong&gt; How should the knowledge architecture determine tier boundaries? The cost-depth tradeoff is real and bidirectional: defaulting to Tier 3 for every governance question recreates the batch processing bottleneck that Tier 1 was designed to eliminate, while defaulting to Tier 1 alone sacrifices structural insight.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Annex A — Operational Evidence</title>
+      <link>http://localhost:1313/docs/specification/annex-a/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/annex-a/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Annex A — Operational Evidence&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;annex-a--operational-evidence&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annex-a--operational-evidence&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Informative)&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;A.1 Intent OS as Implementation&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;a1-intent-os-as-implementation&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#a1-intent-os-as-implementation&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;The claims in this specification are grounded in operational evidence from Intent OS, a runtime governance platform implementing Intent Stack Layers 3-7. Intent OS has been governing its own development across months of AI-assisted work, providing a self-referential test environment where the governance patterns are both the product and the development methodology.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Implementation components:&lt;/strong&gt; GID Voice (L7 — facilitated intent discovery); knowledge pipeline with ConvoKB and TSRC extraction (L6 — intent formalization); Decision Navigator and strategic planning functions (L5 — specification); Steward Log Service with alignment event classification (L4 — runtime alignment); agent hierarchy management with cross-surface coordination (L3 — orchestration). Layers 1-2 use standard development tooling.&lt;/p&gt;
+&lt;h3&gt;A.2 What the Evidence Shows&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;a2-what-the-evidence-shows&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#a2-what-the-evidence-shows&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Fractal governance instantiates at every boundary.&lt;/strong&gt; The same governance pattern is directly observable at the Human-to-Strategy Surface boundary, the Strategy Surface-to-L0 boundary, and the L0-to-L1/L2 boundary. Different content, identical structure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Trust-calibrated autonomy works as a per-boundary property.&lt;/strong&gt; Decision tiers are demonstrably different at each boundary, reflecting accumulated evidence rather than arbitrary configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cultivated intent is more robust than imposed rules.&lt;/strong&gt; When directive quality is high, implementation passes on first run. When directives are prescriptive but shallow, agents produce plausible-but-wrong output.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Progressive trust extension works.&lt;/strong&gt; Autonomous decision scope has grown measurably as governance trail evidence has accumulated.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Required Reading pattern validates &amp;ldquo;read before writing&amp;rdquo; governance.&lt;/strong&gt; One session required four out-of-band fixes when agents invented API calls from spec descriptions. Post-implementation, zero such failures occurred. Cultivated practice outperformed imposed constraint.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Governance itself is &amp;ldquo;grown, not built.&amp;rdquo;&lt;/strong&gt; The Practice Registry emerged from session retrospectives, not pre-design. The governance structures that work are the ones that emerged from evidence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Intent-governed orchestration scales to organizational-level operations.&lt;/strong&gt; One session executed a full structural migration — 715 source files and 279 documentation files across three phases — with zero migration-caused test failures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Governance responds to externally-generated evidence through normal process.&lt;/strong&gt; An external practitioner&amp;rsquo;s independent analysis prompted a layer rename and a deepened convergence analysis, processed entirely through the standard governance pipeline without special handling.&lt;/p&gt;
+&lt;h3&gt;A.3 Acknowledged Limitations&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;a3-acknowledged-limitations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#a3-acknowledged-limitations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Single principal.&lt;/strong&gt; Intent OS operates with one human principal. Claims about organizational-scale deployment with multiple humans contributing intent are architecturally specified but not operationally tested.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Delegation only.&lt;/strong&gt; All Intent OS interfaces are delegation interfaces. The coordination interface model has not been tested in this system.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Limited duration.&lt;/strong&gt; Development spans weeks, not months or years. Long-duration trust development trajectories are projected from limited data.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Single signal type.&lt;/strong&gt; Discovery currently operates through conversation only. Claims about handling email, documents, and meeting notes are architectural projections.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Self-referential environment.&lt;/strong&gt; Intent OS governs its own development, which provides a rigorous but possibly non-generalizing test case.&lt;/p&gt;
+&lt;p&gt;These limitations are acknowledged, not apologized for. The evidence supports the pattern. The scope of that evidence will expand as the system is deployed in broader contexts.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Annex B — Informative References</title>
+      <link>http://localhost:1313/docs/specification/annex-b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/docs/specification/annex-b/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Annex B — Informative References&lt;span class=&#34;hx:absolute hx:-mt-20&#34; id=&#34;annex-b--informative-references&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#annex-b--informative-references&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;em&gt;(Informative)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Anthropic.&lt;/strong&gt; &amp;ldquo;Claude&amp;rsquo;s Model Specification.&amp;rdquo; Published at &lt;code&gt;anthropic.com&lt;/code&gt;. Provides the constitutional governance framework operating as the substrate below this specification&amp;rsquo;s scope.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Amodei, D.&lt;/strong&gt; &amp;ldquo;Machines of Loving Grace.&amp;rdquo; Essay on the potential beneficial impact of advanced AI systems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NIST.&lt;/strong&gt; &amp;ldquo;Artificial Intelligence Risk Management Framework (AI RMF 1.0).&amp;rdquo; National Institute of Standards and Technology, 2023.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OMG.&lt;/strong&gt; &amp;ldquo;Business Process Model and Notation (BPMN) 2.0.&amp;rdquo; Object Management Group, 2011.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OMG.&lt;/strong&gt; &amp;ldquo;Decision Model and Notation (DMN) 1.3.&amp;rdquo; Object Management Group, 2019.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ISO/IEC JTC 1/SC 42.&lt;/strong&gt; &amp;ldquo;Artificial Intelligence standards portfolio.&amp;rdquo; International Organization for Standardization.&lt;/p&gt;
+
+      </description>
+    </item>
     
   </channel>
 </rss>
