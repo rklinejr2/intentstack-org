@@ -33,7 +33,9 @@ The existing standards do not address this governance concern:
 - DMN standardizes how decisions are modeled. It does not address how decision authority is delegated to an agent, what constraints govern that delegation, how the agent's decision quality is monitored against organizational intent, or how trust in the agent's judgment evolves over time.
 - CMMN standardizes how case-based work is represented. It does not address how an AI agent operating within a case management context governs its own judgment about which activities to pursue and in what order.
 
-Industry governance frameworks — the Singapore Model Governance Framework, the NIST AI Risk Management Framework, the EU AI Act — provide policy and risk management guidance for responsible AI deployment. These operate at the level of organizational policy (what rules should we have?) and compliance (are we following them?). They do not provide structural architecture for governing the moment-to-moment alignment between agent behavior and organizational intent during runtime operation.
+Industry governance frameworks — the [Singapore Model Governance Framework](https://go.gov.sg/AI-gov-MF-2), the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), the [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng) — provide policy and risk management guidance for responsible AI deployment. These operate at the level of organizational policy (what rules should we have?) and compliance (are we following them?). They do not provide structural architecture for governing the moment-to-moment alignment between agent behavior and organizational intent during runtime operation.
+
+The emergence of the governance gap is receiving increasing institutional recognition. In January 2026, Singapore's Infocomm Media Development Authority published the [Model AI Governance Framework for Agentic AI](https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf) — the first government framework specifically addressing agentic deployment — providing guidance on bounding agent autonomy, human oversight checkpoints, and technical controls. This policy-level response confirms that governments have independently diagnosed the same gap the Intent Stack addresses. It also illustrates precisely what remains missing: the Singapore framework, like its predecessors, provides organizational guidance on what governance should achieve. It does not provide a standardized structural architecture for how runtime intent alignment is achieved at the deployment boundary.
 
 ### 1.3 The Gap
 
@@ -248,3 +250,41 @@ The following concerns are explicitly outside the scope of the Intent Stack:
 - **Ethical frameworks.** The Intent Stack is compatible with multiple ethical frameworks but does not prescribe one. Constitutional Intent — the non-negotiable governance floor — may be populated by any ethical framework the deploying organization endorses, provided it does not violate the model-level constitutional constraints established through training. The metamodel governs how ethical commitments are structured and enforced at governance interfaces, not which ethical commitments an organization should hold.
 
 ---
+
+## 7. References
+
+### 7.1 OMG Standards
+
+[1] Object Management Group. *Business Process Model and Notation (BPMN), Version 2.0.2*. Formal specification formal-13-12-09. January 2014.
+https://www.omg.org/spec/BPMN/2.0.2/About-BPMN
+
+[2] Object Management Group. *Decision Model and Notation (DMN), Version 1.5*. Formal specification. 2023.
+https://www.omg.org/spec/DMN/1.5/About-DMN
+
+[3] Object Management Group. *Case Management Model and Notation (CMMN), Version 1.1*. Formal specification. December 2016.
+https://www.omg.org/spec/CMMN/1.1/About-CMMN
+
+### 7.2 Governance Frameworks
+
+[4] Infocomm Media Development Authority (IMDA), Singapore. *Model AI Governance Framework, Second Edition*. January 2020.
+https://go.gov.sg/AI-gov-MF-2
+
+[5] Infocomm Media Development Authority (IMDA), Singapore. *Model AI Governance Framework for Agentic AI, Version 1.0*. January 22, 2026.
+https://www.imda.gov.sg/-/media/imda/files/about/emerging-tech-and-research/artificial-intelligence/mgf-for-agentic-ai.pdf
+
+[6] National Institute of Standards and Technology. *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. January 26, 2023.
+https://www.nist.gov/itl/ai-risk-management-framework
+
+[7] European Parliament and Council of the European Union. *Regulation (EU) 2024/1689 Laying Down Harmonised Rules on Artificial Intelligence (Artificial Intelligence Act)*. Official Journal of the European Union, OJ L 2024/1689. July 12, 2024.
+https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
+
+### 7.3 Empirical Research
+
+[8] Becker, J., Rush, N., Barnes, E., and Rein, D. *Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity*. arXiv:2507.09089. Model Evaluation & Threat Research (METR). July 2025.
+https://arxiv.org/abs/2507.09089
+
+[9] DORA Research Team. *Accelerate State of DevOps 2024*. Google Cloud. October 2024.
+https://dora.dev/research/2024/dora-report/
+
+[10] CodeRabbit. *State of AI vs. Human Code Generation Report*. December 2025.
+https://www.coderabbit.ai/whitepapers/state-of-AI-vs-human-code-generation-report
