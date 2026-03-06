@@ -99,7 +99,7 @@ export default async function handler(req, res) {
   // CORS
   const allowedOrigin = process.env.NODE_ENV === 'development'
     ? '*'
-    : 'https://intentstack.org';
+    : (process.env.ALLOWED_ORIGIN || 'https://intentstack.org');
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -170,7 +170,7 @@ export default async function handler(req, res) {
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 512,
         system: SYSTEM_PROMPT,
         messages: sanitizedMessages
