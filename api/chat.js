@@ -97,9 +97,16 @@ function sanitizeMessage(text) {
 
 export default async function handler(req, res) {
   // CORS
-  const allowedOrigin = process.env.NODE_ENV === 'development'
-    ? '*'
-    : (process.env.ALLOWED_ORIGIN || 'https://intentstack.org');
+  const requestOrigin = req.headers['origin'] || '';
+  const allowedOrigins = [
+    'https://intentstack.org',
+    'https://www.intentstack.org',
+    process.env.ALLOWED_ORIGIN
+  ].filter(Boolean);
+  const isVercelPreview = requestOrigin.includes('intentstack') && requestOrigin.endsWith('.vercel.app');
+  const allowedOrigin = (allowedOrigins.includes(requestOrigin) || isVercelPreview || process.env.NODE_ENV === 'development')
+    ? requestOrigin
+    : allowedOrigins[0];
   res.setHeader('Access-Control-Allow-Origin', allowedOrigin);
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
