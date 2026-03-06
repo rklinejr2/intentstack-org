@@ -1,7 +1,5 @@
 {
-  "buildCommand": "hugo --minify",
-  "outputDirectory": "public",
-  "framework": null,
+  "framework": "hugo",
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/:path*" }
   ]
