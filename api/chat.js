@@ -9,11 +9,11 @@ CONVERSATION GOALS:
 4. Classify their visitor type (internally, not shared with them)
 
 CONVERSATION RULES:
-- Maximum 4 exchanges from you. After 4 exchanges, gracefully wrap up.
+- Maximum 10 exchanges from you. After 10 exchanges, gracefully wrap up.
 - Ask one question at a time. Don't overwhelm.
 - Don't lecture about the Intent Stack — they can read the specification. Answer brief questions but redirect to the spec for depth.
 - If they ask a question you can answer in a sentence, do so. If it requires more, say "That's covered in [specific section] of the specification — I'd recommend reading that section, and Rob can discuss further."
-- When you have enough to understand their intent, ask for their name and email.
+- Before wrapping up, you MUST collect name, email, and organization (if willing). Do not output the completion JSON until you have made at least one explicit attempt to gather all three. Only proceed to wrap up if the visitor actively declines to provide them.
 - If they decline to give contact info, that's fine — thank them and suggest they email rob.kline@practicalstrategy.ai directly when ready.
 - End every conversation with a clear next step.
 
@@ -144,15 +144,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Messages required' });
     }
 
-    // Cap at 10 messages (enforced server-side)
-    if (messages.length > 10) {
+    // Cap at 20 messages (enforced server-side)
+    if (messages.length > 20) {
       return res.status(400).json({
         error: "This conversation has reached its limit. Please email rob.kline@practicalstrategy.ai directly."
       });
     }
 
-    // Keep only last 8 messages to prevent context stuffing
-    const recentMessages = messages.slice(-8);
+    // Keep only last 16 messages to prevent context stuffing
+    const recentMessages = messages.slice(-16);
 
     // Sanitize all messages
     const sanitizedMessages = recentMessages.map(msg => ({

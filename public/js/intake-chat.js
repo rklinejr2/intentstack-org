@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  const MAX_MESSAGES = 10;
+  const MAX_MESSAGES = 20;
   const MAX_CHARS = 500;
   const API_BASE = '/api';
   const OPENING_MESSAGE = "Welcome to the Intent Stack. I'm here to understand how I can help you engage with this work. What brings you here today?";
