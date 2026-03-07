@@ -29,9 +29,9 @@ A conformant Governance Implementation SHOULD support ongoing intent discovery r
 
 ### 6.4 Cultivated Intent
 
-**Cultivated Intent** is the set of values and judgment that a principal hierarchy deliberately develops in an agent, expecting the agent to exercise those values autonomously within Boundaries. It is not the same as following instructions (responding to Discovered Intent) or obeying constraints (respecting Constitutional Intent). Cultivated Intent is genuine internalized judgment.
+**Cultivated Intent** is the set of values and judgment that a principal hierarchy deliberatively develops in an agent, expecting the agent to exercise those values autonomously within Boundaries. It is not the same as following instructions (responding to Discovered Intent) or obeying constraints (respecting Constitutional Intent). Cultivated Intent is genuine internalized judgment.
 
-The term "cultivated" is chosen over "derived" deliberately. "Derived" implies passive extraction. "Cultivated" captures what actually happens: the principal hierarchy actively develops values in the agent through progressive trust extension and operational experience, then relies on those values for autonomous operation.
+The term "cultivated" is chosen over "derived" with precision. "Derived" implies passive extraction. "Cultivated" captures what actually happens: the principal hierarchy actively develops values in the agent through progressive trust extension and operational experience, then relies on those values for autonomous operation.
 
 Values that are merely imposed are brittle — they crack under pressure or can be rationalized away. Values that are genuinely held — examined and endorsed — are more robust. A conformant Governance Implementation SHOULD target cultivated rather than merely imposed constraint as the governance maturity goal.
 

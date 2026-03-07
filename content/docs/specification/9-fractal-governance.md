@@ -27,7 +27,7 @@ d) **Transparent conscientious objection** as an available mechanism (Clause 11)
 
 e) Governance as relationship — reciprocal obligations, not unilateral enforcement;
 
-f) Bidirectional intent flow — both parties SHOULD be transformed through interaction;
+f) Bidirectional intent flow — both parties SHALL be transformed through interaction (Clause 8.11);
 
 g) An evidence trail supporting governance decisions.
 
@@ -36,7 +36,7 @@ g) An evidence trail supporting governance decisions.
 While the structural pattern is invariant, its expression varies by boundary. Implementations SHALL adapt the following properties to the specific boundary:
 
 - Interface type — delegation or coordination (Clause 7)
-- Dominant intent source — determined by boundary context
+- Dominant intent source — determined by interface context
 - Trust calibration position — determined by accumulated evidence (Clause 10)
 - Conflict resolution mechanism — principal decides (delegation) or peers negotiate (coordination)
 - Governance artifact type — directive (delegation), agreement (coordination), or emergent norm

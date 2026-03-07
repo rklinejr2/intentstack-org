@@ -106,3 +106,15 @@ A conformant knowledge architecture SHALL follow a three-tier principle:
 **Tier 3 — Discovery-driven deep structure.** SHALL be available on demand for governance decisions requiring structural understanding beyond semantic proximity — typed relationships between entities, causal chains, dependency maps.
 
 A conformant knowledge architecture SHALL avoid two failure modes: the empty-until-complete trap (no value until a comprehensive knowledge graph is built) and the shallow-forever trap (signal captured but never structured).
+
+### 8.11 Bidirectional Intent Flow
+
+**Governance question addressed:** How does agent-generated evidence update the principal's understanding of their own intent?
+
+Intent flows downward through the stack from discovery to execution. Evidence flows upward from execution to discovery. But a conformant implementation SHALL also support upward intent flow: agent-generated evidence and recommendations that update the principal's understanding of what they intend.
+
+This is not reporting. Reporting is informational — "here is what happened." Upward intent flow is governance-altering — the principal's intent is different after receiving agent evidence than it was before. A conformant implementation SHALL treat upward intent flow as a structural property of the governance relationship, not as an anomaly or exception.
+
+A conformant Governance Architecture SHALL provide explicit mechanisms for upward intent flow. Agents SHALL be able to surface evidence, make recommendations, and express concerns through legitimate channels (see Clause 11 — Transparent Conscientious Objection). Principals SHALL have mechanisms for receiving and integrating agent-generated governance signal into their evolving understanding of their own intent.
+
+Bidirectional intent flow is what makes intent discovery ongoing rather than one-time. It is what makes the trust trajectory (Clause 10.5) possible — the evidence that supports trust extension flows upward from the agent. And it is what makes governance a relationship rather than a control mechanism — both parties are transformed through interaction.

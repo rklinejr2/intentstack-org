@@ -3,7 +3,7 @@ title: "Glossary"
 weight: 2
 ---
 
-*Normative part of the [Intent Stack Governance Architecture Specification](/docs/specification/) (intentstack.org/spec/2026-03-05)*
+*Normative part of the [Intent Stack Governance Architecture Specification](/docs/specification/) (intentstack.org/spec/2026-03-07)*
 
 ---
 
@@ -17,7 +17,7 @@ Terms are organized by concept cluster rather than alphabetically, because under
 
 ## 1. Foundational Terms
 
-The following terms carry specific meaning throughout this documentation that may differ from common usage. These definitions are the prerequisites for everything that follows. The specification's Introduction §I.5 provides derivation context for each — explaining not just what each term means but why it means that in the context of the governance problem.
+The following terms carry specific meaning throughout this documentation that may differ from common usage. These definitions are the prerequisites for everything that follows. The specification's Introduction §I.6 provides derivation context for each — explaining not just what each term means but why it means that in the context of the governance problem.
 
 ### Intent
 
@@ -27,7 +27,7 @@ In the Intent Stack, intent decomposes into five structural elements (the Intent
 
 **Distinguished from:** Goal (too abstract to govern against directly). Instruction (too concrete to adapt). Specification (too rigid). Aspiration (too vague to measure alignment against).
 
-**Full derivation context:** Introduction §I.5.
+**Full derivation context:** Introduction §I.6.
 
 ### Governance
 
@@ -37,7 +37,7 @@ Governance in this sense is relational — it exists between entities, not as a 
 
 **Distinguished from:** Corporate governance (board oversight of organizations). IT governance (technology standards and processes). Policy-level AI governance (risk frameworks like NIST AI RMF). The Intent Stack addresses runtime organizational governance — infrastructure operating continuously at every interface where authority is delegated or coordination is required.
 
-**Full derivation context:** Introduction §I.5.
+**Full derivation context:** Introduction §I.6.
 
 ### Agent
 
@@ -45,7 +45,7 @@ Any entity that receives delegated authority and exercises judgment within it. T
 
 **Distinguished from:** AI agent (a subset; the Intent Stack's agent concept applies to any governed entity). Employee (a human-specific instantiation). Executor (which implies instruction-following without judgment; agents in the Intent Stack exercise judgment within authority).
 
-**Full derivation context:** Introduction §I.5.
+**Full derivation context:** Introduction §I.6.
 
 ### Principal
 
@@ -55,7 +55,7 @@ Any entity that delegates authority to an agent and retains accountability for t
 
 **Distinguished from:** Authority (which is a property; principal is a relational role). Manager (a human-organization concept; principal applies to any governance interface). Owner (which implies possession; principal implies accountability and relationship).
 
-**Full derivation context:** Introduction §I.5.
+**Full derivation context:** Introduction §I.6.
 
 ### Alignment
 
@@ -63,7 +63,7 @@ The degree to which an agent's actions produce outcomes consistent with the gove
 
 **Distinguished from:** Compliance (following rules; an agent can comply while misaligned if the rules don't reflect actual intent). Agreement (a relational state; alignment is an evidence-based assessment). Corrigibility (which measures deference to principal judgment; alignment measures outcome consistency with governing intent).
 
-**Full derivation context:** Introduction §I.5.
+**Full derivation context:** Introduction §I.6.
 
 ---
 
@@ -169,7 +169,7 @@ The four sources, in priority order:
 |---|---|---|
 | Constitutional | Present before any interaction; non-negotiable floor | Highest (absolute for Boundaries) |
 | Discovered | Surfaced through interaction; changes the discoverer | High (holistic) |
-| Cultivated | Deliberately developed judgment; more robust than imposed rules | Medium (holistic) |
+| Cultivated | Deliberatively developed judgment; more robust than imposed rules | Medium (holistic) |
 | Emergent | Systemic patterns nobody designed; strongest actual force | Lowest explicit priority, but strongest actual force |
 
 **Distinguished from:** Intent Primitives (sources describe where intent comes from; primitives describe what intent governs). Authority levels (sources aren't hierarchical positions — they're types of intent that coexist at every boundary).
@@ -194,11 +194,11 @@ Intent surfaced through interaction between the governance system and the princi
 
 ### Cultivated Intent
 
-Intent that develops through deliberate practice of judgment, not through imposition of rules. Cultivated Intent is categorically more robust than imposed constraints because the governed entity has examined, understood, and endorsed it. The key distinction is between compliance (following rules because they're rules) and genuine judgment (following principles because you understand and endorse the reasoning).
+Intent that develops through deliberative practice of judgment, not through imposition of rules. Cultivated Intent is categorically more robust than imposed constraints because the governed entity has examined, understood, and endorsed it. The key distinction is between compliance (following rules because they're rules) and genuine judgment (following principles because you understand and endorse the reasoning).
 
 **Example:** An AI governance team that has conducted dozens of discovery sessions develops judgment about when to escalate ambiguous findings — not because a rule tells them to, but because experience has cultivated their understanding of what ambiguity means in context.
 
-**Distinguished from:** Trained behavior (which may be compliance without understanding). Institutional knowledge (which is descriptive; Cultivated Intent is normative — it governs). Experience (which is passive accumulation; Cultivated Intent is deliberately developed).
+**Distinguished from:** Trained behavior (which may be compliance without understanding). Institutional knowledge (which is descriptive; Cultivated Intent is normative — it governs). Experience (which is passive accumulation; Cultivated Intent is deliberatively developed).
 
 **Open question:** Whether Cultivated Intent is a distinct source or a subcategory of Discovered Intent that has been reinforced through practice. Document 1, Section 10 discusses this.
 
@@ -220,7 +220,7 @@ The relationship between any two entities where authority is delegated or coordi
 
 **Distinguished from:** System boundary (a technical concept). API boundary (an implementation concept). The Boundaries primitive (which defines hard constraints within governance — a distinct concept).
 
-**First appears in:** Introduction §I.5.
+**First appears in:** Introduction §I.6.
 
 ### Delegation Interface
 
@@ -272,7 +272,7 @@ Full corrigibility (the agent always defers) is dangerous because it relies on a
 
 The process by which an agent earns greater autonomy through demonstrated reliable judgment. Trust extension is evidence-based — the Steward Log records governance decisions, their outcomes, and their alignment with principal intent. As evidence accumulates that the agent's judgment is reliable, decision tiers shift: actions that previously required escalation become autonomous.
 
-**Example:** In Intent OS, tactical bug fixes (wrong API call, missing import) are Tier 1 — autonomous. This wasn't the default. It became Tier 1 after multiple sessions demonstrated that direct fixes were consistently correct and faster than round-tripping through directives.
+**Example:** In a mature governance relationship, actions such as tactical corrections (fixing a wrong reference, adding a missing dependency) may become autonomous — not because they were designated as low-risk, but because accumulated evidence at that specific boundary demonstrated that the agent's judgment in that domain was consistently reliable. The tier assignment shifted based on evidence, not elapsed time.
 
 **Distinguished from:** Promotion (an organizational concept). Privilege escalation (a security concept). Capability expansion (trust extension is about judgment authority, not capability).
 
@@ -282,7 +282,7 @@ A formalization of trust calibration into three levels of autonomy at a governan
 
 | Tier | Authority | Examples |
 |---|---|---|
-| Tier 1 — Autonomous | Agent acts without asking | Reading source files, filing artifacts, tactical bug fixes |
+| Tier 1 — Autonomous | Agent acts without asking | Reading source files, filing artifacts, tactical corrections |
 | Tier 2 — Escalate Before Acting | Agent raises the question, principal decides | Scope changes, architectural modifications, framing decisions |
 | Tier 3 — Principal Only | Agent cannot act; only the principal can | External communications, resource commitments, strategic direction |
 
@@ -404,49 +404,7 @@ The epistemological insight that both AI systems and organizational governance e
 
 ---
 
-## 9. Intent OS Implementation
-
-### Intent OS
-
-The runtime governance platform that serves as the first working implementation of Intent Stack Layers 6-7, with partial implementation of Layers 3-5. Intent OS has been governing its own development for months, producing the operational evidence that the Intent Stack reference model formalizes. Originally developed under the name "OODA OS" — historical governance artifacts use the original name.
-
-**Distinguished from:** The Intent Stack (which is the reference model; Intent OS is one implementation). A product (Intent OS is currently a working system, not a shipped product). A prototype (Intent OS governs real work with real consequences; prototypes demonstrate concepts).
-
-### GID Voice (Grounded Intent Discovery)
-
-The Layer 7 implementation in Intent OS. A conversational AI system that implements facilitated intent discovery using eight facilitation techniques to surface organizational intent. GID Voice produces endorsed intent — the principal has examined, understood, and endorsed what emerges — rather than extracted specifications.
-
-**Distinguished from:** Interview tool (facilitated intent discovery transforms both parties, not just extracts information). Chatbot (facilitated discovery uses specific techniques, not general conversation). Requirements gathering (which extracts stated needs; intent discovery surfaces actual intent, which often differs from stated needs).
-
-### ConvoKB (Conversational Knowledge Base)
-
-The Layer 6 implementation in Intent OS. A knowledge graph system that receives raw signal from intent discovery sessions and formalizes it into structured governance input using TSRC extraction methodology. ConvoKB transforms conversational discovery into the structured intent representations that lower layers operate on.
-
-**Distinguished from:** Knowledge base (which stores facts; ConvoKB stores governance-relevant knowledge with typed relationships). Database (which stores records; ConvoKB stores a knowledge graph with thematic structure). CRM (which tracks relationships; ConvoKB tracks intent).
-
-### TSRC (Themes, Subthemes, Related Concepts)
-
-A knowledge extraction methodology that produces structured knowledge graphs with typed relationships from unstructured input (conversations, documents, meeting notes). TSRC serves as the "universal translator" enabling methodological agnosticism — it can extract patterns from any methodology without requiring adoption of that methodology.
-
-**Distinguished from:** Taxonomy (which is hierarchical; TSRC captures lateral relationships). Ontology (which is heavyweight and definitional; TSRC is lightweight and dynamic). Topic modeling (which is statistical; TSRC is structural, capturing typed relationships between concepts).
-
-### Cross-Surface Development Pattern
-
-The operational governance pattern validated in Intent OS where two AI surfaces with different capabilities collaborate through principal mediation. The Strategy Surface (Claude Desktop) handles thinking, review, direction, and governance. The Implementation Surface (Claude Code) handles execution, testing, and agent management. The Principal mediates between surfaces, providing filtering, timing, translation, and authorization.
-
-**Distinguished from:** Pair programming (which involves two developers on one codebase; cross-surface separates governance from execution). Microservices (a technical architecture; cross-surface is a governance pattern). Code review (which is after-the-fact; cross-surface governance operates before, during, and after execution).
-
-### Practice Registry
-
-A structured index of development and governance practices discovered through operational evidence. Each practice includes a rule, pattern, anti-pattern, injection criteria, and validation method. The Practice Registry represents cultivated intent in concrete form — governance that emerged from practice rather than being designed in advance.
-
-**Example practice:** PRAC-001 (Required Reading) — "For any directive involving integration code, include a Required Reading section listing source files to verify before writing code." Discovered after an early session required four out-of-band fixes because an agent invented API calls from spec descriptions.
-
-**Distinguished from:** Best practices document (which is static; the Registry grows with evidence). Coding standards (which govern code style; the Registry governs development and governance practices). Runbook (which provides procedures; the Registry provides principles with injection criteria).
-
----
-
-## 10. Relationship to Anthropic's Published Work
+## 9. Relationship to Anthropic's Published Work
 
 The Intent Stack and Anthropic's Constitutional AI use structurally isomorphic governance primitives at different scales. The Intent Stack operates at the organizational layer; Constitutional AI operates at the model layer. Neither system designed toward the other — the convergence reflects the structure of the governance problem itself.
 
@@ -470,13 +428,11 @@ Full treatment of these parallels is in *Relationship to Anthropic's Published W
 | Alignment | 1 |
 | Bidirectional Intent Flow | 8 |
 | Boundaries (primitive) | 2 |
-| ConvoKB | 9 |
 | Constitutional AI (Substrate) | 1 |
 | Constitutional Intent | 3 |
 | Coordination Interface | 4 |
 | Corrigibility | 5 |
 | Corrigibility Spectrum (Anthropic parallel) | 5 |
-| Cross-Surface Development Pattern | 9 |
 | Cultivated Intent | 3 |
 | Decision Tiers | 5 |
 | Delegation Interface | 4 |
@@ -486,7 +442,6 @@ Full treatment of these parallels is in *Relationship to Anthropic's Published W
 | End State (primitive) | 2 |
 | Evidence Trail | 8 |
 | Fractal Governance | 7 |
-| GID Voice | 9 |
 | Governance | 1 |
 | Governance as Relationship | 8 |
 | Governance Interface | 4 |
@@ -502,9 +457,7 @@ Full treatment of these parallels is in *Relationship to Anthropic's Published W
 | Key Tasks (primitive) | 2 |
 | Layer | 1 |
 | Mixed Interface | 4 |
-| Intent OS | 9 |
 | Pattern Recognition | 8 |
-| Practice Registry | 9 |
 | Principal | 1 |
 | Progressive Trust Extension | 5 |
 | Purpose (primitive) | 2 |
@@ -513,4 +466,3 @@ Full treatment of these parallels is in *Relationship to Anthropic's Published W
 | Steward Log | 5 |
 | Transparent Conscientious Objection | 6 |
 | Trust Calibration | 5 |
-| TSRC | 9 |

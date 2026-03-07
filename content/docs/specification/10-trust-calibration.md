@@ -33,4 +33,4 @@ A conformant implementation SHOULD formalize trust calibration into explicit **d
 
 ### 10.5 The Trust Trajectory
 
-A conformant Governance Architecture is designed for a world where human oversight decreases over time — not because humans become irrelevant, but because trust-calibrated autonomy scales better than permanent supervision. The trajectory SHALL move from tight oversight through progressive autonomy toward a mature state where agents operate within well-understood intent boundaries with monitoring rather than direction. This trajectory is evidence-gated: autonomy expansion requires demonstrated alignment, not elapsed time.
+A conformant Governance Architecture is designed for a world where human oversight decreases over time — not because humans become irrelevant, but because trust-calibrated autonomy scales better than permanent supervision. The trajectory SHALL move from tight oversight through progressive autonomy toward a mature state where agents operate within well-understood governance interfaces with monitoring rather than direction. This trajectory is evidence-gated: autonomy expansion requires demonstrated alignment, not elapsed time.
