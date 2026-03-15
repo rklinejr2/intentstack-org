@@ -33,6 +33,6 @@ An implementation claiming conformance SHALL:
 
 a) Identify which conformance target(s) it claims;
 
-b) Reference this specification by its document identifier (`intentstack.org/spec/2026-03-05`) and version;
+b) Reference this specification by its document identifier (`intentstack.org/spec/2026-03-15`) and version;
 
 c) Document any deviations from SHOULD requirements and the justification for each deviation.

@@ -146,7 +146,7 @@ BPMN standardizes process. DMN standardizes decisions. CMMN standardizes case ma
 
 <figure class="landing-diagram">
 <img src="/images/reference-model.svg" alt="The Intent Stack — 7-Layer Reference Model showing layers from Intent Discovery (L7) through Execution (L1), with Constitutional AI substrate beneath, intent flowing downward, evidence flowing upward, and the three-tier Knowledge Architecture spanning layers.">
-<figcaption>The Intent Stack — 7-Layer Reference Model, v5.0</figcaption>
+<figcaption>The Intent Stack — 7-Layer Reference Model</figcaption>
 </figure>
 
 <div class="landing-hero">
@@ -166,6 +166,6 @@ BPMN standardizes process. DMN standardizes decisions. CMMN standardizes case ma
 <a href="/engage/" class="landing-cta-secondary">Engage with the Work</a>
 </div>
 
-<p class="landing-status">Working specification, v5.0 — March 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
+<p class="landing-status">Public Draft Specification, Version 1.1 — March 15, 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
 
 </div>

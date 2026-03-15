@@ -7,9 +7,9 @@ weight: 1
 
 | | |
 |---|---|
-| **Document identifier** | intentstack.org/spec/2026-03-07 |
+| **Document identifier** | intentstack.org/spec/2026-03-15 |
 | **Status** | Public Draft Specification, Version 1.1 |
-| **Date** | March 7, 2026 |
+| **Date** | March 15, 2026 |
 | **Author** | Rob Kline |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 
@@ -96,13 +96,15 @@ Six terms carry specific meaning throughout this specification that may differ f
 
 **Intent** occupies the essential ground between aspiration and action — concrete enough to guide behavior, abstract enough to survive translation across contexts. It is not a goal (too abstract to act on), not an instruction (too concrete to adapt), not a specification in the traditional sense (too rigid to survive contact with reality), and not an aspiration (too vague to govern against). In this specification, intent decomposes into five structural elements (the Intent Primitives, Clause 5) and originates from four distinct sources (Clause 6).
 
+Intent has three properties that jointly distinguish it from all adjacent concepts. It is **relational** — constituted at governance interfaces, not held as a property of any single entity. It is **processual** — temporally extended, evolving through the governance relationship rather than fixed at a moment. And it is **normative** — carrying prescriptive force that distinguishes it from description, prediction, or preference. No adjacent concept — goals, plans, policies, commands, strategies — possesses all three properties simultaneously. These three properties are not competing characterizations. They are three views of a single structure: at any moment, intent is a structured normative disposition; across entities, it operates as a relational protocol; through time, it unfolds as a dynamical process. These three views are unified — each is a different projection of the same governance object.
+
 **Governance** is the continuous process of ensuring that agents' actions remain aligned with the intent of their principals. In this specification, governance is relational (it exists between entities, not as a property of one), bidirectional (both principal and agent are transformed through the relationship), and evidence-based (the degree of oversight reflects accumulated evidence of alignment, not assumption or policy). This is distinct from corporate governance, IT governance, and policy-level AI governance frameworks. This specification addresses runtime organizational governance — infrastructure operating continuously at every interface where authority is delegated or coordination is required.
 
 **Agent** is any entity that receives delegated authority and exercises judgment within it. This includes AI systems, human employees, teams, organizations, and automated processes. This specification uses "agent" in the principal-agent theory sense — not exclusively in the AI sense. An agent at one governance interface may be a principal at another.
 
 **Principal** is any entity that delegates authority to an agent and retains accountability for the outcome. A principal may itself be an agent of a higher principal, creating the principal hierarchy through which intent flows downward and evidence flows upward.
 
-**Alignment** is the degree to which an agent's actions produce outcomes consistent with the governing intent established by its principals. Alignment is not binary but a continuous measure assessed through evidence. An agent that follows instructions perfectly may still be misaligned if the instructions do not reflect the principal's actual intent.
+**Alignment** is the degree to which an agent's actions produce outcomes consistent with the governing intent established by its principals. Alignment is not binary but a continuous measure assessed through evidence. An agent that follows instructions perfectly may still be misaligned if the instructions do not reflect the principal's actual intent. Intent transforms as it crosses governance interfaces — it does not transmit unchanged. A principal's intent and an agent's intent are distinct objects related by a structural transformation (the cascade behavior defined in §5.5). Alignment assesses whether that structural relationship is valid, not whether the two intents are identical.
 
 **Governance Interface** is the relationship between any two entities where authority is delegated or coordination is required. The term "interface" is used rather than "boundary" to avoid collision with the Boundaries primitive, which refers to hard constraints within governance rather than to the relationship between governed entities.
 
@@ -132,15 +134,16 @@ While this specification addresses AI agent governance as its primary scope — 
 | [**Clause 12 — Open Questions**](./12-open-questions/) | Normative |
 | [**Annex A — Operational Evidence**](./annex-a/) | Informative |
 | [**Annex B — Informative References**](./annex-b/) | Informative |
+| [**Annex C — Structural Foundations**](./annex-c/) | Informative |
 
 ---
 
 *Intent Stack Governance Architecture Specification*
-*intentstack.org/spec/2026-03-07 | Public Draft Specification, Version 1.1*
+*intentstack.org/spec/2026-03-15 | Public Draft Specification, Version 1.1*
 *© 2026 Rob Kline. Licensed under CC BY 4.0.*
 
 **Version history:**
 | Version | Date | Changes |
 |---|---|---|
 | 1.0 | 2026-03-05 | Initial public draft |
-| 1.1 | 2026-03-07 | Promoted bidirectional intent flow to normative requirement (§8.11); added §I.5 (enabling technology / capability claim); added §I.7 (broader applicability); expanded Open Question 12.1 (cultivated intent lifecycle); anonymized implementation references in Annex A; terminology corrections throughout; "deliberately" → "deliberatively" in Cultivated Intent |
+| 1.1 | 2026-03-15 | Promoted bidirectional intent flow to normative requirement (§8.11); added §I.5 (enabling technology / capability claim); added §I.7 (broader applicability); expanded Open Question 12.1 (cultivated intent lifecycle); anonymized implementation references in Annex A; terminology corrections throughout; §5.2 rewritten with structural derivation evidence from seven independent traditions; §5.3 strengthened with eight independent derivations; §5.5 added (cascade behavior with algebraic characterization); §5.6 added (governability as constitutive claim); I.6 extended (Intent ontological characterization, Alignment precision); §12 updated with three new open questions (12.10-12.12); Annex A.3 added (structural analysis evidence); Annex C added (Structural Foundations — investigation methodology, five-primitive derivation, Boundaries monotonicity, cascade shape algebra, Intent unification, machine-detectable violations, structural predictions) |
