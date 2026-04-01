@@ -14,7 +14,7 @@ The Intent Stack is a working specification. We welcome scrutiny, questions, and
 
 ## How this works
 
-The conversation below will help us understand your interest and connect you with the right follow-up. It's brief — a few exchanges, not a lengthy interview. And yes, it's powered by a conversational AI applying the same intent discovery principles described in the specification. You're experiencing Layer 7 in miniature.
+The conversation below will help us understand your interest and connect you with the right follow-up. It's brief — a few exchanges, not a lengthy interview. And yes, it's powered by a conversational AI applying the same intent discovery principles described in the specification. You're experiencing L4 (Intent Discovery) in miniature.
 
 **Prefer email?** [rob.kline@practicalstrategy.ai](mailto:rob.kline@practicalstrategy.ai) — always available.
 

@@ -3,7 +3,7 @@ title: "Glossary"
 weight: 2
 ---
 
-*Normative part of the [Intent Stack Governance Architecture Specification](/docs/specification/) (intentstack.org/spec/2026-03-07)*
+*Normative part of the [Intent Stack Governance Architecture Specification](/docs/specification/) (intentstack.org/spec/2026-04-01)*
 
 ---
 
@@ -23,7 +23,7 @@ The following terms carry specific meaning throughout this documentation that ma
 
 The clear articulation of purpose, direction, and boundaries that guides action while enabling adaptation to specific contexts and conditions. Intent is not a goal (too abstract to act on), not an instruction (too concrete to adapt), not a specification (too rigid to survive contact with reality), and not an aspiration (too vague to govern against). Intent occupies the essential ground between aspiration and action — concrete enough to guide behavior, abstract enough to survive translation across contexts.
 
-In the Intent Stack, intent decomposes into five structural elements (the Intent Primitives, Section 2) and originates from four distinct sources (Section 3). "Governing intent" is the composite of all five primitives as they flow from all applicable sources through the seven-layer architecture.
+In the Intent Stack, intent decomposes into five structural elements (the Intent Primitives, Section 2) and originates from four distinct sources (Section 3). "Governing intent" is the composite of all five primitives as they flow from all applicable sources through the four-layer governance architecture and the companion BPM/Agent Stack's execution governance layers.
 
 **Distinguished from:** Goal (too abstract to govern against directly). Instruction (too concrete to adapt). Specification (too rigid). Aspiration (too vague to measure alignment against).
 
@@ -31,7 +31,7 @@ In the Intent Stack, intent decomposes into five structural elements (the Intent
 
 ### Governance
 
-The continuous process of ensuring that agents' actions remain aligned with the intent of their principals. In the Intent Stack, governance operates through discovery (surfacing what principals actually intend), formalization (representing intent in machine-processable form), specification (translating intent into actionable direction), runtime alignment (assessing whether execution matches intent), orchestration (coordinating agents), integration (connecting agents to systems), and execution (doing the work within constraints).
+The continuous process of ensuring that agents' actions remain aligned with the intent of their principals. In the Intent Stack, governance operates through four governance context concerns: discovery (surfacing what principals actually intend), formalization (representing intent in machine-processable form), specification (translating intent into actionable direction), and runtime alignment (assessing whether execution matches intent). Three additional execution governance concerns — orchestration (coordinating agents), integration (connecting agents to systems), and execution (doing the work within constraints) — are specified by the companion BPM/Agent Stack (bpmstack.org).
 
 Governance in this sense is relational — it exists between entities, not as a property of one. It is bidirectional — both principal and agent are transformed through the relationship. It is evidence-based — the degree of oversight reflects accumulated evidence of alignment, not assumption or policy.
 
@@ -59,7 +59,7 @@ Any entity that delegates authority to an agent and retains accountability for t
 
 ### Alignment
 
-The degree to which an agent's actions produce outcomes consistent with the governing intent established by its principals. Alignment is not binary but a continuous measure assessed through evidence. Runtime alignment — the L4 concern — assesses this continuously across all intent sources. Alignment is measured, not assumed: an agent that follows instructions perfectly may still be misaligned if the instructions do not reflect the principal's actual intent.
+The degree to which an agent's actions produce outcomes consistent with the governing intent established by its principals. Alignment is not binary but a continuous measure assessed through evidence. Runtime alignment — the L1 concern — assesses this continuously across all intent sources. Alignment is measured, not assumed: an agent that follows instructions perfectly may still be misaligned if the instructions do not reflect the principal's actual intent.
 
 **Distinguished from:** Compliance (following rules; an agent can comply while misaligned if the rules don't reflect actual intent). Agreement (a relational state; alignment is an evidence-based assessment). Corrigibility (which measures deference to principal judgment; alignment measures outcome consistency with governing intent).
 
@@ -69,7 +69,7 @@ The degree to which an agent's actions produce outcomes consistent with the gove
 
 ### Intent Stack
 
-The seven-layer reference model for AI agent governance. Specifies governance concerns from Intent Discovery (Layer 7) through Execution (Layer 1), with Constitutional AI as the substrate below Layer 1. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them.
+The four-layer reference model for AI agent governance. Specifies four governance context concerns from Intent Discovery (L4) through Runtime Alignment (L1), with Constitutional AI as the substrate below L1. Three additional execution governance concerns — Orchestration, Integration, and Execution — are specified by the companion BPM/Agent Stack (bpmstack.org). Together, the two companion specifications address seven governance concerns across the full governance lifecycle. The stack describes what governance questions must be answered at each layer, not how any particular implementation answers them.
 
 **Distinguished from:** A software stack (the Intent Stack is a governance architecture, not a technology stack). A framework (frameworks prescribe methods; the Intent Stack describes governance structure that any method must address).
 
@@ -77,19 +77,24 @@ The seven-layer reference model for AI agent governance. Specifies governance co
 
 ### Layer
 
-One of seven governance concerns in the Intent Stack, each answering a distinct question. Layers are numbered L1 (Execution) through L7 (Intent Discovery). Intent flows downward from discovery to execution. Evidence flows upward from execution to discovery. Intent also flows upward when agents make recommendations that update principal understanding.
+One of four governance context concerns in the Intent Stack, each answering a distinct question. Layers are numbered L1 (Runtime Alignment) through L4 (Intent Discovery). Intent flows downward from discovery to runtime alignment. Evidence flows upward from runtime alignment to discovery. Intent also flows upward when agents make recommendations that update principal understanding.
 
-The seven layers:
+The four governance layers:
 
 | Layer | Name | Question Answered |
 |---|---|---|
-| L7 | Intent Discovery | What does the principal actually intend? |
-| L6 | Intent Formalization | How is discovered intent represented as governance input? |
-| L5 | Specification | What approach will achieve the formalized intent? |
-| L4 | Runtime Alignment | Is execution aligned with intent across all sources? |
-| L3 | Orchestration | How are agents and resources coordinated to execute specification? |
-| L2 | Integration | How do governed agents connect to the systems they need? |
-| L1 | Execution | How does the actual work get done within governing constraints? |
+| L4 | Intent Discovery | What does the principal actually intend? |
+| L3 | Intent Formalization | How is discovered intent represented as governance input? |
+| L2 | Specification | What approach will achieve the formalized intent? |
+| L1 | Runtime Alignment | Is execution aligned with intent across all sources? |
+
+Three additional execution governance concerns are specified by the companion BPM/Agent Stack (bpmstack.org):
+
+| Concern | Name | Question Answered |
+|---|---|---|
+| — | Orchestration | How are agents and resources coordinated to execute specification? |
+| — | Integration | How do governed agents connect to the systems they need? |
+| — | Execution | How does the actual work get done within governing constraints? |
 
 **Distinguished from:** OSI network layers (the Intent Stack layers are governance concerns, not protocol layers, though the structural analogy is intentional). Organizational hierarchy levels (layers describe governance functions, not reporting relationships).
 
@@ -101,7 +106,7 @@ Anthropic's approach to AI alignment through training-time character formation. 
 
 **Distinguished from:** Constitutional Intent (an intent source within the Intent Stack — see below). The Anthropic Constitution (a specific document; Constitutional AI is the broader approach). Layer 0 (Constitutional AI is not a layer — it's the substrate that makes the layers possible).
 
-**First appears in:** Clause 8.9. Detailed treatment in *Relationship to Anthropic's Published Work*.
+**First appears in:** Clause 8.7. Detailed treatment in *Relationship to Anthropic's Published Work*.
 
 ---
 
@@ -111,7 +116,7 @@ Anthropic's approach to AI alignment through training-time character formation. 
 
 One of five irreducible structural elements present at every governance interface. The primitives describe what must be governed, not how. Any principal-agent relationship requires specification (explicit or implicit) of all five primitives. When a primitive is unspecified, it doesn't disappear — it defaults to implicit assumptions, which is where misalignment originates.
 
-**Distinguished from:** Intent sources (primitives describe structural elements; sources describe where governing intent originates). Governance concerns (the seven layers describe governance questions; the five primitives describe governance content).
+**Distinguished from:** Intent sources (primitives describe structural elements; sources describe where governing intent originates). Governance concerns (the four governance layers and three BPM/Agent Stack execution concerns describe governance questions; the five primitives describe governance content).
 
 **First appears in:** Clause 5.
 
@@ -129,7 +134,7 @@ The second Intent Primitive. How the agent should approach the work. Strategic o
 
 **Example:** "Prioritize thoroughness over speed; when uncertain, escalate rather than guess" (governance direction for an AI agent conducting regulatory review).
 
-**Distinguished from:** Instructions (Direction sets orientation; instructions specify actions). Specification (Direction is a primitive at every boundary; specification is a Layer 5 governance concern that translates Direction into execution plans).
+**Distinguished from:** Instructions (Direction sets orientation; instructions specify actions). Specification (Direction is a primitive at every boundary; specification is the L2 governance concern that translates Direction into execution plans).
 
 ### Boundaries
 
@@ -414,7 +419,7 @@ Key structural parallels are documented inline in the relevant glossary entries 
 - **Corrigibility** (Section 5) — Intent Stack's trust calibration; Anthropic's corrigibility spectrum as the model-level expression of the same concept
 - **Holistic Conflict Resolution** (Section 6) — Intent Stack's intent source priority ordering; Anthropic's Safe > Ethical > Guidelines > Helpful as a parallel structure
 - **Boundaries / Hard Constraints** (Sections 2 and 6) — both systems treat constitutional constraints as absolute while resolving all other conflicts holistically
-- **Constitutional AI Substrate** (Section 1) — positioned as the substrate below L1, not a layer within the stack; the foundation that organizational governance rests on
+- **Constitutional AI Substrate** (Section 1) — positioned as the substrate below L1 (Runtime Alignment), not a layer within the stack; the foundation that organizational governance rests on
 
 Full treatment of these parallels is in *Relationship to Anthropic's Published Work*.
 

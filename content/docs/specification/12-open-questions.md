@@ -13,7 +13,7 @@ weight: 120
 
 **12.3** How does intent governance scale across multiple human principals with divergent intent? The single-principal case is operationally validated. The multi-principal case is architecturally specified but not yet operationally tested. Structural analysis predicts specific pathologies in non-tree topologies — boundary explosion in mesh networks, governance deadlock where constraint propagation creates contradictory requirements, and intent amplification where multiple principals' intents constructively interfere. These predictions are theoretically grounded but require operational validation.
 
-**12.4** What does "genuine endorsement" mean for organizational intent? Whether a team, department, or enterprise can examine and endorse its intent determines how L7 scales from individual to organizational discovery.
+**12.4** What does "genuine endorsement" mean for organizational intent? Whether a team, department, or enterprise can examine and endorse its intent determines how L4 (Intent Discovery) scales from individual to organizational discovery.
 
 **12.5** *Resolved in v1.1.* Bidirectional intent flow requires explicit mechanisms. See Clause 8.11.
 

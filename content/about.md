@@ -9,7 +9,7 @@ toc: false
 
 ## Status
 
-The Intent Stack is a working specification (v5.0, March 2026). It is subject to revision as operational evidence accumulates and the scope of deployment expands. The specification emerged from operational practice — patterns discovered through building and governing AI agent systems across months of real-world development.
+The Intent Stack is a working specification (v1.2, April 2026). It is subject to revision as operational evidence accumulates and the scope of deployment expands. The specification emerged from operational practice — patterns discovered through building and governing AI agent systems across months of real-world development.
 
 ## Engagement
 

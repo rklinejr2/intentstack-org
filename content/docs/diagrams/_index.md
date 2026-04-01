@@ -7,11 +7,11 @@ These diagrams visualize the Intent Stack's architecture and metamodel. They are
 
 ---
 
-## 7-Layer Reference Model
+## 4-Layer Reference Model
 
-The Intent Stack is a seven-layer governance architecture. Intent flows downward from discovery (L7) through formalization, specification, governance, orchestration, and integration to execution (L1). Evidence flows upward. The Knowledge Architecture provides a three-tier principle for how accumulated knowledge serves governance across layers.
+The Intent Stack is a four-layer governance architecture addressing governance context — from Intent Discovery (L4) through Runtime Alignment (L1). Intent flows downward through formalization, specification, and runtime alignment. Evidence flows upward. The Knowledge Architecture provides a three-tier principle for how accumulated knowledge serves governance across layers. Three additional execution governance concerns (orchestration, integration, execution) are specified by the companion [BPM/Agent Stack](https://bpmstack.org) specification.
 
-{{< figure src="/images/reference-model.svg" alt="The Intent Stack 7-Layer Reference Model diagram showing layers L7 (Intent Discovery) through L1 (Execution), with Constitutional AI substrate beneath, intent flowing downward, evidence flowing upward, and the three-tier Knowledge Architecture spanning layers." caption="The Intent Stack — 7-Layer Reference Model (v5.0)" >}}
+{{< figure src="/images/reference-model.svg" alt="The Intent Stack 4-Layer Reference Model diagram showing layers L4 (Intent Discovery) through L1 (Runtime Alignment), with Constitutional AI substrate beneath, intent flowing downward, evidence flowing upward, and the three-tier Knowledge Architecture spanning layers." caption="The Intent Stack — 4-Layer Reference Model (v1.2)" >}}
 
 Machine-readable source: [reference-model-v5.json](/data/reference-model-v5.json)
 

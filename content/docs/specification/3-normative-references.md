@@ -9,4 +9,4 @@ weight: 30
 
 There are no normative references. This specification is self-contained. All definitions and requirements are established within this document and its companion normative clause (Clause 4 — Terms and Definitions).
 
-Informative references are listed in Annex B.
+Informative references — documents cited for context, background, or illustrative purposes — are listed in Annex B.

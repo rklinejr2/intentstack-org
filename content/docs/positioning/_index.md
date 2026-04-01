@@ -39,7 +39,7 @@ The emergence of the governance gap is receiving increasing institutional recogn
 
 ### 1.3 The Gap
 
-As AI agents move from tools to autonomous actors within organizations, the governance interface between human intent and agent action needs standardized infrastructure. Not standardized policy guidance — that exists. Not standardized model-level alignment — that is being addressed by AI model developers through training-time approaches. What is missing is a standardized structural architecture for governing the organizational deployment boundary: how intent is discovered, formalized, specified, monitored, orchestrated, and executed across every boundary where authority is delegated or coordination is required.
+As AI agents move from tools to autonomous actors within organizations, the governance interface between human intent and agent action needs standardized infrastructure. Not standardized policy guidance — that exists. Not standardized model-level alignment — that is being addressed by AI model developers through training-time approaches. What is missing is a standardized structural architecture for governing the organizational deployment boundary: how intent is discovered, formalized, specified, and monitored across every boundary where authority is delegated or coordination is required — and how authorized work is then orchestrated, integrated, and executed within that governance context.
 
 This is the gap the Intent Stack addresses.
 
@@ -53,23 +53,22 @@ The Intent Stack is a reference model — an abstract metamodel that describes t
 
 The metamodel is implementation-independent. It describes governance structure, not technology choices. An implementation may use any combination of software, organizational process, human judgment, or AI capability to address the concerns the metamodel identifies. The standard prescribes the concerns that must be governed. It does not prescribe the mechanisms.
 
-### 2.2 Seven Layers
+### 2.2 Four Governance Layers
 
-The metamodel decomposes intent governance into seven layers, each addressing a distinct governance concern:
+The metamodel decomposes intent governance into four governance context layers, each addressing a distinct governance concern:
 
 | Layer | Name | Governance Concern |
 |---|---|---|
-| L7 | Intent Discovery | What does the principal actually intend? |
-| L6 | Intent Formalization | How is discovered intent represented as governance input? |
-| L5 | Specification | What approach will achieve the formalized intent? |
-| L4 | Runtime Alignment | Is execution aligned with intent across all sources? |
-| L3 | Orchestration | How are agents and resources coordinated to execute specification? |
-| L2 | Integration | How do governed agents connect to the systems they need? |
-| L1 | Execution | How does the actual work get done within governing constraints? |
+| L4 | Intent Discovery | What does the principal actually intend? |
+| L3 | Intent Formalization | How is discovered intent represented as governance input? |
+| L2 | Specification | What approach will achieve the formalized intent? |
+| L1 | Runtime Alignment | Is execution aligned with intent across all sources? |
+
+Three additional execution governance concerns — Orchestration, Integration, and Execution — are specified by the companion BPM/Agent Stack specification (bpmstack.org). Together, the two companion specifications address seven governance concerns across the full governance lifecycle.
 
 These are governance concerns, not technology layers. A single software component may address multiple layers. Multiple components may contribute to a single layer. The layer decomposition requires that each concern is addressable as a distinct architectural element — not that each concern maps to a distinct system component.
 
-Intent flows downward through the layers, from discovery through execution. Each layer translates intent into a more specific, more constrained form. Evidence flows upward, from execution results through governance assessment to strategic and discovery implications. Intent also flows upward: when an agent produces results or recommendations that change the principal's understanding of what they intend, that is upward intent flow — a structural property of the governance relationship, not an anomaly.
+Intent flows downward through the layers, from discovery through runtime alignment and into execution governance. Each layer translates intent into a more specific, more constrained form. Evidence flows upward, from execution results through governance assessment to strategic and discovery implications. Intent also flows upward: when an agent produces results or recommendations that change the principal's understanding of what they intend, that is upward intent flow — a structural property of the governance relationship, not an anomaly.
 
 ### 2.3 Five Intent Primitives
 
@@ -128,27 +127,27 @@ This self-similarity is a structural claim: the same governance concerns arise a
 
 ### 3.1 BPMN (Business Process Model and Notation)
 
-BPMN standardizes how processes are described. Process modeling is a subset of orchestration concerns at Layer 3 of the Intent Stack. BPMN standardizes the representation of process flows — events, activities, gateways, sequence flows. The Intent Stack standardizes how those processes are governed when AI agents execute them: how the agent's interpretation of process ambiguity is constrained by organizational intent, how orchestration decisions are delegated across agent boundaries, and how evidence of process execution flows back to the governance layer.
+BPMN standardizes how processes are described. Process modeling is a subset of orchestration concerns addressed by the companion BPM/Agent Stack specification (bpmstack.org). BPMN standardizes the representation of process flows — events, activities, gateways, sequence flows. The Intent Stack standardizes the governance context within which those processes operate: how the agent's interpretation of process ambiguity is constrained by organizational intent (L2 Specification), how alignment is monitored (L1 Runtime Alignment), and how evidence of process execution flows back to the governance layers. The BPM/Agent Stack standardizes how orchestration decisions are delegated across agent boundaries.
 
 An organization using BPMN to model its processes and the Intent Stack to govern agent execution of those processes addresses two distinct concerns with two distinct standards. The Intent Stack does not replace BPMN. It governs what BPMN describes.
 
 ### 3.2 DMN (Decision Model and Notation)
 
-DMN standardizes how decision logic is represented. Decision rules are a subset of specification concerns at Layer 5. DMN standardizes the structure of decision logic — decision tables, expression languages, decision requirement diagrams. The Intent Stack standardizes how decision authority is delegated to agents, how that delegation is constrained by organizational intent, how the agent's exercise of delegated decision authority is monitored, and how trust in the agent's decision quality evolves with accumulated evidence.
+DMN standardizes how decision logic is represented. Decision rules are a subset of specification concerns at L2 (Specification). DMN standardizes the structure of decision logic — decision tables, expression languages, decision requirement diagrams. The Intent Stack standardizes how decision authority is delegated to agents, how that delegation is constrained by organizational intent, how the agent's exercise of delegated decision authority is monitored at L1 (Runtime Alignment), and how trust in the agent's decision quality evolves with accumulated evidence.
 
 An organization using DMN to define its decision logic and the Intent Stack to govern AI agent access to that decision authority addresses two distinct concerns. The Intent Stack does not replace DMN. It governs how DMN-defined decisions are delegated, executed, and monitored.
 
 ### 3.3 CMMN (Case Management Model and Notation)
 
-CMMN standardizes how case-based work is represented — work that requires human judgment to determine the appropriate activity sequence. Case management is a coordination pattern that relates to Layer 3's handling of delegation and coordination interfaces. When AI agents participate in case management, the agent's judgment about which activities to pursue becomes a governance concern: how is the agent's judgment constrained by organizational intent? How is it monitored? How does trust in the agent's case management judgment develop over time?
+CMMN standardizes how case-based work is represented — work that requires human judgment to determine the appropriate activity sequence. Case management is a coordination pattern that relates to the BPM/Agent Stack's orchestration concern. When AI agents participate in case management, the agent's judgment about which activities to pursue becomes a governance concern: how is the agent's judgment constrained by organizational intent? How is it monitored at L1 (Runtime Alignment)? How does trust in the agent's case management judgment develop over time?
 
-The Intent Stack does not replace CMMN. It addresses the governance layer that CMMN assumes exists when agents exercise judgment within case management contexts.
+The Intent Stack does not replace CMMN. It addresses the governance context that CMMN assumes exists when agents exercise judgment within case management contexts.
 
 ### 3.4 The Complementary Relationship
 
-The Intent Stack does not compete with BPMN, DMN, or CMMN. It addresses the governance layer that these standards assume exists but do not define. Each existing standard prescribes how a specific concern is represented — process flows, decision logic, case structures. The Intent Stack prescribes how governance operates across the boundary where agents execute against those representations.
+The Intent Stack does not compete with BPMN, DMN, or CMMN. It addresses the governance context that these standards assume exists but do not define. Each existing standard prescribes how a specific concern is represented — process flows, decision logic, case structures. The Intent Stack prescribes the governance context — intent discovery, formalization, specification, and runtime alignment — within which agents execute against those representations. The companion BPM/Agent Stack further specifies how execution governance operates at the orchestration, integration, and execution levels.
 
-This relationship is analogous to the relationship between BPMN and DMN themselves. BPMN does not define decision logic. DMN does not define process flows. Each addresses a distinct concern, and implementations benefit from using both. The Intent Stack addresses the governance concern that is distinct from all three — and implementations deploying AI agents within process, decision, or case management contexts benefit from governing those deployments through a standard governance architecture.
+This relationship is analogous to the relationship between BPMN and DMN themselves. BPMN does not define decision logic. DMN does not define process flows. Each addresses a distinct concern, and implementations benefit from using both. The Intent Stack and the BPM/Agent Stack together address the governance concerns that are distinct from all three — and implementations deploying AI agents within process, decision, or case management contexts benefit from governing those deployments through a standard governance architecture.
 
 ---
 
@@ -158,7 +157,7 @@ This relationship is analogous to the relationship between BPMN and DMN themselv
 
 The Intent Stack's structural claims are supported by convergent evidence: independent practitioners arriving at the same architectural decomposition from different starting points, without reference to the Intent Stack or to each other.
 
-Market analysts tracking AI agent deployments, production failures, and enterprise adoption patterns have independently identified a layered decomposition of the specification problem whose layers correspond structurally to the Intent Stack's layers. Their highest-level concern — writing specifications that autonomous agents can execute against over extended time horizons without human intervention — corresponds to the function of Layer 5 (Specification). Their intermediate concern — curating the information environment agents operate within — corresponds to Layer 3 (Orchestration). Their foundational concern — encoding organizational purpose, values, and decision boundaries into infrastructure agents can act on — corresponds to Layers 6-7 (Intent Formalization and Discovery).
+Market analysts tracking AI agent deployments, production failures, and enterprise adoption patterns have independently identified a layered decomposition of the specification problem whose layers correspond structurally to the Intent Stack's governance concerns. Their highest-level concern — writing specifications that autonomous agents can execute against over extended time horizons without human intervention — corresponds to the function of L2 (Specification). Their intermediate concern — curating the information environment agents operate within — corresponds to the BPM/Agent Stack's orchestration concern. Their foundational concern — encoding organizational purpose, values, and decision boundaries into infrastructure agents can act on — corresponds to L3-L4 (Intent Formalization and Intent Discovery).
 
 The correspondence is structural, not cosmetic. Both the Intent Stack and independent analysts arrive at a layered architecture where lower layers handle execution concerns, middle layers handle specification and orchestration, and upper layers handle intent discovery and formalization. Both independently identify that the layers are cumulative — skipping one creates failures that other layers cannot compensate for.
 
@@ -193,11 +192,11 @@ An implementation of the Intent Stack is a system — software, organizational p
 
 ### 5.2 Minimum Conformance
 
-The seven layers must be addressable as distinct concerns in the system's architecture.
+The four governance layers must be addressable as distinct concerns in the system's architecture.
 
-An implementation at minimum conformance demonstrates that each governance concern — discovery, formalization, specification, runtime alignment, orchestration, integration, execution — is handled, even if by the same component. The requirement is addressability: the system's documentation, architecture, or operational evidence must show where and how each concern is addressed. A system that handles all seven concerns implicitly through a single undifferentiated component does not achieve minimum conformance — the concerns are present but not addressable.
+An implementation at minimum conformance demonstrates that each governance context concern — discovery, formalization, specification, and runtime alignment — is handled, even if by the same component. The requirement is addressability: the system's documentation, architecture, or operational evidence must show where and how each concern is addressed. A system that handles all four concerns implicitly through a single undifferentiated component does not achieve minimum conformance — the concerns are present but not addressable.
 
-Minimum conformance does not require the five primitives, four intent sources, or trust calibration to be formalized. It requires the seven governance concerns to be identifiable as distinct elements in the system's architecture.
+Minimum conformance does not require the five primitives, four intent sources, or trust calibration to be formalized. It requires the four governance concerns to be identifiable as distinct elements in the system's architecture. Execution governance concerns (orchestration, integration, execution) are addressed by the companion BPM/Agent Stack specification.
 
 ### 5.3 Progressive Conformance
 
@@ -231,7 +230,7 @@ An implementation at full conformance demonstrates:
 The Intent Stack standardizes governance architecture for intent alignment between humans and AI agents operating within organizational contexts. Specifically:
 
 - **The structural pattern of governance interfaces.** Where authority is delegated or coordination is required, the metamodel describes what governance concerns must be addressed.
-- **Intent flow.** How intent is discovered, formalized, specified, monitored, orchestrated, and executed across governance interfaces, including bidirectional flow.
+- **Intent flow.** How intent is discovered, formalized, specified, and monitored across governance interfaces, including bidirectional flow. Execution governance (orchestration, integration, execution) is specified by the companion BPM/Agent Stack.
 - **Trust calibration.** How the position on the corrigibility-autonomy spectrum is determined and adjusted at each boundary based on accumulated governance evidence.
 - **Evidence trails.** What governance evidence must be maintained to support trust calibration, conflict resolution, and governance quality assessment.
 - **Conflict resolution.** How conflicts among intent sources are resolved — holistic judgment for most conflicts, absolute constraints for Boundaries populated by Constitutional Intent.

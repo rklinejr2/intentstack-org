@@ -9,7 +9,7 @@ weight: 130
 
 ### A.1 Implementation Context
 
-The claims in this specification are grounded in operational evidence from a conformant implementation developed and operated by the author. This implementation addresses Layers 3-7 of the Intent Stack and has been governing its own development across months of AI-assisted work, providing a self-referential test environment where the governance patterns are both the product and the development methodology.
+The claims in this specification are grounded in operational evidence from a conformant implementation developed and operated by the author. This implementation addresses all four governance layers of the Intent Stack (L4 Intent Discovery through L1 Runtime Alignment) and elements of the companion BPM/Agent Stack (orchestration), and has been governing its own development across months of AI-assisted work, providing a self-referential test environment where the governance patterns are both the product and the development methodology.
 
 ### A.2 What the Evidence Shows
 

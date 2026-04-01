@@ -123,9 +123,9 @@
     <text x="10" y="80" class="entity-prop">cost: low | moderate | high</text>
     <text x="10" y="96" class="entity-prop">latency: low | periodic | on-demand</text>
     <line x1="0" y1="106" x2="240" y2="106" stroke="#e2e8f0" stroke-width="0.5"/>
-    <text x="10" y="122" class="entity-type">T1: Operational (L1–L4)</text>
-    <text x="10" y="136" class="entity-type">T2: Structured (L4–L6)</text>
-    <text x="10" y="150" class="entity-type">T3: Discovery (L6–L7)</text>
+    <text x="10" y="122" class="entity-type">T1: Operational (L1–L2)</text>
+    <text x="10" y="136" class="entity-type">T2: Structured (L1–L3)</text>
+    <text x="10" y="150" class="entity-type">T3: Discovery (L3–L4)</text>
   </g>
 
   <!-- Layer entity (below KnowledgeTier) -->
@@ -134,12 +134,12 @@
     <rect x="0" y="0" width="240" height="30" rx="3" fill="#0d9488"/>
     <text x="120" y="20" text-anchor="middle" class="entity-header">Layer</text>
     <line x1="0" y1="30" x2="240" y2="30" stroke="#334155" stroke-width="1"/>
-    <text x="10" y="48" class="entity-prop">number: 1–7</text>
+    <text x="10" y="48" class="entity-prop">number: 1–4</text>
     <text x="10" y="64" class="entity-prop">name: string</text>
     <text x="10" y="80" class="entity-prop">questionAnswered: string</text>
     <text x="10" y="96" class="entity-prop">governanceConcern: string</text>
     <line x1="0" y1="106" x2="240" y2="106" stroke="#e2e8f0" stroke-width="0.5"/>
-    <text x="10" y="122" class="entity-type">L7 at top, L1 at bottom</text>
+    <text x="10" y="122" class="entity-type">L4 at top, L1 at bottom</text>
     <text x="10" y="136" class="entity-type">Adjacent layers interface up/down</text>
   </g>
 
@@ -219,7 +219,7 @@
   <text x="130" y="670" class="rel-card">1</text>
   <text x="130" y="698" class="rel-card">1</text>
 
-  <!-- Relationship: EvidenceTrail → Layer (produced by L1-L4) -->
+  <!-- Relationship: EvidenceTrail → Layer (produced primarily at L1) -->
   <path d="M 270,740 L 500,740 C 600,740 700,600 730,430" class="rel-line"/>
   <text x="500" y="730" class="rel-label">produced by (L1–L4)</text>
 

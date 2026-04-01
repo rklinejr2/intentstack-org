@@ -7,9 +7,9 @@ weight: 1
 
 | | |
 |---|---|
-| **Document identifier** | intentstack.org/spec/2026-03-15 |
-| **Status** | Public Draft Specification, Version 1.1 |
-| **Date** | March 15, 2026 |
+| **Document identifier** | intentstack.org/spec/2026-04-01 |
+| **Status** | Public Draft Specification, Version 1.2 |
+| **Date** | April 1, 2026 |
 | **Author** | Rob Kline |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 
@@ -80,17 +80,7 @@ AI breaks all four mechanisms. The governance that humans provide implicitly —
 
 In formalizing governance for AI, this specification also improves human governance. Most organizations have poor intent governance at human-to-human boundaries — they manage only because the implicit mechanisms compensate. When an organization goes through intent discovery to prepare for AI deployment, it surfaces intent that was always present but never articulated. The organization does not just get better AI governance. It gets better governance across every delegation and coordination relationship. The AI deployment is the forcing function. The value extends to the entire organization.
 
-### I.5 The Enabling Technology
-
-The governance architecture described in this specification has always been needed at every principal-agent boundary — but was impossible to implement at scale because no entity could operate it. Continuous intent discovery, dynamic formalization, real-time alignment monitoring, and per-boundary trust calibration across hundreds or thousands of governance interfaces exceed human cognitive capacity. Organizations compensated with informal mechanisms (§I.3), which worked adequately when agents were exclusively human.
-
-AI deployment simultaneously creates the need for this governance infrastructure and provides the only entities capable of operating it. Large language models can conduct intent discovery conversationally, formalize discovered intent dynamically, monitor alignment continuously, and maintain per-interface trust calibration — at scales and speeds that human governance operators cannot match. The problem and the solution arrived together.
-
-This is structurally analogous to network protocol architecture. The TCP/IP protocol suite describes how network communication operates at every scale — two devices on a local network or billions of devices across the internet. The protocol complexity is real, but the entities operating the protocol (computers) are capable of handling it. Similarly, the Intent Stack describes how governance operates at every principal-agent boundary. The governance complexity is real — every interface must address all seven layers — but the entities capable of operating the governance infrastructure (AI systems) are the same entities whose deployment makes the infrastructure necessary.
-
-This has a practical implication: objections that the Intent Stack is "too complex to implement" assume human operators managing governance infrastructure manually. With AI systems as both the governed entities and the governance operators, the complexity is manageable because the entities handling it are computationally capable of the task. Every governance interface already deals with all seven layers, whether it explicitly declares them or not. The Intent Stack makes that governance explicit and manageable, and AI makes that explicitness operationally feasible for the first time.
-
-### I.6 Foundational Terms
+### I.5 Foundational Terms
 
 Six terms carry specific meaning throughout this specification that may differ from their common usage. Full normative definitions are in Clause 4 ([Terms and Definitions](/docs/glossary/)). The derivation context below explains why each term means what it means in the context of the governance problem.
 
@@ -108,10 +98,6 @@ Intent has three properties that jointly distinguish it from all adjacent concep
 
 **Governance Interface** is the relationship between any two entities where authority is delegated or coordination is required. The term "interface" is used rather than "boundary" to avoid collision with the Boundaries primitive, which refers to hard constraints within governance rather than to the relationship between governed entities.
 
-### I.7 Broader Applicability
-
-While this specification addresses AI agent governance as its primary scope — that is where the standards gap is most acute and the operational urgency is greatest — the governance architecture described herein applies at every principal-agent boundary regardless of agent type. The seven governance concerns arise wherever authority is delegated or coordination is required: human-to-human, human-to-AI, AI-to-AI, and organization-to-organization. AI deployment is the forcing function that makes formalization necessary, but the architecture is general. The Intent Primitives, intent sources, trust calibration, and transparent conscientious objection are structural properties of governance itself, not properties specific to AI governance.
-
 ---
 
 ## Table of Contents
@@ -127,7 +113,7 @@ While this specification addresses AI agent governance as its primary scope — 
 | [**Clause 5 — The Five Intent Primitives**](./5-intent-primitives/) | Normative |
 | [**Clause 6 — Four Intent Sources**](./6-intent-sources/) | Normative |
 | [**Clause 7 — Two Interface Types**](./7-interface-types/) | Normative |
-| [**Clause 8 — The Seven Layers**](./8-seven-layers/) | Normative |
+| [**Clause 8 — The Four Governance Layers**](./8-four-layers/) | Normative |
 | [**Clause 9 — The Fractal Governance Pattern**](./9-fractal-governance/) | Normative |
 | [**Clause 10 — Trust Calibration**](./10-trust-calibration/) | Normative |
 | [**Clause 11 — Transparent Conscientious Objection**](./11-tco/) | Normative |
@@ -139,11 +125,12 @@ While this specification addresses AI agent governance as its primary scope — 
 ---
 
 *Intent Stack Governance Architecture Specification*
-*intentstack.org/spec/2026-03-15 | Public Draft Specification, Version 1.1*
+*intentstack.org/spec/2026-04-01 | Public Draft Specification, Version 1.2*
 *© 2026 Rob Kline. Licensed under CC BY 4.0.*
 
 **Version history:**
 | Version | Date | Changes |
 |---|---|---|
 | 1.0 | 2026-03-05 | Initial public draft |
-| 1.1 | 2026-03-15 | Promoted bidirectional intent flow to normative requirement (§8.11); added §I.5 (enabling technology / capability claim); added §I.7 (broader applicability); expanded Open Question 12.1 (cultivated intent lifecycle); anonymized implementation references in Annex A; terminology corrections throughout; §5.2 rewritten with structural derivation evidence from seven independent traditions; §5.3 strengthened with eight independent derivations; §5.5 added (cascade behavior with algebraic characterization); §5.6 added (governability as constitutive claim); I.6 extended (Intent ontological characterization, Alignment precision); §12 updated with three new open questions (12.10-12.12); Annex A.3 added (structural analysis evidence); Annex C added (Structural Foundations — investigation methodology, five-primitive derivation, Boundaries monotonicity, cascade shape algebra, Intent unification, machine-detectable violations, structural predictions) |
+| 1.1 | 2026-03-15 | §5.2 rewritten with structural derivation evidence; §5.3 strengthened with eight independent derivations; §5.5 added (cascade behavior with algebraic characterization); §5.6 added (governability as constitutive claim); I.5 extended (Intent ontological characterization, Alignment precision); §12 updated with three new open questions; Annex A.3 streamlined; Annex C added (Structural Foundations — seven sections covering investigation methodology, five-primitive derivation, Boundaries monotonicity, cascade shape algebra, Intent unification, machine-detectable violations, and structural predictions) |
+| 1.2 | 2026-04-01 | Four-layer architecture: execution governance layers (Orchestration, Integration, Execution — formerly L3, L2, L1) reclassified to the companion BPM/Agent Stack specification (bpmstack.org). Remaining layers renumbered: L4 Intent Discovery (was L7), L3 Intent Formalization (was L6), L2 Specification (was L5), L1 Runtime Alignment (was L4). All structural foundations unchanged — five primitives, four intent sources, cascade behavior, Annex C mathematical apparatus are layer-count-independent (confirmed by orthogonality audit). Scope clause updated with explicit execution governance exclusion. Conformance targets updated for four layers. Knowledge Architecture repositioned as cross-cutting infrastructure. |

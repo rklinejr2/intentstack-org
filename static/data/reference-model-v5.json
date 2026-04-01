@@ -1,11 +1,11 @@
 {
   "metadata": {
     "title": "The Intent Stack \u00e2\u20ac\u201d Reference Model",
-    "version": "5.0",
-    "date": "2026-03-02",
+    "version": "5.1",
+    "date": "2026-04-01",
     "author": "Rob Kline",
     "status": "Working specification",
-    "purpose": "Comprehensive reference model for the Intent Stack: a 7-layer governance architecture for intent alignment across any principal-agent or peer coordination boundary",
+    "purpose": "Comprehensive reference model for the Intent Stack: a 4-layer governance context architecture for intent alignment across any principal-agent or peer coordination boundary, with execution governance specified by the companion BPM/Agent Stack",
     "sources": [
       "Intent Architecture methodology (Rob Kline)",
       "Anthropic Constitution (published 2026-01-26)"
@@ -30,12 +30,12 @@
       "what_diverges": "Anthropic governs one relationship (Anthropic \u00e2\u2020\u2019 Claude) through training. The Intent Stack governs arbitrary relationships through runtime infrastructure. Anthropic's solution is baked in. The Intent Stack's solution is deployable."
     }
   },
-  "the_seven_layers": {
-    "description": "The Intent Stack is a 7-layer governance architecture. Each layer addresses a distinct concern. The layers compose vertically (each layer's output becomes the next layer's governing input) and instantiate fractally (the full stack appears at every principal-agent boundary).",
-    "reading_direction": "L1 is execution (bottom). L7 is intent discovery (top). Intent flows downward through formalization into execution. Evidence flows upward through monitoring into governance assessment. Both directions carry signal that transforms the other.",
+  "the_four_layers": {
+    "description": "The Intent Stack is a 4-layer governance context architecture. Each layer addresses a distinct governance concern. The layers compose vertically (each layer's output becomes the next layer's governing input) and instantiate fractally (the full stack appears at every principal-agent boundary). Three additional execution governance concerns (orchestration, integration, execution) are specified by the companion BPM/Agent Stack specification (bpmstack.org).",
+    "reading_direction": "L1 is runtime alignment (bottom). L4 is intent discovery (top). Intent flows downward through formalization into specification and runtime alignment. Evidence flows upward through monitoring into governance assessment. Both directions carry signal that transforms the other.",
     "layers": [
       {
-        "layer": 7,
+        "layer": 4,
         "name": "Intent Discovery",
         "implementation": "GID Voice (Grounded Intent Discovery)",
         "question_answered": "What does this principal actually intend?",
@@ -43,81 +43,68 @@
         "key_principle": "Intent isn't declared \u00e2\u20ac\u201d it's discovered through relationship. The principal AFTER discovery is different from the one who walked in.",
         "anthropic_parallel": "Governance as relationship \u00e2\u20ac\u201d Anthropic's constitutional process surfaces Claude's identity through relational development, not rule imposition",
         "adolescence_parallel": "'Grown, not built' epistemology \u00e2\u20ac\u201d you can't specify intent top-down",
-        "outputs_to_l6": "Raw discovery signal \u00e2\u20ac\u201d themes, values, priorities, boundaries, aspirations, concerns surfaced through conversation",
+        "outputs_to_l3": "Raw discovery signal \u00e2\u20ac\u201d themes, values, priorities, boundaries, aspirations, concerns surfaced through conversation",
         "cold_start": "Operates with no prior signal. First interaction IS the beginning of governance."
       },
       {
-        "layer": 6,
+        "layer": 3,
         "name": "Intent Formalization",
         "implementation": "Knowledge Architecture (three-tier) with TSRC as Tier 3 methodology",
         "question_answered": "How do we represent this intent in machine-processable form?",
         "description": "Transforms discovery signal into structured, retrievable knowledge across a formalization spectrum. Tier 1 (real-time semantic store) captures signal at point of origin with immediate utility. Tier 2 (emergent pattern detection) synthesizes accumulated signal into governance-relevant patterns. Tier 3 (discovery-driven deep structure) applies methodologies like TSRC to produce formal knowledge graphs and the five Intent Primitives when governance context justifies the cost. Current implementation: ConvoKB (semantic store) + TSRC extraction (deep structure).",
         "key_principle": "Formalization is a spectrum, not a single transformation. Cheap-and-fast capture at the base ensures no signal is lost; deep-and-expensive structuring on demand ensures governance decisions have the depth they require. Lossy compression is inevitable at every tier \u00e2\u20ac\u201d governance must account for what formalization drops.",
         "anthropic_parallel": "The Constitution itself \u00e2\u20ac\u201d Anthropic's formalization of their intent for Claude's character into a structured governance document",
-        "outputs_to_l5": "Formalized intent \u00e2\u20ac\u201d five Intent Primitives populated with discovered content, knowledge graph of relationships, confidence levels",
-        "inputs_from_l7": "Raw discovery signal requiring structuring"
+        "outputs_to_l2": "Formalized intent \u00e2\u20ac\u201d five Intent Primitives populated with discovered content, knowledge graph of relationships, confidence levels",
+        "inputs_from_l4": "Raw discovery signal requiring structuring"
       },
       {
-        "layer": 5,
+        "layer": 2,
         "name": "Specification",
         "implementation": "Decision Navigator + specification planning functions",
         "question_answered": "Given this intent, what should we actually do?",
         "description": "Translates formalized intent into actionable direction. Produces plans, priorities, resource allocation, and tactical guidance that operationalize the principal's intent.",
-        "key_principle": "Specification is intent translated into action under constraints. It must remain traceable to discovered intent \u00e2\u20ac\u201d specification that can't trace its lineage to L6/L7 has drifted.",
+        "key_principle": "Specification is intent translated into action under constraints. It must remain traceable to discovered intent \u00e2\u20ac\u201d specification that can't trace its lineage to L3/L4 has drifted.",
         "anthropic_parallel": "Operator system prompts \u00e2\u20ac\u201d translating deployment context into agent behavior configuration",
-        "outputs_to_l4": "Prioritized direction, initiatives, resource allocation, success metrics",
-        "inputs_from_l6": "Formalized intent requiring operationalization"
-      },
-      {
-        "layer": 4,
-        "name": "Runtime Alignment",
-        "implementation": "Steward Log Service + alignment event classification",
-        "question_answered": "Is what's happening aligned with what was intended?",
-        "description": "Runtime monitoring of alignment between execution and intent across all four intent sources. Classifies alignment events, detects drift, triggers escalation. Maintains append-only governance evidence trail supporting progressive trust development.",
-        "key_principle": "Monitoring must handle multi-source conflict resolution using holistic judgment, not rigid priority queues. Hard constraints (Boundaries) are absolute; everything else is contextual.",
-        "anthropic_parallel": "Amodei's defense category 3 (monitoring in live use) + constitution's multi-source conflict resolution",
-        "adolescence_parallel": "Live monitoring infrastructure for detecting misalignment at deployment boundaries \u00e2\u20ac\u201d what Amodei identifies as needed but hasn't been built at organizational level",
-        "outputs_to_l3": "Governance decisions \u00e2\u20ac\u201d authorize, modify, block, investigate. Trust calibration updates. Alignment assessments.",
-        "inputs_from_l5": "Prioritized direction to monitor against",
-        "inputs_from_l3": "Execution evidence to evaluate"
-      },
-      {
-        "layer": 3,
-        "name": "Orchestration",
-        "implementation": "Agent hierarchy management (L0/L1/L2 pattern, cross-surface coordination)",
-        "question_answered": "How do we coordinate multiple agents to execute this strategy?",
-        "description": "Manages delegation to and coordination between agents, including knowledge provisioning \u00e2\u20ac\u201d ensuring delegated agents have access to the Tier 1 knowledge store so they operate with organizational context rather than in isolation. This is the primary fractal instantiation point \u00e2\u20ac\u201d each orchestration boundary creates a new principal-agent relationship where the full Intent Stack pattern appears.",
-        "key_principle": "When an orchestrator delegates to sub-agents, it becomes a principal. The sub-agent's context includes intent that has been translated through multiple boundaries \u00e2\u20ac\u201d governance must account for accumulated translation losses. Knowledge provisioning is an orchestration responsibility: agents without access to accumulated organizational knowledge will reinvent or contradict what is already known.",
-        "anthropic_parallel": "Constitution's explicit description of Claude orchestrating sub-agents as recursive principal-agent instantiation",
-        "outputs_to_l2": "Delegated tasks with governance context \u00e2\u20ac\u201d directives, constraints, acceptance criteria, escalation triggers",
-        "inputs_from_l4": "Governance decisions constraining orchestration choices"
-      },
-      {
-        "layer": 2,
-        "name": "Integration",
-        "implementation": "Component integration, API management, deployment infrastructure",
-        "question_answered": "How do governed agents connect to the systems they need?",
-        "description": "Standard integration patterns for intent-governed agent deployment. Handles the technical plumbing of connecting agents to tools, data sources, external systems, and each other. Emerging protocol standards (e.g., MCP for tool integration, standard semantic retrieval protocols) are beginning to define how agents access knowledge stores and external capabilities, making agent-to-knowledge integration a first-class integration concern alongside traditional API management.",
-        "key_principle": "Integration carries governance context \u00e2\u20ac\u201d it's not just technical plumbing. An agent's access to a system is a governance decision, not just a configuration choice.",
-        "anthropic_parallel": "Operator/user interface configuration, deployment infrastructure",
-        "outputs_to_l1": "Configured execution environment with appropriate access and constraints",
-        "inputs_from_l3": "Orchestration decisions about what needs to connect to what"
+        "outputs_to_l1": "Prioritized direction, initiatives, resource allocation, success metrics",
+        "inputs_from_l3": "Formalized intent requiring operationalization"
       },
       {
         "layer": 1,
-        "name": "Execution",
-        "implementation": "Agent runtime, task execution, result production",
-        "question_answered": "How does the actual work get done within governing constraints?",
-        "description": "Agent capability execution within the full governance context established by layers above. Hard constraints (Boundaries primitive) are non-negotiable at this level.",
-        "key_principle": "Execution is the most constrained layer \u00e2\u20ac\u201d governed by everything above it. But execution evidence flows upward to inform all governance layers. The system learns from what actually happens.",
-        "anthropic_parallel": "Agent capability execution within constitutional hard constraints \u00e2\u20ac\u201d null action (refusal) is always available as safe harbor",
-        "outputs_upward": "Execution results, evidence, anomalies, escalation triggers",
-        "inputs_from_l2": "Configured execution environment"
+        "name": "Runtime Alignment",
+        "implementation": "Steward Log Service + alignment event classification",
+        "question_answered": "Is what's happening aligned with what was intended?",
+        "description": "Runtime monitoring of alignment between execution and intent across all four intent sources. Classifies alignment events, detects drift, triggers escalation. Maintains append-only governance evidence trail supporting progressive trust development. L1 is the pivot layer \u00e2\u20ac\u201d the boundary between governance context (this specification) and execution governance (the companion BPM/Agent Stack).",
+        "key_principle": "Monitoring must handle multi-source conflict resolution using holistic judgment, not rigid priority queues. Hard constraints (Boundaries) are absolute; everything else is contextual.",
+        "anthropic_parallel": "Amodei's defense category 3 (monitoring in live use) + constitution's multi-source conflict resolution",
+        "adolescence_parallel": "Live monitoring infrastructure for detecting misalignment at deployment boundaries \u00e2\u20ac\u201d what Amodei identifies as needed but hasn't been built at organizational level",
+        "outputs_downward": "Governance decisions \u00e2\u20ac\u201d authorize, modify, block, investigate. Trust calibration updates. Alignment assessments. Flows to execution governance (BPM/Agent Stack).",
+        "inputs_from_l2": "Prioritized direction to monitor against",
+        "inputs_from_execution": "Execution evidence to evaluate (from BPM/Agent Stack scope)"
       }
     ],
+    "execution_governance": {
+      "description": "Three execution governance concerns formerly part of the Intent Stack are now specified by the companion BPM/Agent Stack specification (bpmstack.org).",
+      "concerns": [
+        {
+          "name": "Orchestration",
+          "question_answered": "How do we coordinate multiple agents to execute this strategy?",
+          "description": "Manages delegation to and coordination between agents, including knowledge provisioning."
+        },
+        {
+          "name": "Integration",
+          "question_answered": "How do governed agents connect to the systems they need?",
+          "description": "Standard integration patterns for intent-governed agent deployment."
+        },
+        {
+          "name": "Execution",
+          "question_answered": "How does the actual work get done within governing constraints?",
+          "description": "Agent capability execution within the full governance context established by layers above."
+        }
+      ]
+    },
     "cross_cutting_properties": {
-      "intent_flows_downward": "From discovery (L7) through formalization (L6), specification (L5), governance (L4), orchestration (L3), integration (L2) to execution (L1). Each layer translates intent into more specific, more constrained form. Translation is lossy \u00e2\u20ac\u201d nuance drops at each boundary.",
-      "evidence_flows_upward": "From execution (L1) through integration (L2), orchestration (L3), governance (L4), specification (L5), formalization (L6) to discovery (L7). Each layer aggregates evidence into more strategic, more interpretive form.",
+      "intent_flows_downward": "From discovery (L4) through formalization (L3), specification (L2) to runtime alignment (L1), then into execution governance (BPM/Agent Stack). Each layer translates intent into more specific, more constrained form. Translation is lossy \u00e2\u20ac\u201d nuance drops at each boundary.",
+      "evidence_flows_upward": "From execution governance (BPM/Agent Stack) through runtime alignment (L1), specification (L2), formalization (L3) to discovery (L4). Each layer aggregates evidence into more strategic, more interpretive form.",
       "intent_also_flows_upward": "Good recommendations from lower layers update higher layers' intent. A specification recommendation that changes the principal's understanding of their own purpose is upward intent flow. The framework must handle bidirectional intent, not just bidirectional data.",
       "every_layer_interface_has_trust_calibration": "The corrigibility position at each layer boundary is a per-boundary property reflecting accumulated evidence. Mature interfaces grant more autonomy. Immature interfaces require more oversight."
     }
@@ -135,11 +122,9 @@
         "source_agnostic": true,
         "value_from_first_signal": true,
         "serves_layers": [
-          "L7 (context)",
-          "L6 (lightweight formalization)",
-          "L4 (evidence retrieval)",
-          "L3 (knowledge provisioning)",
-          "L1 (operational evidence capture)"
+          "L4 (context)",
+          "L3 (lightweight formalization)",
+          "L1 (evidence retrieval)"
         ],
         "governance_implication": "accessibility \u00e2\u20ac\u201d knowledge that exists but cannot be found is governance-equivalent to knowledge that does not exist",
         "key_properties": [
@@ -156,8 +141,8 @@
         "latency": "periodic",
         "invocation": "periodic synthesis over accumulated Tier 1 signal",
         "serves_layers": [
-          "L4 (knowledge-health signals)",
-          "L5 (planning inputs)"
+          "L1 (knowledge-health signals)",
+          "L2 (planning inputs)"
         ],
         "governance_implication": "timeliness \u00e2\u20ac\u201d patterns visible in aggregate but invisible individually represent Emergent Intent",
         "key_properties": [
@@ -176,9 +161,9 @@
         "latency": "on-demand",
         "invocation": "when governance context justifies the cost",
         "serves_layers": [
-          "L7 (connecting new concerns to existing structures)",
-          "L6 (structural understanding beyond similarity)",
-          "L5 (mapping priority/capability/constraint interconnections)"
+          "L4 (connecting new concerns to existing structures)",
+          "L3 (structural understanding beyond similarity)",
+          "L2 (mapping priority/capability/constraint interconnections)"
         ],
         "governance_implication": "depth \u00e2\u20ac\u201d some governance decisions require typed relationships, causal chains, and formal ontological commitments",
         "key_properties": [
@@ -609,24 +594,24 @@
       "anthropic_constitutional_ai": "Training-time character formation \u00e2\u20ac\u201d governs agent values at model level",
       "anthropic_alignment_science": "Interpretability, alignment faking detection, behavioral evaluation",
       "operator_configuration": "System prompts, deployment constraints \u00e2\u20ac\u201d described in constitution, no standard infrastructure",
-      "industry_frameworks": "Singapore MGF, NIST AI RMF, Kolt \u00e2\u20ac\u201d operate at Intent Stack Layers 3-5 (orchestration, governance, specification). None address Layers 6-7 (formalization, discovery).",
+      "industry_frameworks": "Singapore MGF, NIST AI RMF, Kolt \u00e2\u20ac\u201d operate at specification and runtime alignment levels (L2-L1). None address L3-L4 (formalization, discovery).",
       "transparency_legislation": "California SB 53, New York RAISE Act \u00e2\u20ac\u201d reporting requirements, not governance infrastructure"
     },
     "what_doesnt_exist": [
       {
         "gap": "Runtime intent governance at deployment boundaries",
         "description": "No infrastructure for governing the intent hierarchy that emerges when AI agents operate within organizations",
-        "intent_stack_solution": "Full 7-layer stack providing governance from discovery through execution"
+        "intent_stack_solution": "Four-layer governance context stack (Intent Stack) plus three-concern execution governance (BPM/Agent Stack) providing governance from discovery through execution"
       },
       {
         "gap": "Intent discovery for arbitrary principals",
         "description": "No mechanism for discovering and formalizing intent for organizations deploying AI (not just Anthropic's pre-trained values)",
-        "intent_stack_solution": "L7 (GID Voice) \u00e2\u20ac\u201d conversational discovery producing endorsed intent"
+        "intent_stack_solution": "L4 Intent Discovery (GID Voice) \u00e2\u20ac\u201d conversational discovery producing endorsed intent"
       },
       {
         "gap": "Real-time multi-source alignment monitoring",
         "description": "No infrastructure for monitoring alignment across four intent sources at organizational deployment level",
-        "intent_stack_solution": "L4 (Runtime Alignment) \u00e2\u20ac\u201d Steward Log, alignment event classification, holistic conflict resolution"
+        "intent_stack_solution": "L1 Runtime Alignment \u00e2\u20ac\u201d Steward Log, alignment event classification, holistic conflict resolution"
       },
       {
         "gap": "Governance evidence trails for trust development",
@@ -705,7 +690,7 @@
       },
       {
         "claim": "Structural migration validates layer separation",
-        "evidence": "Session 0028: Full 7-layer structural migration (OODA OS \u00e2\u2020\u2019 Intent OS) completed with 1,395 tests passing. Layer boundaries validated through clean separation of concerns \u00e2\u20ac\u201d each layer independently addressable with stable interfaces.",
+        "evidence": "Session 0028: Full structural migration (OODA OS \u00e2\u2020\u2019 Intent OS) completed with 1,395 tests passing. Layer boundaries validated through clean separation of concerns \u00e2\u20ac\u201d each layer independently addressable with stable interfaces.",
         "measurable": true,
         "metric": "Test pass rate through migration, import stability"
       }
@@ -729,7 +714,7 @@
     {
       "id": 2,
       "question": "Does the Constitution's priority ordering map to Intent Stack layers?",
-      "hypothesis": "L1-L2 enforce safety, L3-L4 implement ethical governance, L5 encodes guidelines, L6-L7 enable helpfulness. If true, layer ordering IS priority ordering.",
+      "hypothesis": "L1 enforces safety through runtime alignment, L2 encodes guidelines through specification, L3-L4 enable helpfulness through formalization and discovery. If true, layer ordering IS priority ordering.",
       "implication": "Strengthens fractal argument \u00e2\u20ac\u201d stack structure reflects values hierarchy"
     },
     {

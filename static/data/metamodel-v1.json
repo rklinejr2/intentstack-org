@@ -5,7 +5,7 @@
     "date": "2026-03-02",
     "description": "Formal entity-relationship model for the Intent Stack reference architecture",
     "rendering_format": "UML class diagram",
-    "source_specification": "reference-model-specification.md v5.0"
+    "source_specification": "reference-model-specification.md v1.2"
   },
   "entities": [
     {
@@ -76,7 +76,7 @@
         {
           "name": "number",
           "type": "int",
-          "description": "Layer position in the stack (1-7)"
+          "description": "Layer position in the stack (1-4)"
         },
         {
           "name": "name",
@@ -96,73 +96,49 @@
         {
           "name": "inputsFrom",
           "type": "string",
-          "description": "Adjacent lower layer providing inputs (null for L1)"
+          "description": "Adjacent lower layer providing inputs (L1 interfaces with BPM/Agent Stack execution governance)"
         },
         {
           "name": "outputsTo",
           "type": "string",
-          "description": "Adjacent upper layer receiving outputs (null for L7)"
+          "description": "Adjacent upper layer receiving outputs (null for L4)"
         }
       ],
       "instances": [
         {
-          "number": 1,
-          "name": "Execution",
-          "questionAnswered": "How does the actual work get done within governing constraints?",
-          "governanceConcern": "Constrained task execution; evidence production",
-          "inputsFrom": null,
-          "outputsTo": "L2 Integration"
-        },
-        {
-          "number": 2,
-          "name": "Integration",
-          "questionAnswered": "How do governed agents connect to the systems they need?",
-          "governanceConcern": "Governed connectivity; access as governance decision",
-          "inputsFrom": "L1 Execution",
-          "outputsTo": "L3 Orchestration"
-        },
-        {
-          "number": 3,
-          "name": "Orchestration",
-          "questionAnswered": "How do we coordinate multiple agents to execute this strategy?",
-          "governanceConcern": "Delegation and coordination; fractal boundary instantiation",
-          "inputsFrom": "L2 Integration",
-          "outputsTo": "L4 Runtime Alignment"
-        },
-        {
           "number": 4,
-          "name": "Runtime Alignment",
-          "questionAnswered": "Is what's happening aligned with what was intended?",
-          "governanceConcern": "Runtime alignment monitoring; drift detection; escalation",
-          "inputsFrom": "L3 Orchestration",
-          "outputsTo": "L5 Specification"
-        },
-        {
-          "number": 5,
-          "name": "Specification",
-          "questionAnswered": "Given this intent, what should we actually do?",
-          "governanceConcern": "Intent-to-action translation; prioritization; resource allocation",
-          "inputsFrom": "L4 Runtime Alignment",
-          "outputsTo": "L6 Intent Formalization"
-        },
-        {
-          "number": 6,
-          "name": "Intent Formalization",
-          "questionAnswered": "How do we represent this intent in machine-processable form?",
-          "governanceConcern": "Structured knowledge representation; lossy compression accounting",
-          "inputsFrom": "L5 Specification",
-          "outputsTo": "L7 Intent Discovery"
-        },
-        {
-          "number": 7,
           "name": "Intent Discovery",
           "questionAnswered": "What does the principal actually intend?",
           "governanceConcern": "Genuine intent surfacing; relational discovery; endorsed intent",
-          "inputsFrom": "L6 Intent Formalization",
+          "inputsFrom": "L3 Intent Formalization",
           "outputsTo": null
+        },
+        {
+          "number": 3,
+          "name": "Intent Formalization",
+          "questionAnswered": "How do we represent this intent in machine-processable form?",
+          "governanceConcern": "Structured knowledge representation; lossy compression accounting",
+          "inputsFrom": "L2 Specification",
+          "outputsTo": "L4 Intent Discovery"
+        },
+        {
+          "number": 2,
+          "name": "Specification",
+          "questionAnswered": "Given this intent, what should we actually do?",
+          "governanceConcern": "Intent-to-action translation; prioritization; resource allocation",
+          "inputsFrom": "L1 Runtime Alignment",
+          "outputsTo": "L3 Intent Formalization"
+        },
+        {
+          "number": 1,
+          "name": "Runtime Alignment",
+          "questionAnswered": "Is what's happening aligned with what was intended?",
+          "governanceConcern": "Runtime alignment monitoring; drift detection; escalation",
+          "inputsFrom": null,
+          "outputsTo": "L2 Specification"
         }
       ],
-      "notes": "Intent flows down (L7 to L1) \u00e2\u20ac\u201d each layer translates intent into more specific, more constrained form. Evidence flows up (L1 to L7) \u00e2\u20ac\u201d each layer aggregates evidence into more strategic, more interpretive form. Intent also flows upward when good recommendations from lower layers update higher layers' understanding."
+      "notes": "Intent flows down (L4 to L1) \u00e2\u20ac\u201d each layer translates intent into more specific, more constrained form. Evidence flows up (L1 to L4) \u00e2\u20ac\u201d each layer aggregates evidence into more strategic, more interpretive form. Intent also flows upward when good recommendations from lower layers update higher layers' understanding. Three additional execution governance concerns (Orchestration, Integration, Execution) are specified by the companion BPM/Agent Stack specification (bpmstack.org)."
     },
     {
       "name": "KnowledgeTier",
@@ -208,9 +184,7 @@
           "invocationTrigger": "Every governance decision; always available in context",
           "servesLayers": [
             "L1",
-            "L2",
-            "L3",
-            "L4"
+            "L2"
           ]
         },
         {
@@ -220,9 +194,9 @@
           "latency": "periodic",
           "invocationTrigger": "Periodic refresh; formalization cycles; specification planning",
           "servesLayers": [
-            "L4",
-            "L5",
-            "L6"
+            "L1",
+            "L2",
+            "L3"
           ]
         },
         {
@@ -232,12 +206,12 @@
           "latency": "on-demand",
           "invocationTrigger": "Explicit discovery sessions; intent drift detection; principal request",
           "servesLayers": [
-            "L6",
-            "L7"
+            "L3",
+            "L4"
           ]
         }
       ],
-      "notes": "Three tiers provide a cost-effective knowledge access strategy. Lower tiers are cheap and always available; higher tiers are expensive and invoked only when needed. This mirrors the OSI pattern where lower layers handle routine traffic and upper layers handle complex protocol negotiation."
+      "notes": "Three tiers provide a cost-effective knowledge access strategy. Lower tiers are cheap and always available; higher tiers are expensive and invoked only when needed. The Knowledge Architecture is cross-cutting infrastructure that serves all four governance layers."
     },
     {
       "name": "TrustCalibration",
@@ -305,7 +279,7 @@
           "description": "Always true \u00e2\u20ac\u201d evidence trails are the basis for all trust calibration decisions"
         }
       ],
-      "notes": "Immutable record; basis for all trust calibration decisions. Evidence trails are produced by the lower layers (L1-L4) and consumed by all layers for governance assessment. The append-only constraint ensures that governance decisions can always be audited against the evidence that informed them."
+      "notes": "Immutable record; basis for all trust calibration decisions. Evidence trails are produced primarily at L1 (Runtime Alignment) and consumed by all layers for governance assessment. The append-only constraint ensures that governance decisions can always be audited against the evidence that informed them."
     },
     {
       "name": "ConflictResolution",
@@ -439,7 +413,7 @@
         "from": "1",
         "to": "0..1"
       },
-      "description": "Each layer interfaces with at most one layer above it. L7 has no upper interface. Intent flows downward through these interfaces; evidence flows upward."
+      "description": "Each layer interfaces with at most one layer above it. L4 has no upper interface. Intent flows downward through these interfaces; evidence flows upward."
     },
     {
       "from": "Layer",
@@ -450,7 +424,7 @@
         "from": "1",
         "to": "0..1"
       },
-      "description": "Each layer interfaces with at most one layer below it. L1 has no lower interface. Adjacent layers exchange through defined interface contracts."
+      "description": "Each layer interfaces with at most one layer below it. L1 interfaces downward with the execution governance scope of the companion BPM/Agent Stack. Adjacent layers exchange through defined interface contracts."
     },
     {
       "from": "Layer",
@@ -461,7 +435,7 @@
         "from": "*",
         "to": "*"
       },
-      "description": "Layers access knowledge tiers based on the governance concern they address. Lower layers use operational knowledge (Tier 1). Middle layers use structured knowledge (Tier 2). Upper layers use discovery knowledge (Tier 3). Overlap exists \u00e2\u20ac\u201d L4 accesses both Tier 1 and Tier 2."
+      "description": "Layers access knowledge tiers based on the governance concern they address. L1-L2 use operational knowledge (Tier 1). L1-L3 use structured knowledge (Tier 2). L3-L4 use discovery knowledge (Tier 3). The Knowledge Architecture is cross-cutting infrastructure serving all layers."
     },
     {
       "from": "TrustCalibration",
@@ -483,8 +457,8 @@
         "from": "*",
         "to": "1"
       },
-      "description": "Evidence trails are produced by the lower layers (L1 Execution, L2 Integration, L3 Orchestration, L4 Runtime Alignment). These layers generate the raw evidence \u00e2\u20ac\u201d execution results, integration events, orchestration decisions, alignment assessments \u00e2\u20ac\u201d that feeds trust calibration.",
-      "constraint": "Only layers L1-L4 produce evidence trails"
+      "description": "Evidence trails are produced primarily at L1 (Runtime Alignment), which performs closed-loop assessment of execution evidence against governing intent. Evidence from execution governance (the companion BPM/Agent Stack) flows upward through L1 for alignment assessment.",
+      "constraint": "L1 Runtime Alignment is the primary evidence producer within this specification's scope"
     },
     {
       "from": "Agent",
@@ -571,7 +545,7 @@
       "Agent role is context-dependent \u00e2\u20ac\u201d shown with a note, not separate classes",
       "IntentPrimitive x IntentSource forms a 5x4 matrix at each boundary",
       "Composition relationships (filled diamond) indicate lifecycle dependency on GovernanceBoundary",
-      "The Layer stack should be rendered vertically with L7 at top and L1 at bottom"
+      "The Layer stack should be rendered vertically with L4 at top and L1 at bottom"
     ]
   }
 }

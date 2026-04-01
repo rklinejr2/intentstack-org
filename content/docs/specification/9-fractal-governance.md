@@ -9,7 +9,7 @@ weight: 90
 
 ### 9.1 Self-Similarity Across Scale
 
-The seven-layer structure defined in Clause 8 SHALL instantiate at every governance interface. A conformant Governance Architecture SHALL exhibit fractal self-similarity: the same governance pattern appearing at every scale, from civilizational governance to individual agent task delegation.
+The governance pattern defined in this specification SHALL instantiate at every governance interface. A conformant Governance Architecture SHALL exhibit fractal self-similarity: the same governance pattern appearing at every scale, from civilizational governance to individual agent task delegation.
 
 Two terms apply: *fractal* describes what the pattern is (self-similar at every scale); *recursive* describes how instances compose (each level's output becomes the next level's governing input).
 

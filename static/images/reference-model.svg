@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 780" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
-  <title>The Intent Stack — 7-Layer Reference Model</title>
-  <desc>A vertical stack diagram showing the seven layers of the Intent Stack reference model. Layer 7 (Intent Discovery) at top through Layer 1 (Execution) at bottom, with Constitutional AI substrate beneath. Intent flows downward, evidence flows upward.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 590" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <title>The Intent Stack — 4-Layer Reference Model</title>
+  <desc>A vertical stack diagram showing the four governance context layers of the Intent Stack reference model. Layer 4 (Intent Discovery) at top through Layer 1 (Runtime Alignment) at bottom, with a BPM/Agent Stack execution governance reference and Constitutional AI substrate beneath. Intent flows downward, evidence flows upward.</desc>
 
   <defs>
     <style>
@@ -15,6 +15,9 @@
       .substrate-box { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 6 3; fill: #f1f5f9; }
       .substrate-text { font-size: 13px; font-weight: 600; fill: #64748b; }
       .substrate-detail { font-size: 11px; fill: #94a3b8; }
+      .companion-box { stroke: #94a3b8; stroke-width: 1.5; stroke-dasharray: 4 2; fill: #fefce8; }
+      .companion-text { font-size: 13px; font-weight: 600; fill: #92400e; }
+      .companion-detail { font-size: 10.5px; fill: #a16207; }
     </style>
     <marker id="arrow-down" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
       <path d="M0,0 L8,4 L0,8 Z" fill="#3b82f6"/>
@@ -25,104 +28,78 @@
   </defs>
 
   <!-- Background -->
-  <rect width="760" height="780" fill="#ffffff" rx="4"/>
+  <rect width="760" height="590" fill="#ffffff" rx="4"/>
 
   <!-- Title -->
-  <text x="380" y="32" text-anchor="middle" class="title-text">The Intent Stack — 7-Layer Reference Model</text>
-  <text x="380" y="50" text-anchor="middle" class="subtitle-text">v5.0 — A governance architecture for intent alignment across principal-agent and peer coordination interfaces</text>
+  <text x="380" y="32" text-anchor="middle" class="title-text">The Intent Stack — 4-Layer Reference Model</text>
+  <text x="380" y="50" text-anchor="middle" class="subtitle-text">v1.2 — Governance context architecture for intent alignment across principal-agent and peer coordination interfaces</text>
 
-  <!-- === LAYER 7: Intent Discovery === -->
+  <!-- === LAYER 4: Intent Discovery === -->
   <g transform="translate(100, 68)">
     <rect width="560" height="80" rx="4" class="layer-box" fill="#e0e7ff"/>
     <rect width="36" height="80" rx="4" fill="#4338ca"/>
     <rect x="36" width="0.5" height="80" fill="#4338ca"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L7</text>
+    <text x="18" y="45" text-anchor="middle" class="layer-num">L4</text>
     <text x="52" y="26" class="layer-name">Intent Discovery</text>
     <text x="52" y="44" class="layer-question">What does this principal actually intend?</text>
     <text x="52" y="62" class="layer-concern">Genuine intent surfacing · Relational discovery · Endorsed intent</text>
   </g>
 
-  <!-- === LAYER 6: Intent Formalization === -->
+  <!-- === LAYER 3: Intent Formalization === -->
   <g transform="translate(100, 158)">
     <rect width="560" height="80" rx="4" class="layer-box" fill="#dbeafe"/>
     <rect width="36" height="80" rx="4" fill="#3b82f6"/>
     <rect x="36" width="0.5" height="80" fill="#3b82f6"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L6</text>
+    <text x="18" y="45" text-anchor="middle" class="layer-num">L3</text>
     <text x="52" y="26" class="layer-name">Intent Formalization</text>
     <text x="52" y="44" class="layer-question">How do we represent this intent in machine-processable form?</text>
     <text x="52" y="62" class="layer-concern">Structured knowledge representation · Lossy compression accounting</text>
   </g>
 
-  <!-- === LAYER 5: Specification === -->
+  <!-- === LAYER 2: Specification === -->
   <g transform="translate(100, 248)">
     <rect width="560" height="80" rx="4" class="layer-box" fill="#ccfbf1"/>
     <rect width="36" height="80" rx="4" fill="#0d9488"/>
     <rect x="36" width="0.5" height="80" fill="#0d9488"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L5</text>
+    <text x="18" y="45" text-anchor="middle" class="layer-num">L2</text>
     <text x="52" y="26" class="layer-name">Specification</text>
     <text x="52" y="44" class="layer-question">Given this intent, what should we actually do?</text>
     <text x="52" y="62" class="layer-concern">Intent-to-action translation · Prioritization · Resource allocation</text>
   </g>
 
-  <!-- === LAYER 4: Runtime Alignment === -->
+  <!-- === LAYER 1: Runtime Alignment === -->
   <g transform="translate(100, 338)">
     <rect width="560" height="80" rx="4" class="layer-box" fill="#d1fae5"/>
     <rect width="36" height="80" rx="4" fill="#059669"/>
     <rect x="36" width="0.5" height="80" fill="#059669"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L4</text>
+    <text x="18" y="45" text-anchor="middle" class="layer-num">L1</text>
     <text x="52" y="26" class="layer-name">Runtime Alignment</text>
     <text x="52" y="44" class="layer-question">Is what's happening aligned with what was intended?</text>
     <text x="52" y="62" class="layer-concern">Closed-loop alignment assessment · Drift detection · Escalation</text>
   </g>
 
-  <!-- === LAYER 3: Orchestration === -->
-  <g transform="translate(100, 428)">
-    <rect width="560" height="80" rx="4" class="layer-box" fill="#fef3c7"/>
-    <rect width="36" height="80" rx="4" fill="#d97706"/>
-    <rect x="36" width="0.5" height="80" fill="#d97706"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L3</text>
-    <text x="52" y="26" class="layer-name">Orchestration</text>
-    <text x="52" y="44" class="layer-question">How do we coordinate multiple agents to execute this strategy?</text>
-    <text x="52" y="62" class="layer-concern">Delegation and coordination · Fractal boundary instantiation</text>
-  </g>
-
-  <!-- === LAYER 2: Integration === -->
-  <g transform="translate(100, 518)">
-    <rect width="560" height="80" rx="4" class="layer-box" fill="#fae8ff"/>
-    <rect width="36" height="80" rx="4" fill="#a855f7"/>
-    <rect x="36" width="0.5" height="80" fill="#a855f7"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L2</text>
-    <text x="52" y="26" class="layer-name">Integration</text>
-    <text x="52" y="44" class="layer-question">How do governed agents connect to the systems they need?</text>
-    <text x="52" y="62" class="layer-concern">Governed connectivity · Access as governance decision</text>
-  </g>
-
-  <!-- === LAYER 1: Execution === -->
-  <g transform="translate(100, 608)">
-    <rect width="560" height="80" rx="4" class="layer-box" fill="#f1f5f9"/>
-    <rect width="36" height="80" rx="4" fill="#475569"/>
-    <rect x="36" width="0.5" height="80" fill="#475569"/>
-    <text x="18" y="45" text-anchor="middle" class="layer-num">L1</text>
-    <text x="52" y="26" class="layer-name">Execution</text>
-    <text x="52" y="44" class="layer-question">How does the actual work get done within governing constraints?</text>
-    <text x="52" y="62" class="layer-concern">Constrained task execution · Evidence production</text>
+  <!-- === BPM/Agent Stack (Companion Spec) === -->
+  <g transform="translate(100, 432)">
+    <rect width="560" height="52" rx="4" class="companion-box"/>
+    <text x="280" y="22" text-anchor="middle" class="companion-text">BPM/Agent Stack — Execution Governance (bpmstack.org)</text>
+    <text x="280" y="40" text-anchor="middle" class="companion-detail">Orchestration · Integration · Execution — companion specification</text>
   </g>
 
   <!-- === Constitutional AI Substrate === -->
-  <g transform="translate(100, 706)">
+  <g transform="translate(100, 498)">
     <rect width="560" height="52" rx="4" class="substrate-box"/>
     <text x="280" y="24" text-anchor="middle" class="substrate-text">Constitutional AI Substrate</text>
     <text x="280" y="42" text-anchor="middle" class="substrate-detail">Model-level alignment · Training-time governance · Character formation</text>
   </g>
 
   <!-- === Intent Flow Arrow (left side) === -->
-  <line x1="70" y1="88" x2="70" y2="700" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-down)"/>
-  <text x="60" y="400" text-anchor="middle" class="arrow-label" fill="#3b82f6" transform="rotate(-90, 60, 400)">Intent flows downward</text>
+  <line x1="70" y1="88" x2="70" y2="478" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrow-down)"/>
+  <text x="60" y="290" text-anchor="middle" class="arrow-label" fill="#3b82f6" transform="rotate(-90, 60, 290)">Intent flows downward</text>
 
   <!-- === Evidence Flow Arrow (right side) === -->
-  <line x1="690" y1="700" x2="690" y2="88" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow-up)"/>
-  <text x="700" y="400" text-anchor="middle" class="arrow-label" fill="#10b981" transform="rotate(90, 700, 400)">Evidence flows upward</text>
+  <line x1="690" y1="478" x2="690" y2="88" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow-up)"/>
+  <text x="700" y="290" text-anchor="middle" class="arrow-label" fill="#10b981" transform="rotate(90, 700, 290)">Evidence flows upward</text>
 
   <!-- Version annotation -->
-  <text x="380" y="773" text-anchor="middle" font-size="10" fill="#94a3b8">The Intent Stack Reference Model v5.0 · CC BY 4.0 · intentstack.org</text>
+  <text x="380" y="578" text-anchor="middle" font-size="10" fill="#94a3b8">The Intent Stack Reference Model v1.2 · CC BY 4.0 · intentstack.org</text>
 </svg>

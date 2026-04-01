@@ -34,7 +34,7 @@ menu:
         type: search
 
 params:
-  description: "A seven-layer reference model for governing AI agent behavior within organizations"
+  description: "A four-layer reference model for governing AI agent behavior within organizations"
 
   navbar:
     displayTitle: true

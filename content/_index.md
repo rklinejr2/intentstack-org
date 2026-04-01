@@ -134,19 +134,22 @@ title: The Intent Stack
 
 <h1>A reference model for governing AI agent behavior within organizations</h1>
 
-<p class="landing-subtitle">Seven layers. From intent discovery to execution. At every interface where authority is delegated or coordination is required.</p>
+<p class="landing-subtitle">Four layers of governance context. From intent discovery to runtime alignment. At every interface where authority is delegated or coordination is required.</p>
 
 <div class="landing-gap">
 <p>
 BPMN standardizes process. DMN standardizes decisions. CMMN standardizes case management. No standard exists for governing the alignment between agent behavior and organizational intent at runtime. The gap is not in policy guidance — frameworks like NIST AI RMF address that. The gap is not in model-level alignment — Constitutional AI addresses that at training time. The gap is in <strong>runtime organizational governance</strong>: the infrastructure that discovers what an organization actually intends, formalizes that intent in a form agents can operate against, monitors alignment in real time, and adjusts governance as the relationship matures.
+</p>
+<p style="margin-top: 1rem;">
+The Intent Stack covers <strong>governance context</strong> — from intent discovery through runtime alignment. The companion <a href="https://bpmstack.org">BPM/Agent Stack</a> specification covers <strong>execution governance</strong> — orchestration, integration, and execution of authorized work. Together, the two specifications address seven governance concerns across the full governance lifecycle.
 </p>
 </div>
 
 </div>
 
 <figure class="landing-diagram">
-<img src="/images/reference-model.svg" alt="The Intent Stack — 7-Layer Reference Model showing layers from Intent Discovery (L7) through Execution (L1), with Constitutional AI substrate beneath, intent flowing downward, evidence flowing upward, and the three-tier Knowledge Architecture spanning layers.">
-<figcaption>The Intent Stack — 7-Layer Reference Model</figcaption>
+<img src="/images/reference-model.svg" alt="The Intent Stack — 4-Layer Reference Model showing layers from Intent Discovery (L4) through Runtime Alignment (L1), with Constitutional AI substrate beneath, intent flowing downward, evidence flowing upward, and the three-tier Knowledge Architecture spanning layers.">
+<figcaption>The Intent Stack — 4-Layer Reference Model</figcaption>
 </figure>
 
 <div class="landing-hero">
@@ -166,6 +169,6 @@ BPMN standardizes process. DMN standardizes decisions. CMMN standardizes case ma
 <a href="/engage/" class="landing-cta-secondary">Engage with the Work</a>
 </div>
 
-<p class="landing-status">Public Draft Specification, Version 1.1 — March 15, 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
+<p class="landing-status">Public Draft Specification, Version 1.2 — April 1, 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
 
 </div>
