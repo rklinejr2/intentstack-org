@@ -183,11 +183,11 @@ The four sources, in priority order:
 
 ### Constitutional Intent
 
-Intent that exists before any specific interaction, relationship, or context. The non-negotiable floor below which governance cannot descend. At the model level, Constitutional Intent is Anthropic's Constitution. At the organizational level, it includes legal requirements, ethical commitments, and safety constraints that apply regardless of what any principal discovers or decides.
+The set of values, constraints, and principles that exist before any specific relationship begins — the **normative floor** beneath all other intent in the governance stack. The term *Constitutional* is used in the polity sense: the constituting layer that places and limits delegated authority and protects lower levels from higher. It does NOT denote any specific document, laboratory, or model-alignment artifact. Constitutional Intent originates in different registers depending on the governed entity: for an AI agent, this includes training-time character formation, which operates below the Intent Stack as a substrate (§8.7); for a human, personal ethics, professional standards, and legal obligations; for an organization, its charter, regulatory environment, and foundational commitments. The specification governs the *shape* of a well-formed Constitutional floor (§2.4); the *content* is supplied by the deploying organization (§6.2, §6.2.1).
 
 **Example:** "AI agents in this organization never make autonomous decisions about patient treatment" (organizational constitutional intent in healthcare).
 
-**Distinguished from:** Constitutional AI (Anthropic's specific implementation of constitutional governance at the model level). The Anthropic Constitution (a document; Constitutional Intent is a category of intent that exists at every governance interface, not just the model level).
+**Distinguished from:** Constitutional AI (a specific model-level implementation approach; conformant as a partial floor per §6.2.1 but not by itself the organizational floor). A model-alignment constitution (a document in the training-time register; Constitutional Intent is a category of intent that exists at every governance interface, not just the model level).
 
 ### Discovered Intent
 

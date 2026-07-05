@@ -169,6 +169,6 @@ The Intent Stack covers <strong>governance context</strong> — from intent disc
 <a href="/engage/" class="landing-cta-secondary">Engage with the Work</a>
 </div>
 
-<p class="landing-status">Public Draft Specification, Version 1.2 — April 1, 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
+<p class="landing-status">Public Draft Specification, Version 1.5 — June 16, 2026. Subject to revision through operational evidence. Licensed under CC BY 4.0.</p>
 
 </div>

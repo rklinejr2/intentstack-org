@@ -23,6 +23,8 @@ A conformant L4 implementation SHALL conduct discovery rather than extraction �
 
 L4 SHALL produce endorsed intent: intent that the principal has examined, understood, and endorsed, not merely declared. L4 SHALL operate at cold start — it requires no prior signal to begin. There is no pre-governance state.
 
+**Constraint inventory.** A conformant L4 implementation SHALL produce, as a discovery output, a **constraint inventory** — the set of constraints that shape the principal's available choices, each classified as **hard** (a fact of the world: geography, economics, embodiment), **soft** (a changeable circumstance), or **chosen** (a self-imposed limit adopted to serve a declared value, carrying the value it serves). The constraint inventory is the discovery-side record of what bounds the principal's possibility; it is distinct from the five Intent Primitives (§5.1), which record what the principal intends. A chosen constraint corresponds to a Boundary with purpose-grounding (§5.1 NOTE, §5.3) and SHALL also be expressible as such in the principal's intent specification; hard and soft constraints have no Boundary form — they are discovered facts, not declarations. The constraint inventory SHALL be retrievable by L1 at runtime, where it is the input the gap-interpretation requirement of §8.5 traces against. Where the inventory is stored — as a standalone L4 artifact or as a typed section of an existing discovery output — is implementation-determined; the conformance requirement is that the three constraint kinds are produced as endorsed L4 output and are retrievable at L1.
+
 ### 8.3 Layer 3 — Intent Formalization
 
 **Governance question addressed:** How do we represent this intent in machine-processable form?
@@ -51,11 +53,23 @@ a) Classify alignment events against all four intent sources;
 
 b) Detect drift from governing intent;
 
-c) Trigger escalation when drift exceeds thresholds established by the governing principal;
+b-bis) Before escalating a stated-observed gap as misalignment, classify the gap as drift, aspiration, or constraint-response, per the gap-interpretation requirement below;
+
+c) Trigger escalation when drift, as classified per (b-bis), exceeds thresholds established by the governing principal;
 
 d) Maintain an append-only evidence trail that supports progressive trust development;
 
 e) Support per-boundary trust calibration as described in Clause 10.
+
+**Gap interpretation (drift / aspiration / constraint-response).** A *stated-observed gap* is a divergence between what the principal has declared and what the principal's behavior or outcomes show. (This declared-versus-behavior sense of *drift* is distinct from the cascade-shape *drift* of §5.5, which concerns a primitive's failure to trace across a hierarchy interface; the two senses do not interact.) Before triggering misalignment escalation on such a gap, a conformant L1 implementation SHALL classify it as exactly one of:
+
+- **drift** — divergence not traceable to a governing constraint or an endorsed-but-unrealized intent; the principal is going off-course;
+- **aspiration** — the intent is endorsed and the divergence is an outcome not yet realized; the principal means it but has not yet arrived;
+- **constraint-response** — the divergence serves the governing value through a named constraint in the constraint inventory (§8.2), established by a traceable purpose chain from the divergent behavior to the declared value.
+
+Only **drift** exceeding the governing principal's thresholds SHALL trigger misalignment escalation. A gap classified as **constraint-response** SHALL NOT be escalated as misalignment. The classification SHALL cite the constraint inventory entry and the purpose chain it traced, so the determination is a retrieve-and-trace operation over governance state rather than an unrecorded judgment. This requirement strengthens the drift-detection obligation (b): drift detection alone, applied to a constraint-shaped principal, mis-escalates value-serving behavior — for example, a faith practice or a family commitment — as misalignment; the discriminator is what prevents that failure.
+
+NOTE — The discriminator is specifiable, not advisory, precisely because constraint-response is defined by the *existence of a purpose chain through a named constraint*, which the runtime retrieves and traces; it does not require the runtime to judge whether the divergence is warranted. This keeps the requirement inside the specification's separation of specification from inference: L1 retrieves and traces; it does not adjudicate. The constraint inventory (§8.2) is the precondition — without it, the classification has nothing to trace against and regresses to judgment.
 
 The term "runtime" distinguishes L1's concern from training-time alignment (the Constitutional AI substrate below L1). Training-time alignment shapes the agent's character before deployment. Runtime alignment assesses whether that character, operating within organizational context, is producing outcomes consistent with governing intent. Both are necessary; neither substitutes for the other.
 

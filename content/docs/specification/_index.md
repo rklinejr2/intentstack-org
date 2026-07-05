@@ -7,9 +7,9 @@ weight: 1
 
 | | |
 |---|---|
-| **Document identifier** | intentstack.org/spec/2026-04-01 |
-| **Status** | Public Draft Specification, Version 1.2 |
-| **Date** | April 1, 2026 |
+| **Document identifier** | intentstack.org/spec/2026-06-16 |
+| **Status** | Public Draft Specification, Version 1.5 |
+| **Date** | June 16, 2026 |
 | **Author** | Rob Kline |
 | **License** | Creative Commons Attribution 4.0 International (CC BY 4.0) |
 
@@ -139,7 +139,7 @@ This section is informative. It does not modify any normative content in this sp
 ---
 
 *Intent Stack Governance Architecture Specification*
-*intentstack.org/spec/2026-04-01 | Public Draft Specification, Version 1.2*
+*intentstack.org/spec/2026-06-16 | Public Draft Specification, Version 1.5*
 *© 2026 Rob Kline. Licensed under CC BY 4.0.*
 
 **Version history:**
@@ -148,3 +148,6 @@ This section is informative. It does not modify any normative content in this sp
 | 1.0 | 2026-03-05 | Initial public draft |
 | 1.1 | 2026-03-15 | §5.2 rewritten with structural derivation evidence; §5.3 strengthened with eight independent derivations; §5.5 added (cascade behavior with algebraic characterization); §5.6 added (governability as constitutive claim); I.5 extended (Intent ontological characterization, Alignment precision); §12 updated with three new open questions; Annex A.3 streamlined; Annex C added (Structural Foundations — seven sections covering investigation methodology, five-primitive derivation, Boundaries monotonicity, cascade shape algebra, Intent unification, machine-detectable violations, and structural predictions) |
 | 1.2 | 2026-04-01 | Four-layer architecture: execution governance layers (Orchestration, Integration, Execution — formerly L3, L2, L1) reclassified to the companion BPM/Agent Stack specification (bpmstack.org). Remaining layers renumbered: L4 Intent Discovery (was L7), L3 Intent Formalization (was L6), L2 Specification (was L5), L1 Runtime Alignment (was L4). All structural foundations unchanged — five primitives, four intent sources, cascade behavior, Annex C mathematical apparatus are layer-count-independent (confirmed by orthogonality audit). Scope clause updated with explicit execution governance exclusion. Conformance targets updated for four layers. Knowledge Architecture repositioned as cross-cutting infrastructure. |
+| 1.3 | 2026-06-03 | §6.2 sharpened: existing multi-register treatment of the Constitutional source clarified to polity-sense, pluggable-floor framing. §6.2.1 added (informative exemplars). §2.4 added — four binding conformance criteria for a well-formed Constitutional floor, including deployer-binding (§2.4.4). §12.13–§12.15 added (conformance testing, composition conflicts, floor-revision legitimacy). Glossary Constitutional Intent entry updated. |
+| 1.4 | 2026-06-15 | §6.6 extended with an intra-principal value-conflict clause (F-05): where a single principal holds competing terminal values, a declared resolution principle is expressible as a Boundary, inheriting Boundaries' monotonic no-inverse protection, and SHALL NOT be resolved by holistic source-weighting. Additive — a new resolvable conflict class, no change to existing conformant implementations. NOTE added connecting the mechanism to multi-principal composition (§12.3) with the slot-generalizes / fill-does-not boundary. |
+| 1.5 | 2026-06-16 | Coupled gap-interpretation amendment (F-02 + F-08). §8.5 gains sub-requirement (b-bis): before escalating a stated-observed gap, a conformant L1 SHALL classify it as drift / aspiration / constraint-response, SHALL NOT escalate constraint-response as misalignment, and SHALL cite the constraint inventory and the traced purpose chain. §8.2 gains a constraint-inventory L4 output class (hard / soft / chosen constraints) that L1 reads at gap interpretation (F-08). §5.1 NOTE records the correspondence — a chosen constraint is a Boundary with purpose-grounding. ACW companion §10.2 gains the AA-4 corollary (same cycle). **Strengthens an existing SHALL (§8.5(b) drift detection); not additive** — conformance to v1.5 requires the discriminator; no grandfather clause (implementations claiming v1.4 are unaffected; versioned conformance governs the transition). |

@@ -23,6 +23,8 @@ The five Intent Primitives are:
 
 **Key Tasks** — what work the agent is authorized to perform. Key Tasks also defines what is not authorized by omission. An agent SHALL NOT perform work outside the scope established by Key Tasks without explicit principal authorization.
 
+NOTE — Correspondence with the constraint inventory (§8.2). A principal's constraints come in three kinds: *hard* (facts of the world that shape possibility), *soft* (changeable circumstances), and *chosen* (self-imposed for the sake of a value — for example, a faith practice or a family commitment). A **chosen** constraint is structurally a **Boundary with purpose-grounding**: it shares the declarative origin and inviolability-by-commitment of a Boundary (§5.3) and inherits Boundaries' monotonic, no-inverse protection (Annex C.3, C.4); its grounding value is what the constraint serves. A chosen constraint is therefore expressible as a Boundary entry in the relevant intent specification. Hard and soft constraints are not declarations and are not Boundaries; they are discovered facts about what limits the principal's choices, modeled as L4 output (§8.2) and read at runtime gap interpretation (§8.5).
+
 ### 5.2 Why Five
 
 The claim that these five primitives constitute an irreducible set is supported by convergent evidence from multiple independent lines of analysis.
